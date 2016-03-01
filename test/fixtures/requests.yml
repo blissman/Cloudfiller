@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  description: MyText
+  expire: 2016-03-01
+  points: 1
+  user_id: 1
+  active: false
+  category_id: 1
+
+two:
+  description: MyText
+  expire: 2016-03-01
+  points: 1
+  user_id: 1
+  active: false
+  category_id: 1
