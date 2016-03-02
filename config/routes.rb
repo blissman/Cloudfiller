@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   resources :users do
     resources :experiences
+    resources :requests
+    resources :messages
   end
 
   resources :responses do
@@ -30,7 +32,7 @@ Rails.application.routes.draw do
     #   - show
     #   update
     #   edit
-    #   - delete
+    #   delete
     #
     # Requests
     #   - create
