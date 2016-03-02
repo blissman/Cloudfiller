@@ -11,4 +11,3 @@ That's where Cloudfiller comes in: bridging gaps and connecting communities.
 
 To Do:
 * Facebook API integration
-* Bourbon Neat/Bitters
