@@ -1,4 +1,4 @@
- cRails.application.routes.draw do
+Rails.application.routes.draw do
   root "categories#index"
 
   resources :users do
