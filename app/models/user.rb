@@ -1,7 +1,6 @@
 class User < ActiveRecord::Base
-  has_many :experiences
+  authenticates_with_sorcery!
   has_many :requests
+  has_one :experience
   has_many :responses
-  
-
 end
