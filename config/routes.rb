@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   resources :users do
     resources :experiences
+    resources :requests
+    resources :messages
   end
 
   resources :responses do

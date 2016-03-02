@@ -1,14 +1,19 @@
 class ExperiencesController < ApplicationController
 
   def index
-
+    @experiences = Experience.all
   end
 
   def show
-
+    @experience = Experience.find(params[:id])
   end
 
   def new
+    @experience = Experience.new(experience_params)
+    if @experience.save
+      redirect_to user_path
+    else
+
 
   end
 
@@ -27,5 +32,7 @@ class ExperiencesController < ApplicationController
   def destroy
 
   end
-  
+
+
+
 end

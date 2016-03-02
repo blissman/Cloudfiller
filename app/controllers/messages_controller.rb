@@ -15,9 +15,9 @@ class MessagesController < ApplicationController
   def create
     @message = Message.new(message_params)
     if @message.save
-      redirect_to response_path
+      render json: "ok"
     else
-      render :new
+      render json: "fail"
     end
   end
 
