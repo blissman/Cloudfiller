@@ -1,12 +1,7 @@
 Rails.application.routes.draw do
-  get 'user_sessions/new'
-
-  get 'user_sessions/create'
-
-  get 'user_sessions/destroy'
-
-  resources :users
   root "categories#index"
+
+  resources :user_sessions
 
   resources :users do
     resources :experiences
@@ -22,6 +17,9 @@ Rails.application.routes.draw do
     resources :requests
   end
 
+
+  get 'login' => 'user_sessions#new', :as => :login
+  post 'logout' => 'user_sessions#destroy', :as => :logout
 
     # User
     #   - create
