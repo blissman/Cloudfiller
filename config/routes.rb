@@ -1,12 +1,14 @@
 Rails.application.routes.draw do
   root "categories#index"
-  resources :users
+  resources :users do
+    resources :experiences
+  end
   resources :requests
   resources :responses do
     resources :messages
   end
   resources :categories
-  resources :experiences
+
 
     # User
     #   - create
