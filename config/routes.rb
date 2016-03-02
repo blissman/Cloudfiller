@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
   root "categories#index"
   resources :users
-  resources :messages
   resources :requests
-  resources :responses
+  resources :responses do
+    resources :messages
+  end
   resources :categories
   resources :experiences
 
