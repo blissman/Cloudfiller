@@ -30,7 +30,7 @@ Rails.application.routes.draw do
     #   - show
     #   update
     #   edit
-    #   - delete
+    #   delete
     #
     # Requests
     #   - create
