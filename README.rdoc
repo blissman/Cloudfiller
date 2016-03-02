@@ -1,28 +1,15 @@
-== README
+== Cloudfiller
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Problem:
+We live in an age where we can Google almost anything. But sometimes there are
+questions Google just can't answer easily, and we want to find someone to ask.
 
-Things you may want to cover:
+But what if there's nobody in our social circle who can answer the question?
 
-* Ruby version
+Solution:
+That's where Cloudfiller comes in: bridging gaps and connecting communities.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+To Do:
+* Devise/Sorcery for password handling
+* Facebook API integration
+* Bourbon Neat/Bitters
