@@ -7,10 +7,7 @@ Rails.application.routes.draw do
     resources :experiences
     resources :requests
     resources :messages
-  end
-
-  resources :responses do
-    resources :messages
+    resources :responses
   end
 
   resources :categories do

@@ -1,26 +1,46 @@
 <!DOCTYPE html>
+
 <html>
 <head>
+
   <title>Cloudfiller</title>
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
 </head>
 <body>
-  <div id="nav">
-    <% if current_user %>
-      <%= link_to "Edit Profile", edit_user_path(current_user.id) %>
-      <%= link_to "Logout", :logout, method: :post %>
-    <% else %>
-      <%= link_to "Register", new_user_path %> |
-      <%= link_to "Login", :login %>
-    <% end %>
-  </div>
-  <div>
-    <p id="notice"><%= flash[:notice] %></p>
-    <p id="alert"><%= flash[:alert] %></p>
-  </div>
-<%= yield %>
+
+  <header>
+        <div class="navbar">
+            <ul class="nav-links">
+              <% if current_user %>
+                <li><%=link_to "Account", user_path(current_user) %></li>
+                <li><%=link_to "Request", user_requests_path(current_user) %></li>
+                <li><%=link_to "Responses", user_responses_path(current_user) %></li>
+              <% end %>
+            </ul>
+
+            <div id="nav">
+              <% if current_user %>
+                <%= link_to "Edit Profile", edit_user_path(current_user.id) %>
+                <%= link_to "Logout", :logout, method: :post %>
+              <% else %>
+                <%= link_to "Register", new_user_path %> |
+                <%= link_to "Login", :login %>
+              <% end %>
+            </div>
+        </div>
+
+        <div>
+          <p id="notice"><%= flash[:notice] %></p>
+          <p id="alert"><%= flash[:alert] %></p>
+        </div>
+
+  </header>
+
+  <%= yield %>
 
 </body>
 </html>
