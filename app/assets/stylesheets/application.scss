@@ -22,7 +22,7 @@
  html, body {
    font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
    font-size: 20px;
-   line-height: 1.35;
+   line-height: 1.35rem;
    color: black;
    background-color: white;
  }
@@ -43,7 +43,7 @@ header{
     a {
       color: black;
       border: 1px solid black;
-      
+
       &:hover,
       &:focus {
         text-decoration: none;
