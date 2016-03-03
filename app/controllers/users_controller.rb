@@ -27,6 +27,7 @@ class UsersController < ApplicationController
       if @user.save
         format.html { redirect_to root_path, notice: 'User was successfully created.' }
         format.json { render :root, status: :created, location: @user }
+        auto_login(@user)
       else
         format.html { render :new }
         format.json { render json: @user.errors, status: :unprocessable_entity }
@@ -66,6 +67,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:email, :password, :password_confirmation)
+      params.require(:user).permit(:name, :lastname, :email, :password, :password_confirmation)
     end
 end
