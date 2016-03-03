@@ -14,6 +14,9 @@
 
   <header>
         <div class="navbar">
+
+              <!-- <a class="logo" href="/"><%= image_tag '.png' %></a> -->
+
             <ul class="nav-links">
               <% if current_user %>
                 <li><%=link_to "Account", user_path(current_user) %></li>
@@ -24,7 +27,7 @@
 
             <div id="nav">
               <% if current_user %>
-                <%= link_to "Edit Profile", edit_user_path(current_user.id) %>
+                <!-- <#%= link_to "Edit Profile", edit_user_path(current_user.id) %> -->
                 <%= link_to "Logout", :logout, method: :post %>
               <% else %>
                 <%= link_to "Register", new_user_path %> |
@@ -40,7 +43,11 @@
 
   </header>
 
+  <div class="body">
+
   <%= yield %>
+
+  </div>
 
 </body>
 </html>

@@ -18,6 +18,7 @@ class RequestsController < ApplicationController
       redirect_to category_request_path
     else
       render :new
+    end
   end
 
   def edit

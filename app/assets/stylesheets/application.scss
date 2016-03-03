@@ -17,3 +17,50 @@
  @import "neat";
  // @import "home";
  // @import "users";
+
+
+ html, body {
+   font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+   font-size: 20px;
+   line-height: 1.35;
+   color: black;
+   background-color: white;
+ }
+
+header{
+  height:30px;
+  width: 100%;
+  background-color: green;
+}
+
+.nav-links {
+  list-style-type: none;
+  margin: 0;
+
+  li {
+    float: left;
+    padding-right: 40px;
+    a {
+      color: black;
+      border: 1px solid black;
+      
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        color: red;
+        background-color: white;
+      }
+    }
+
+  }
+}
+
+.logo {
+   img {
+     width: 150px;
+     margin-top: 2px; //remove px
+   }
+   position: absolute;
+   top: 5;
+   left: 30;
+ }
