@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   resources :categories do
     resources :requests
-  end
+   end
 
 
   get 'login' => 'user_sessions#new', :as => :login
