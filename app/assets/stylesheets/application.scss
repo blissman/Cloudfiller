@@ -12,12 +12,14 @@
  *
  *= require_self
  */
+
+
  @import "bourbon";
  @import "base/base";
  @import "neat";
  // @import "home";
  // @import "users";
-
+ @import 'normalize';
 
  html, body {
    font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
