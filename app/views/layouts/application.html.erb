@@ -1,72 +1,119 @@
 <!DOCTYPE html>
 
 <html>
-<head>
+  <head>
 
-  <title>Cloudfiller</title>
+    <title>Cloudfiller</title>
 
-  <meta name="viewport" content="initial-scale=1.0, width=divice-width">
+    <meta name="viewport" content="initial-scale=1.0, width=divice-width">
 
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <!-- The scripts below are required to handle the jquery mobile popups -->
+  	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
+  </head>
+  <body>
+    <header>
+          <div class="navbar">
 
-	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
-</head>
-<body>
+                <!-- <a class="logo" href="/"><%= image_tag '.png' %></a> -->
 
-<a href="#popupLogin" data-rel="popup" data-position-to="window" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-check ui-btn-icon-left ui-btn-a" data-transition="pop">Sign in</a>
-<div data-role="popup" id="popupLogin" data-theme="a" class="ui-corner-all">
-    <form>
-        <div style="padding:10px 20px;">
-            <h3>Please sign in</h3>
-            <label for="un" class="ui-hidden-accessible">Username:</label>
-            <input name="user" id="un" value="" placeholder="username" data-theme="a" type="text">
-            <label for="pw" class="ui-hidden-accessible">Password:</label>
-            <input name="pass" id="pw" value="" placeholder="password" data-theme="a" type="password">
-            <button type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-check">Sign in</button>
-        </div>
-    </form>
-</div>
+              <ul class="nav-links">
+                <% if current_user %>
+                  <li><%=link_to "Account", user_path(current_user) %></li>
+                  <li><%=link_to "Request", user_requests_path(current_user) %></li>
+                  <li><%=link_to "Responses", user_responses_path(current_user) %></li>
+                <% end %>
+              </ul>
 
-  <header>
-        <div class="navbar">
+              <div id="nav">
+                <% if current_user %>
+                  <!-- <#%= link_to "Edit Profile", edit_user_path(current_user.id) %> -->
+                  <%= link_to "Logout", :logout, method: :post %>
+                <% else %>
+                  <a href="#popupRegister" data-rel="popup" data-position-to="window" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-check ui-btn-icon-left ui-btn-a" data-transition="pop">Register</a>
+                    <div data-role="popup" id="popupRegister" data-theme="a" class="ui-corner-all">
+                      <!-- This is the _form from users -->
+                      <div class="popupform">
+                        <%= form_for(@user) do |f| %>
+                          <% if @user.errors.any? %>
+                            <div id="error_explanation">
+                              <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
 
-              <!-- <a class="logo" href="/"><%= image_tag '.png' %></a> -->
+                              <ul>
+                              <% @user.errors.full_messages.each do |message| %>
+                                <li><%= message %></li>
+                              <% end %>
+                              </ul>
+                            </div>
+                          <% end %>
 
-            <ul class="nav-links">
-              <% if current_user %>
-                <li><%=link_to "Account", user_path(current_user) %></li>
-                <li><%=link_to "Request", user_requests_path(current_user) %></li>
-                <li><%=link_to "Responses", user_responses_path(current_user) %></li>
-              <% end %>
-            </ul>
+                          <div class="field">
+                            <%= f.label :name %><br>
+                            <%= f.text_field :name %>
+                          </div>
+                          <div class="field">
+                            <%= f.label "Last Name" %><br />
+                            <%= f.text_field :lastname %>
+                          </div>
+                          <div class="field">
+                            <%= f.label :email %><br>
+                            <%= f.text_field :email %>
+                          </div>
+                          <div class="field">
+                            <%= f.label :password %><br />
+                            <%= f.password_field :password %>
+                          </div>
+                          <div class="field">
+                            <%= f.label :password_confirmation %><br />
+                            <%= f.password_field :password_confirmation %>
+                          </div>
+                          <div class="actions">
+                            <%= f.submit %>
+                          </div>
+                        <% end %>
+                      </div>
+                    </div>
 
-            <div id="nav">
-              <% if current_user %>
-                <!-- <#%= link_to "Edit Profile", edit_user_path(current_user.id) %> -->
-                <%= link_to "Logout", :logout, method: :post %>
-              <% else %>
-                <%= link_to "Register", new_user_path %> |
-                <%= link_to "Login", :login %>
-              <% end %>
-            </div>
-        </div>
+                  <a href="#popupLogin" data-rel="popup" data-position-to="window" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-check ui-btn-icon-left ui-btn-a" data-transition="pop">Login</a>
+                    <div data-role="popup" id="popupLogin" data-theme="a" class="ui-corner-all">
+                      <!-- This should probably be put back into a partial later -->
+                      <div class="popupform">
+                        <%= form_tag user_sessions_path, :method => :post do %>
+                          <div class="field">
+                            <%= label_tag :email %><br />
+                            <%= text_field_tag :email %>
+                          </div>
+                          <div class="field">
+                            <%= label_tag :password %><br />
+                            <%= password_field_tag :password %>
+                          </div>
+                          <div class="actions">
+                            <%= submit_tag "Login" %>
+                          </div>
+                        <% end %>
+                      </div>
 
-        <div>
-          <p id="notice"><%= flash[:notice] %></p>
-          <p id="alert"><%= flash[:alert] %></p>
-        </div>
+                    </div>
+                <% end %>
+              </div>
+          </div>
 
-  </header>
+          <div>
+            <p id="notice"><%= flash[:notice] %></p>
+            <p id="alert"><%= flash[:alert] %></p>
+          </div>
 
-  <div class="body">
+    </header>
 
-  <%= yield %>
+    <div class="body">
 
-  </div>
+    <%= yield %>
 
-</body>
+    </div>
+
+  </body>
 </html>
