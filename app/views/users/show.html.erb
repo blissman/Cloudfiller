@@ -20,5 +20,17 @@
 <%= link_to 'Back', root_path %>
 
 <div id="account_points">
+  <p>
+    <%= @user.points %>
+  </p>
+</div>
 
+<div id="account_rating">
+  <p>
+    <% if @user.rating == nil %>
+      <%= "Participate in the community for a rating!" %>
+    <% else %>
+      <%= @user.rating %>
+    <% end %>
+  </p>
 </div>
