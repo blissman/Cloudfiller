@@ -1,1 +1,32 @@
 <h1> New Request </h1>
+
+  <div class="new_request_form">
+
+    <%= form_for @request do |form| %>
+
+      <div class="form_field">
+        <%= form.label :description %>
+        <%= form.text_area :description %>
+      </div>
+
+        <br>
+
+      <div class="form_field">
+        <%= form.label :expire %>
+        <%= form.date :expire %>
+      </div>
+
+        <br>
+
+      <div class="form_field">
+        <%= form.label :points %>
+        <%= form.number_field :points %>
+      </div>
+
+        <br>
+
+      <div class="submit">
+        <%= form.submit %>
+      </div>
+
+    <% end %>
