@@ -26,3 +26,16 @@
  .popupform {
    padding: 1rem 2rem;
  }
+
+ .nav_links{
+          text-align: center;
+
+    & > li{
+          display: inline-block;
+          background-color: silver;
+          color: black;
+          padding: 0.6rem;
+          border: solid black 2px;
+          margin:5px;
+        }
+  }

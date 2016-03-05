@@ -17,11 +17,13 @@
     <header>
           <div class="navbar">
                 <!-- <a class="logo" href="/"><%= image_tag '.png' %></a> -->
-            <ul class="nav-links">
+            <ul class="nav_links">
               <% if current_user %>
                 <li><%=link_to "Account", user_path(current_user) %></li>
-                <li><%=link_to "Request", user_requests_path(current_user) %></li>
+
                 <li><%=link_to "Responses", user_responses_path(current_user) %></li>
+
+                <li><%=link_to "Request", user_requests_path(current_user) %></li>
               <% end %>
             </ul>
 
