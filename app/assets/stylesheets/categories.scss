@@ -31,7 +31,6 @@
 
             @include media($large-screen-up) {
               @include span-columns(2);
-
             }
         }
 }

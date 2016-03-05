@@ -1,0 +1,25 @@
+
+
+
+<%= form_for ([@user, @experience]) do |f| %>
+
+    <div class="field">
+      <%= f.label :education %>
+      <%= f.text_field :education %>
+    </div>
+
+      <br>
+
+    <div class="field">
+      <%= f.label :job %>
+      <%= f.text_field :job %>
+    </div>
+
+      <br>
+
+    <div class="field">
+      <%= f.label :knowledge %>
+      <%= f.text_field :knowledge %>
+    </div>
+
+<% end %>
