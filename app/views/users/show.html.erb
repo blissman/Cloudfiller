@@ -34,3 +34,13 @@
     <% end %>
   </p>
 </div>
+
+<div id="user_experiences">
+  <p>
+    <% if @user.rating == nil %>
+      <%= "Participate in the community for a rating!" %>
+    <% else %>
+      <%= @user.rating %>
+    <% end %>
+  </p>
+</div>
