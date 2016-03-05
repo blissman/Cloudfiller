@@ -1,7 +1,12 @@
 class RequestsController < ApplicationController
 
   def index
-    @requests = Request.all
+    @active_requests = Request.where("active = ?", true).order(:number)
+    @inactive_requests = Request.where("active = ?", false).order(:created_at)
+    @new_request = Request.new
+    # @requests = @active_requests + @inactive_requests
+    # @requests = Request.all
+    # for active it will always be the most recent date
   end
 
   def show

@@ -1,1 +1,23 @@
 <h1> Requests Index </h1>
+
+<!-- if there is no active Request render button for new Request -->
+
+  <button id="new_request"> <%= link_to "New Request", new_user_request_path %> </button>
+
+  <!-- else render active request -->
+
+  <div class="active_request">
+
+    <button id="done_request_btn"> <%= link_to "Done"%> </button>
+                                              <!-- (render "_rating.html") -->
+
+  </div>
+
+
+<h2> Old Requests </h2>
+
+  <div class="old_requests_container">
+    <% @requests.each do |request| %>
+    <%= "inactive" if !request.active %>
+    <%end%>
+  </div>
