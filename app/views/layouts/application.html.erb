@@ -14,6 +14,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   </head>
   <body>
+
     <header>
           <div class="navbar">
                 <!-- <a class="logo" href="/"><%= image_tag '.png' %></a> -->
@@ -33,6 +34,9 @@
                 <!-- <#%= link_to "Edit Profile", edit_user_path(current_user.id) %> -->
                 <%= link_to "Logout", :logout, method: :post %>
               <% else %>
+                <ul class="nav_links">
+                  <li><%=link_to "About", "/categories/about"%></li>
+                </ul>
                 <%= link_to "Register", new_user_path %> |
                 <%= link_to "Login", :login %>
               <% end %>
@@ -52,6 +56,12 @@
       <%= yield %>
 
     </div>
+
+    <footer>
+
+      <div id="copyright"> © Cloudfiller 2016 </div>
+
+    </footer>
 
   </body>
 </html>
