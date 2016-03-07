@@ -16,6 +16,11 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
+    if Experience.exists?(params[:id])
+      @experience = Experience.find(params[:id])
+    else
+      @experience = Experience.new
+    end
   end
 
   # POST /users
@@ -23,7 +28,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     @user.points = 5
-    
+
     respond_to do |format|
       if @user.save
         format.html { redirect_to root_path, notice: 'User was successfully created.' }
