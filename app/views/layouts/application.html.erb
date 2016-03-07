@@ -17,37 +17,36 @@
 
     <header>
           <div class="navbar">
-                <a id="logo" href="/"><%= image_tag 'horn_logo.png' %></a>
-            <ul class="nav_links">
-              <% if current_user %>
-                <li><%=link_to "Account", user_path(current_user) %></li>
 
-                <li><%=link_to "Responses", user_responses_path(current_user) %></li>
+            <a id="logo" href="/"><%= image_tag 'horn_logo.png' %></a>
 
-                <li><%=link_to "Request", user_requests_path(current_user) %></li>
-              <% end %>
-            </ul>
+              <div class="nav_links">
 
+                <ul>
+                  <% if current_user %>
+                    <li><%=link_to "Account", user_path(current_user) %></li>
+                    <li><%=link_to "Responses", user_responses_path(current_user) %></li>
+                    <li><%=link_to "Request", user_requests_path(current_user) %></li>
+                  <% else %>
+                    <li><%=link_to "About", "/pages/about" %></li>
+                  <% end %>
 
-              <div class="log_btns">
-                <% if current_user %>
-                <!-- <#%= link_to "Edit Profile", edit_user_path(current_user.id) %> -->
-                <%= link_to "Logout", :logout, method: :post %>
-              <% else %>
-                <ul class="nav_links">
-                  <li><%=link_to "About", "/pages/about" %></li>
+                      <div class="log_btns">
+                        <% if current_user %>
+                        <!-- <#%= link_to "Edit Profile", edit_user_path(current_user.id) %> -->
+                          <%= link_to "Logout", :logout, method: :post %>
+                        <% else %>
+                          <%= link_to "Register", new_user_path %> |
+                          <%= link_to "Login", :login %>
+                        <% end %>
+                      </div>
                 </ul>
-                <%= link_to "Register", new_user_path %> |
-                <%= link_to "Login", :login %>
-              <% end %>
-            </div>
+              </div>
 
               <!-- <div>
                 <p id="notice"><%#= flash[:notice] %></p>
                 <p id="alert"><%#= flash[:alert] %></p>
               </div> -->
-
-            </div>
           </div>
     </header>
 
