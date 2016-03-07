@@ -17,7 +17,9 @@
 <h2> Old Requests </h2>
 
   <div class="old_requests_container">
-    <% @requests.each do |request| %>
-    <%= "inactive" if !request.active %>
-    <%end%>
+    <% if @requests != nil %>
+      <% @requests.each do |request| %>
+      <%= "inactive" if !request.active %>
+    <% end %>
+    <% end %>
   </div>
