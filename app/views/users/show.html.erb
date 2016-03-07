@@ -1,5 +1,5 @@
 
-  <h1> <%= @user.name %> Account</h1>
+  <h1> My Account</h1>
 
 <p id="notice"><%= notice %></p>
 
@@ -16,8 +16,8 @@
   <%= @user.email %>
 </p>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', root_path %>
+<%= link_to 'Edit', edit_user_path(@user) %> 
+<%#= link_to 'Back', root_path %>
 
 <div id="account_points">
   <p>
