@@ -1,1 +1,11 @@
-<h1>Category Show</h1>
+<h1><%= category.name %></h1>
+
+<!-- this is broken and i think we need to call @requests.category instead -->
+<div class ="category_requests_page">
+  <% @categories.each do |category| %>
+    <article class="category">
+    <%= link_to categories_show_path(category) do %>
+      <h2><%= category.name %></h2>
+    <% end %>
+    </article>
+  <% end %>

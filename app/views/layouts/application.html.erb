@@ -3,7 +3,7 @@
 <html>
   <head>
 
-    <title>Cloudfiller</title>
+    <title>Enkidu</title>
 
     <meta name="viewport" content="initial-scale=1.0, width=divice-width">
 
@@ -24,6 +24,7 @@
 
                 <ul>
                   <% if current_user %>
+                    <li><%=link_to "Categories", root_path(current_user) %></li>
                     <li><%=link_to "Account", user_path(current_user) %></li>
                     <li><%=link_to "Responses", user_responses_path(current_user) %></li>
                     <li><%=link_to "Request", user_requests_path(current_user) %></li>
@@ -54,7 +55,7 @@
 
     <footer>
 
-      <div id="copyright"> © Cloudfiller 2016 </div>
+      <div id="copyright"> © Enkidu 2016 </div>
 
     </footer>
 
