@@ -35,26 +35,31 @@
   </p>
 </div>
 
-<!-- <div class="user_experiences">
+<div class="user_experiences">
 
     <p>
       <strong>Education:</strong>
-
-      <%#= @user.experience.education %>
+      <% if @user.experience != nil %>
+        <%= @user.experience.education %>
+      <% end %>
     </p>
 
       <br>
 
     <p>
       <strong>Job Experience:</strong>
-      <%#= @user.experience.job %>
+      <% if @user.experience != nil %>
+        <%= @user.experience.job %>
+      <% end %>
     </p>
 
       <br>
 
     <p>
       <strong>Knowledge:</strong>
-      <%#= @user.experience.knowledge %>
+      <% if @user.experience != nil %>
+        <%= @user.experience.knowledge %>
+      <% end %>
     </p>
 
-</div> -->
+</div>
