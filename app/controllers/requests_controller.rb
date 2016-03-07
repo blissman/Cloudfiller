@@ -18,9 +18,10 @@ class RequestsController < ApplicationController
   end
 
   def create
+    @user = current_user
     @request = Request.new(request_params)
     if @request.save
-      redirect_to category_request_path
+      redirect_to user_request_path
     else
       render :new
     end
