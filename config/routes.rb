@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root "categories#index"
 
+  resources :pages, only: [:show]
+
   resources :user_sessions
 
   resources :users, except: :index do
