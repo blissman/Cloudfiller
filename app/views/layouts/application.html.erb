@@ -17,7 +17,7 @@
 
     <header>
           <div class="navbar">
-                <!-- <a class="logo" href="/"><%= image_tag '.png' %></a> -->
+                <a id="logo" href="/"><%= image_tag 'horn_logo.png' %></a>
             <ul class="nav_links">
               <% if current_user %>
                 <li><%=link_to "Account", user_path(current_user) %></li>
