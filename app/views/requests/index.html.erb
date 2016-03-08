@@ -18,7 +18,7 @@
     <!-- show request with most current created at -->
 
 
-    <button id="done_request_btn"> <%= link_to "Done", user_request_path(current_user, @active_request), method: :patch, data: {active: false} %> </button>
+    <button id="done_request_btn"> <%= link_to "Done", request_path(current_user, @active_request), method: :patch, data: {active: false} %> </button>
                                               <!-- (render "_rating.html") -->
 
   </div>

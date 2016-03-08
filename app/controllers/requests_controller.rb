@@ -16,9 +16,11 @@ class RequestsController < ApplicationController
 
   def new
     @request = Request.new
+    @categories = Category.all
   end
 
   def create
+    @categories = Category.all
     @user = current_user
     @request = Request.new(request_params)
     @active_request = Request.update("active = ?", true)
@@ -30,7 +32,7 @@ class RequestsController < ApplicationController
   end
 
   def edit
-    # not in use
+    @categories = Category.all
   end
 
   def update
