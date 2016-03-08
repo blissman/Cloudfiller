@@ -23,9 +23,9 @@ class RequestsController < ApplicationController
     @categories = Category.all
     @user = current_user
     @request = Request.new(request_params)
-    @active_request = Request.update("active = ?", true)
+    # @active_request = Request.update("active = ?", true)
     if @request.save
-      redirect_to user_requests_path
+      redirect_to requests_path
     else
       render :new
     end
@@ -51,7 +51,7 @@ class RequestsController < ApplicationController
 private
 
 def request_params
-  params.require(:request).permit(:description, :expire, :points, :active)
+  params.require(:request).permit(:description, :expire, :points, :active, :category_id)
 end
 
 end
