@@ -1,16 +1,16 @@
-<h1><%= category.name %> Requests </h1>
+<h1><%= @category.name %> Requests </h1>
 
 
   <div class="category_requests">
     <ul id="requests_list">
-        <% @category.requests.each do |request| %>
+        <% @category.requests.where(active: true).each do |request| %>
       <li>
         <div class="active_category_request">
 
           <p>
-            Description: <%= @active_request.description %>
+            Description: <%= request.description %>
             <br>
-            Points: <%= @active_request.points %> Expiry: <%= @active_request.expire %>
+            Points: <%= request.points %> Expiry: <%= request.expire %>
           </p>
 
           <button id="respond_to_request"> <%= link_to "Respond", category_path %> </button>

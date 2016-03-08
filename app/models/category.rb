@@ -1,4 +1,4 @@
 class Category < ActiveRecord::Base
-  belongs_to :request
-  
+  has_many :requests
+
 end

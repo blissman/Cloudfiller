@@ -11,11 +11,13 @@ skip_before_action :require_login, only: [:index]
   end
 
   def new
-    # not in use
+    @category = Category.new
   end
 
   def create
-    # not in use
+    @category = Category.new
+    @category.save
+    redirect_to root_path
   end
 
   def edit

@@ -37,3 +37,14 @@ Category.create(name: 'Environment')
 Category.create(name: 'Gender Studies')
 Category.create(name: 'Religion')
 Category.create(name: 'Philosophy')
+
+100.times do |i|
+  Request.create(
+    description: "Description number #{i}",
+    expire: Time.now,
+    points: (1..10).to_a.sample,
+    category: Category.all.sample,
+    active: [true, false].sample,
+    user: User.all.sample
+  )
+end
