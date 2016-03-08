@@ -1,7 +1,8 @@
 class RequestsController < ApplicationController
 
+
   def index
-    @active_requests = Request.where("active = ?", true).order(:number)
+    @active_request = Request.find_by("active = ?", true)
     @inactive_requests = Request.where("active = ?", false).order(:created_at)
     @new_request = Request.new
     # @requests = @active_requests + @inactive_requests
@@ -32,7 +33,9 @@ class RequestsController < ApplicationController
   end
 
   def update
-    # not in use
+    @active_request = Request.find(params[:id])
+    @active_request.update_attributes(request_params)
+    redirect_to user_requests_path
   end
 
   def destroy
@@ -45,7 +48,7 @@ class RequestsController < ApplicationController
 private
 
 def request_params
-  params.require(:request).permit(:description, :expire, :points)
+  params.require(:request).permit(:description, :expire, :points, :active)
 end
 
 end

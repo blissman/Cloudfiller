@@ -7,12 +7,18 @@
   <!-- else render active request -->
 
   <div class="active_request">
-    <%#= render @request %>
+    <%#=  @active_request.inspect %>
+    <p>
+      Description: <%= @active_request.description %>
+      <br>
+      Points: <%= @active_request.points %> Expiry: <%= @active_request.expire %>
+    </p>
 
-    show request with most current created at
+
+    <!-- show request with most current created at -->
 
 
-    <button id="done_request_btn"> <%= link_to "Done"%> </button>
+    <button id="done_request_btn"> <%= link_to "Done", user_request_path(current_user, @active_request), method: :patch, data: {active: false} %> </button>
                                               <!-- (render "_rating.html") -->
 
   </div>
@@ -21,9 +27,14 @@
 <h2> Old Requests </h2>
 
   <div class="old_requests_container">
-    <% if @requests != nil %>
-      <% @requests.each do |request| %>
-      <%= "inactive" if !request.active %>
-    <% end %>
+    <% if @inactive_requests.present? %>
+      <% @inactive_requests.each do |request| %>
+        <%#= request.inspect %>
+        <p>
+          Description: <%= @inactive_request.description %>
+          <br>
+          Points: <%= @inactive_request.points %> Expiry: <%= @inactive_request.expire %>
+        </p>
+        <% end %>
     <% end %>
   </div>
