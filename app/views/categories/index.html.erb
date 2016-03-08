@@ -4,7 +4,7 @@
     <ul id="category_list">
         <% @categories.each do |category| %>
       <li>
-        <%=  category.name %>
+        <a href="category_path"> <%=  category.name %> </a>
       </li>
         <% end %>
     </ul>
