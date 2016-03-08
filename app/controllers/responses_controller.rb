@@ -1,7 +1,7 @@
 class ResponsesController < ApplicationController
 
   def index
-    @responses = Response.all
+    @responses = Response.all.where(user: current_user)
   end
 
   def show
@@ -14,8 +14,17 @@ class ResponsesController < ApplicationController
 
   def create
     @response = Response.new
+    @response.user = current_user
+    @request = Request.find(params[:request_id])
+    @response.request = @request
+
     @response.save
-    redirect_to category_request_path
+
+    respond_to do |format|
+        format.js {}
+        format.html {}
+    end
+
   end
 
   def edit

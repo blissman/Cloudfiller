@@ -13,7 +13,12 @@
             Points: <%= request.points %> Expiry: <%= request.expire %>
           </p>
 
-          <button id="respond_to_request"> <%= link_to "Respond", category_path %> </button>
+          <button id="respond_to_request_<%= request.id %>">
+            <%= link_to "Respond",
+                        "/requests/#{request.id}/responses",
+                        method: :post,
+                        remote: true %>
+          </button>
 
         </div>
 
