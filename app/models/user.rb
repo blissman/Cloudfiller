@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
   authenticates_with_sorcery!
   has_many :requests
   has_one :experience
+  accepts_nested_attributes_for :experience
   has_many :responses
 
   validates :password, length: { minimum: 3 }, if: -> { new_record? || changes["password"] }

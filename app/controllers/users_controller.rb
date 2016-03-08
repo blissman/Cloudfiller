@@ -16,10 +16,11 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
-    if Experience.exists?(params[:id])
-      @experience = Experience.find(params[:id])
+    user = User.find(params[:id])
+    if user.experience.present?
+      @experience = user.experience
     else
-      @experience = Experience.new
+      @experience = user.build_experience
     end
   end
 
@@ -73,6 +74,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:name, :lastname, :email, :password, :password_confirmation)
+      params.require(:user).permit(:name, :lastname, :email, :password, :password_confirmation, experience_attributes:[:job, :education, :knowledge])
     end
 end
