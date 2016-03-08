@@ -1,11 +1,23 @@
-<h1><%= category.name %></h1>
+<h1><%= category.name %> Requests </h1>
 
-<!-- this is broken and i think we need to call @requests.category instead -->
-<div class ="category_requests_page">
-  <% @categories.each do |category| %>
-    <article class="category">
-    <%= link_to categories_show_path(category) do %>
-      <h2><%= category.name %></h2>
-    <% end %>
-    </article>
-  <% end %>
+
+  <div class="category_requests">
+    <ul id="requests_list">
+        <% @category.requests.each do |request| %>
+      <li>
+        <div class="active_category_request">
+
+          <p>
+            Description: <%= @active_request.description %>
+            <br>
+            Points: <%= @active_request.points %> Expiry: <%= @active_request.expire %>
+          </p>
+
+          <button id="respond_to_request"> <%= link_to "Respond", user_responses_path %> </button>
+
+        </div>
+
+      </li>
+        <% end %>
+    </ul>
+  </div>
