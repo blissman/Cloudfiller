@@ -1,5 +1,5 @@
 class RequestsController < ApplicationController
-
+  skip_before_action :verify_authenticity_token, only: :update
 
   def index
     @active_request = Request.find_by("active = ?", true)
@@ -36,9 +36,10 @@ class RequestsController < ApplicationController
   end
 
   def update
+    # byebug
     @active_request = Request.find(params[:id])
     @active_request.update_attributes(request_params)
-    redirect_to user_requests_path
+    render js: "" # TODO: actually render something meaningful
   end
 
   def destroy

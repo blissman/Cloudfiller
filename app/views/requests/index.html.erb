@@ -18,8 +18,8 @@
     <!-- show request with most current created at -->
 
 
-    <button id="done_request_btn"> <%= link_to "Done", request_path(current_user, @active_request), method: :patch, data: {active: false} %> </button>
-                                              <!-- (render "_rating.html") -->
+    <button id="done_request_btn"> <%= link_to "Done", request_path(@active_request)%> </button>
+
 
   </div>
 
@@ -31,9 +31,9 @@
       <% @inactive_requests.each do |request| %>
         <%#= request.inspect %>
         <p>
-          Description: <%= @inactive_request.description %>
+          Description: <%= request.description %>
           <br>
-          Points: <%= @inactive_request.points %> Expiry: <%= @inactive_request.expire %>
+          Points: <%= request.points %> Expiry: <%= request.expire %>
         </p>
         <% end %>
     <% end %>
