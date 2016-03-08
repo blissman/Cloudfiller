@@ -1,65 +1,66 @@
 
-  <h1> My Account</h1>
+<h1> My Account</h1>
 
-<p id="notice"><%= notice %></p>
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
-<p>
-  <strong>Last name:</strong>
-  <%= @user.lastname %>
-</p>
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
+      <p>
+        <strong>Name:</strong>
+        <%= @user.name %>
+      </p>
+      <p>
+        <strong>Last name:</strong>
+        <%= @user.lastname %>
+      </p>
+      <p>
+        <strong>Email:</strong>
+        <%= @user.email %>
+      </p>
 
-<%= link_to 'Edit', edit_user_path(@user) %> 
 <%#= link_to 'Back', root_path %>
 
-<div id="account_points">
-  <p>
-    <%= @user.points %>
-  </p>
-</div>
+    <div class="user_experiences">
 
-<div id="account_rating">
-  <p>
-    <% if @user.rating == nil %>
-      <%= "Participate in the community for a rating!" %>
-    <% else %>
-      <%= @user.rating %>
-    <% end %>
-  </p>
-</div>
+      <p>
+        <strong>Education:</strong>
+        <% if @user.experience != nil %>
+          <%= @user.experience.education %>
+        <% end %>
+      </p>
 
-<div class="user_experiences">
+        <br>
 
-    <p>
-      <strong>Education:</strong>
-      <% if @user.experience != nil %>
-        <%= @user.experience.education %>
-      <% end %>
-    </p>
+      <p>
+        <strong>Job Experience:</strong>
+        <% if @user.experience != nil %>
+          <%= @user.experience.job %>
+        <% end %>
+      </p>
 
-      <br>
+        <br>
 
-    <p>
-      <strong>Job Experience:</strong>
-      <% if @user.experience != nil %>
-        <%= @user.experience.job %>
-      <% end %>
-    </p>
+      <p>
+        <strong>Knowledge:</strong>
+        <% if @user.experience != nil %>
+          <%= @user.experience.knowledge %>
+        <% end %>
+      </p>
 
-      <br>
+    </div>
 
-    <p>
-      <strong>Knowledge:</strong>
-      <% if @user.experience != nil %>
-        <%= @user.experience.knowledge %>
-      <% end %>
-    </p>
+    <%= link_to 'Edit', edit_user_path(@user) %>
 
-</div>
+    <div id="account_points">
+      <p>Current points:
+        <%= @user.points %>
+      </p>
+    </div>
+
+    <div id="account_rating">
+      <p> Current rating:
+        <% if @user.rating == nil %>
+          <%= "Participate in the community for a rating!" %>
+        <% else %>
+          <%= @user.rating %>
+        <% end %>
+      </p>
+    </div>
