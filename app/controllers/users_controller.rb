@@ -16,11 +16,9 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
-    user = User.find(params[:id])
-    if user.experience.present?
-      @experience = user.experience
-    else
-      @experience = user.build_experience
+    @user = User.find(params[:id])
+    unless @user.experience.present?
+      @user.build_experience
     end
   end
 

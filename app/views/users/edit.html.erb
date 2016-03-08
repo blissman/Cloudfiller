@@ -25,7 +25,7 @@
     <%= f.text_field :email %>
   </div>
 
-  <%= f.fields_for @experience do |exp_form| %>
+  <%= f.fields_for :experience do |exp_form| %>
 
       <div class="field">
         <%= exp_form.label :education %>
