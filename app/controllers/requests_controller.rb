@@ -21,8 +21,8 @@ class RequestsController < ApplicationController
 
   def create
     @categories = Category.all
-    @user = current_user
     @request = Request.new(request_params)
+    @request.user = current_user
     # @active_request = Request.update("active = ?", true)
     if @request.save
       redirect_to requests_path
