@@ -16,11 +16,11 @@ class RequestsController < ApplicationController
 
   def new
     @request = Request.new
-    @categories = Category.all
+    @categories = Category.order("name")
   end
 
   def create
-    @categories = Category.all
+    @categories = Category.order("name")
     @request = Request.new(request_params)
     @request.user = current_user
     # @active_request = Request.update("active = ?", true)
@@ -32,7 +32,7 @@ class RequestsController < ApplicationController
   end
 
   def edit
-    @categories = Category.all
+    @categories = Category.order("name")
   end
 
   def update
