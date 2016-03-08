@@ -4,7 +4,8 @@
     <ul id="category_list">
         <% @categories.each do |category| %>
       <li>
-         <%= link_to category.name, category_path %>
+         <%= link_to category.name, "/" %>
+         <!-- category_path is not working currently it requires :id -->
       </li>
         <% end %>
     </ul>
