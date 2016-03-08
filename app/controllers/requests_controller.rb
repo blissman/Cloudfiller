@@ -2,7 +2,7 @@ class RequestsController < ApplicationController
 
 
   def index
-    @active_requests = Request.where("active = ?", true).order(:created_at)
+    @active_request = Request.find_by("active = ?", true)
     @inactive_requests = Request.where("active = ?", false).order(:created_at)
     @new_request = Request.new
     # @requests = @active_requests + @inactive_requests

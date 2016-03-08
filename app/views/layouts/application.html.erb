@@ -24,10 +24,10 @@
 
                 <ul>
                   <% if current_user %>
-                    <li><%=link_to "Categories", root_path(current_user) %></li>
-                    <li><%=link_to "Account", user_path(current_user) %></li>
-                    <li><%=link_to "Responses", user_responses_path(current_user) %></li>
-                    <li><%=link_to "Request", user_requests_path(current_user) %></li>
+                    <li><%=link_to "Categories", root_path %></li>
+                    <li><%=link_to "Account", current_user %></li>
+                    <li><%=link_to "Responses", responses_path %></li>
+                    <li><%=link_to "Request", requests_path %></li>
                   <% else %>
                     <li><%=link_to "About", "/pages/about" %></li>
                   <% end %>

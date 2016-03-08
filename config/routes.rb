@@ -5,16 +5,19 @@ Rails.application.routes.draw do
 
   resources :user_sessions
 
-  resources :users, except: :index do
-    resources :experiences
-    resources :requests
-    resources :messages
+  resources :users
+  resources :experiences
+
+  resources :requests do
     resources :responses
+    resources :messages
   end
+
+  resources :responses
 
   resources :categories do
     resources :requests
-   end
+  end
 
 
   get 'login' => 'user_sessions#new', :as => :login
