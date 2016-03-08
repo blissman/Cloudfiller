@@ -7,7 +7,7 @@ skip_before_action :require_login, only: [:index]
   end
 
   def show
-    @categories = Category.find(params[:id])
+    @category = Category.find(params[:id])
   end
 
   def new
