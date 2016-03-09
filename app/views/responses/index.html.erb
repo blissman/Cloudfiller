@@ -3,11 +3,27 @@
   <div class="my-responses">
     <ul id="user_response_list">
 
-      <li> 1 <!-- add ruby to place current responses--> </li>
+    <% @responses.each do |response| %>
+      <li>
+        <p>
+          Category: <%= response.request.category.name %>
+        </p>
+        <p>
+          Description: <%= response.request.description %>
+        </p>
+        <p>
+          Question Expires: <%= response.request.expire %>
+        </p>
+        <p>
+          Active: <%= response.request.active %>
+        </p>
+        <p>
+          Points: <%= response.request.points %>
+        </p>
 
-      <li> 2 <!-- add ruby to place current responses--> </li>
-
-      <li> 3 <!-- add ruby to place current responses--> </li>
+      </li>
+      <br>
+    <% end %>
 
     </ul>
   </div>
