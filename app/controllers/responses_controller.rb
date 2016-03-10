@@ -13,11 +13,10 @@ class ResponsesController < ApplicationController
   end
 
   def create
+    @request = Request.find(params[:request_id])
     @response = Response.new
     @response.user = current_user
-    @request = Request.find(params[:request_id])
     @response.request = @request
-
     @response.save
 
     respond_to do |format|

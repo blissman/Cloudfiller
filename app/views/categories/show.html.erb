@@ -1,41 +1,43 @@
 <h1><%= @category.name %> Requests </h1>
 
-
   <div class="category_requests">
+
     <ul id="requests_list">
-        <% @category.requests.where(active: true).each do |request| %>
-      <li>
-        <div class="active_category_request">
-          <% specific_request = request %>
-          <p>
-            Description: <%= request.description %>
-            <br>
-            Points: <%= request.points %>
-            <br>
-            Request Expires: <%= request.expire %>
-          </p>
-          <% if specific_request.responses.length == 0 %>
-            <%= "Be the first to offer your expertise! Click respond below!"%>
-          <% else %>
-            Responders: <br>
-            <% specific_request.responses.each do |response| %>
-              Name: <%= response.user.name %> <%= response.user.lastname %>
-              <br>
-              Rating: <%= response.user.rating %>
-              <br>
+      <% @category.requests.where(active: true).shuffle.each do |request| %>
+        <li>
+          <div class="active_category_request">
+
+            <p>
+              Description: <%= request.description %>
+                <br>
+              Points: <%= request.points %>
+                <br>
+              Request Expires: <%= request.expire %>
+            </p>
+
+            <% specific_request = request %>
+            <% if specific_request.responses.length == 0 %>
+              <%= "Be the first to offer your expertise! Click respond below!"%>
+            <% else %>
+              Responders: <br>
+              <% specific_request.responses.each do |response| %>
+                Name: <%= response.user.name %> <%= response.user.lastname %>
+                  <br>
+                Rating: <%= response.user.rating %>
+                  <br>
+              <% end %>
             <% end %>
-          <% end %>
-          <br>
-          <button id="respond_to_request_<%= request.id %>">
-            <%= link_to "Respond",
-                        "/requests/#{request.id}/responses",
-                        method: :post,
-                        remote: true %>
-          </button>
 
-        </div>
+            <br>
+            <button id="respond_to_request_<%= request.id %>">
+              <%= link_to "Respond",
+                          "/requests/#{request.id}/responses",
+                          method: :post,
+                          remote: true %>
+            </button>
 
-      </li>
-        <% end %>
+          </div>
+        </li>
+      <% end %>
     </ul>
   </div>
