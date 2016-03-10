@@ -16,7 +16,7 @@
 
  html, body{
    min-height: 1000px;
-   background-color: mintcream;
+  //  background-color: mintcream;
    margin: 0;
  }
 
@@ -58,7 +58,7 @@
 }
 
 footer{
-      position: fixed;
+      position: absolute;
       bottom: 0;
       height: 40px;
       width: 100%;
