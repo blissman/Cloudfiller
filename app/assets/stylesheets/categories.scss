@@ -83,7 +83,7 @@
 }
 
 .category_active_request{
-    position: absolute;
+    position: relative;
     background-color: $light-green;
     height: 300px;
     width: 800px;
@@ -94,12 +94,11 @@
     margin-bottom: 30px;
 
       li{
-        position: relative;
         margin: 25px;
+        list-style: none;
       }
 
       button{
-        position: relative;
         border-radius: 4%;
         background-color: $blue;
         font-size: 1.3rem;
