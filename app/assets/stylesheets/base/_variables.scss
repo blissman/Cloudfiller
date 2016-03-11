@@ -16,14 +16,20 @@ $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
 
 // Colors
-$blue: #1565c0;
 $dark-gray: #333;
 $medium-gray: #999;
 $light-gray: #ddd;
+$blue: #001855;
+$light-blue: #7d8faf;
+$green: #4bffcf;
+$light-green: #aefce4;
+$salmon: #ffa597;
+$black: #000;
+$white: #fff;
 
 // Font Colors
-$base-font-color: $dark-gray;
-$action-color: $blue;
+$base-font-color: $black;
+$action-color: $white;
 
 // Border
 $base-border-color: $light-gray;
