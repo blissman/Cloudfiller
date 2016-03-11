@@ -1,3 +1,38 @@
-// Place all the styles related to the Pages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.about_page{
+
+  h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4rem;
+    color: $salmon;
+    // text-shadow: 1px 1px $dark-gray, -1px -1px $medium-gray;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+    width: 100%;
+    margin-top: 100px;
+  }
+}
+
+.about_page_container{
+      position: absolute;
+      background-color: $green;
+      height: 600px;
+      width: 900px;
+      border-radius: 1%;
+      margin-left: 150px;
+      margin-right: 150px;
+
+      p{
+        font-size: 1.3rem;
+        margin-right: 50px;
+        margin-left: 50px;
+        margin-bottom: 20px;
+      }
+
+      h3{
+        font-size: 1.7rem;
+        margin: 50px;
+
+      }
+
+}
