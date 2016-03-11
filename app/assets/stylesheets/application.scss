@@ -15,7 +15,14 @@
 
 
  html, body{
-   background-color: #7d8faf;
+      background-color: #7d8faf;
+
+  //   body{
+  //       @include outer-container($max-width);
+  //       background: url("grok_background_img.png") no-repeat;
+  //       background-size: contain;
+  //       min-height: 2000px;
+  //  }
  }
 
  .popupform{
