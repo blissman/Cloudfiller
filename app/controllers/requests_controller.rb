@@ -2,8 +2,9 @@ class RequestsController < ApplicationController
   skip_before_action :verify_authenticity_token, only: :update
 
   def index
-    @active_request = Request.find_by("active = ?", true)
-    @inactive_requests = Request.where("active = ?", false).order(:created_at)
+    @user = current_user
+    @active_request = Request.find_by("active = ? AND user_id = ?", true, @user.id)
+    @inactive_requests = Request.where("active = ? AND user_id = ?", false, @user.id).order(created_at: :desc)
     @new_request = Request.new
     # @requests = @active_requests + @inactive_requests
     # @requests = Request.all
