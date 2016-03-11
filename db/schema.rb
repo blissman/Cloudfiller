@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20160302212438) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "categories", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
@@ -66,6 +69,6 @@ ActiveRecord::Schema.define(version: 20160302212438) do
     t.string   "salt"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
 
 end
