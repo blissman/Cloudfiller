@@ -28,7 +28,6 @@
 .user_active_request{
     position: relative;
     background-color: $light-green;
-    text-align: center;
     height: 200px;
     width: 800px;
     border-radius: 2%;
@@ -36,10 +35,11 @@
     margin-right: 50px;
     margin-left: 50px;
     margin-bottom: 30px;
+    padding: 20px;
 
     button{
       padding: 30px;
-      margin: 50px;
+      margin: 10px;
       border-radius: 4%;
       background-color: $blue;
       font-size: 1.3rem;

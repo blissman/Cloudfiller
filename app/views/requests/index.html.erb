@@ -9,9 +9,9 @@
           <% if @user.requests.where("active = ?", true).exists? %>
 
             <p>
-              Description: <%= @active_request.description %>
+              <strong>Description:</strong> <%= @active_request.description %>
               <br>
-              Points: <%= @active_request.points %> Expiry: <%= @active_request.expire %>
+              <strong>Points:</strong> <%= @active_request.points %> Expiry: <%= @active_request.expire %>
             </p>
 
             <button id="done_request_btn"> <%= link_to "Done", request_path(@active_request)%> </button>

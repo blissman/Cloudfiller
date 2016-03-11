@@ -12,6 +12,14 @@
       width: 100%;
       margin-top: 100px;
     }
+    button{
+      padding: 30px;
+      margin: 10px;
+      border-radius: 4%;
+      background-color: $blue;
+      font-size: 1.3rem;
+      font-weight: 600;      
+    }
 }
 
 .account_page_container{

@@ -8,15 +8,15 @@
             <div class="category_active_request">
               <li>
                 <p>
-                  Description: <%= request.description %>
+                  <strong>Description:</strong> <%= request.description %>
                     <br>
-                  Points: <%= request.points %>
+                  <strong>Points:</strong> <%= request.points %>
                     <br>
-                  Request Expires: <%= request.expire %>
+                  <strong>Request Expires:</strong> <%= request.expire %>
                 </p>
 
                 <% specific_request = request %>
-                    Responders: <br>
+                    <strong>Responders:</strong> <br>
                     <% specific_request.responses.each do |response| %>
                       Name: <%= response.user.name %> <%= response.user.lastname %>
                         <br>
