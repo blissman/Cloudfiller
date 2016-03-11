@@ -1,41 +1,44 @@
-<h1> New Request </h1>
+<div class="new_request_page">
 
-  <div class="new_request_form">
+  <h1> New Request </h1>
 
-    <%= form_for @request, url: {action: "create"} do |form| %>
+    <div class="new_request_form">
 
-      <div class="form_field">
-        <%= form.label :Category %>
-        <%= form.collection_select :category_id, @categories, :id, :name, include_blank: true %>
-      </div>
+      <%= form_for @request, url: {action: "create"} do |form| %>
 
-        <br>
+        <div class="form_field">
+          <%= form.label :Category %>
+          <%= form.collection_select :category_id, @categories, :id, :name, include_blank: true %>
+        </div>
 
-      <div class="form_field">
-        <%= form.label :description %>
-        <%= form.text_area :description %>
-      </div>
+          <br>
 
-        <br>
+        <div class="form_field">
+          <%= form.label :description %>
+          <%= form.text_area :description %>
+        </div>
 
-      <div class="form_field">
-        <%= form.label :expire %>
-        <%= form.date_field :expire %>
-      </div>
+          <br>
 
-        <br>
+        <div class="form_field">
+          <%= form.label :expire %>
+          <%= form.date_field :expire %>
+        </div>
 
-      <div class="form_field">
-        <%= form.label :points %>
-        <%= form.number_field :points %>
-      </div>
+          <br>
 
-        <br>
+        <div class="form_field">
+          <%= form.label :points %>
+          <%= form.number_field :points %>
+        </div>
 
-      <div class="submit">
-        <%= form.submit %>
-      </div>
+          <br>
 
-    <% end %>
+        <div class="submit">
+          <%= form.submit %>
+        </div>
 
+      <% end %>
+
+    </div>
   </div>

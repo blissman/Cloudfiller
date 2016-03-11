@@ -76,13 +76,14 @@
 }
 
 .category_requests_container{
-      position: absolute;
+      position: relative;;
       background-color: $green;
-      height: 1000px;
+      height: 1050px;
       width: 900px;
       border-radius: 1%;
       margin-left: 150px;
       margin-right: 150px;
+      padding: 30px;
 }
 
 .category_active_request{
@@ -91,10 +92,10 @@
     height: 300px;
     width: 800px;
     border-radius: 2%;
-    margin-top: 50px;
-    margin-right: 50px;
-    margin-left: 50px;
-    margin-bottom: 30px;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 10px;
 
       li{
         margin: 25px;
