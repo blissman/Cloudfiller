@@ -7,7 +7,7 @@
 }
 
 #category_list {
-  @include shift(1);
+  @include shift(1.67);
 
   & > li {
     @include media($small-screen-only) {
@@ -28,13 +28,18 @@
       }
 
   & > a {
-      display: block;
       text-align: center;
+      font-size: 1.2rem;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      color: $blue;
+      display: block;
       height: 8rem;
-      width: 8rem;
-      padding-top: 3.5rem;
-      background-color: peachpuff;
-      margin-bottom: 3rem;
+      width: 10.2rem;
+      padding-top: 2.7rem;
+      background-color: $green;
+      margin-bottom: 1.6rem;
+      border-radius: 4%;
     }
   }
 }
