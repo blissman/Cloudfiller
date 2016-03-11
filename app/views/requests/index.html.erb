@@ -32,9 +32,9 @@
               <% @inactive_requests.each do |request| %>
                 <%#= request.inspect %>
                 <p>
-                  Description: <%= request.description %>
+                  <strong>Description:</strong> <%= request.description %>
                   <br>
-                  Points: <%= request.points %> Expiry: <%= request.expire %>
+                  <strong>Points:</strong> <%= request.points %> Expiry: <%= request.expire %>
                 </p>
                 <% end %>
             <% end %>

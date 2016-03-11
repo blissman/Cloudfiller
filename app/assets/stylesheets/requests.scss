@@ -58,15 +58,14 @@
       margin-right: 50px;
       margin-left: 50px;
       margin-bottom: 50px;
-      overflow: inherit;;
+      overflow: hidden;
+
       h2{
-        position: relative;
         text-align: center;
-        color: $blue;
-        margin: 20px;
+        padding: 20px;
+        font-size: 2rem;
       }
       p{
         padding: 20px;
-
       }
   }

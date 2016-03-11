@@ -14,12 +14,26 @@
 }
 
 .responses_page_container{
-    background-color: $light-blue;
+  position: absolute;
+    background-color: $green;
     height: 1000px;
     width: 900px;
     border-radius: 1%;
     margin-left: 150px;
     margin-right: 150px;
     margin-bottom: 150px;
-    overflow: inherit;
+    overflow: hidden;
+}
+
+.user_active_responses{
+    position: relative;
+    background-color: $light-green;
+    height: 250px;
+    width: 800px;
+    border-radius: 2%;
+    margin-top: 30px;
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-bottom: 30px;
+    padding: 25px;
 }

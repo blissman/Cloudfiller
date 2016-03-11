@@ -5,7 +5,7 @@
     <div class="account_page_container">
 
       <!-- <p id="notice"><%= notice %></p> -->
-
+      <div class="user_info">
           <p>
             <strong>Name:</strong>
             <%= @user.name %>
@@ -52,22 +52,30 @@
 
         <%= link_to 'Edit', edit_user_path(@user) %>
 
-        <div class="account_points">
-          <p>
-            <strong>Current points:</strong>
-            <%= @user.points %>
-          </p>
         </div>
 
-        <div id="account_rating">
-          <p>
-            <strong>Current rating:</strong>
-            <% if @user.rating == nil %>
-              <%= "Participate in the community for a rating!" %>
-            <% else %>
-              <%= @user.rating %>
-            <% end %>
-          </p>
-        </div>
+          <div class="user_account_points">
+            <p>
+              <strong>Current points:</strong>
+              <%= @user.points %>
+            </p>
+          </div>
+
+          <div class="user_account_rating">
+            <p>
+              <strong>Current rating:</strong>
+              <% if @user.rating == nil %>
+                <%= "Participate in the community for a rating!" %>
+              <% else %>
+                <%= @user.rating %>
+              <% end %>
+            </p>
+          </div>
+
+          <div class="user_account_notifications">
+            <p>
+              <strong>Notifications:</strong> No pending updates.
+            </p>
+          </div>
     </div>
   </div>

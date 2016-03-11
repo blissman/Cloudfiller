@@ -2,34 +2,73 @@
 .user_account_page{
   @include outer-container($max-width);
 
-  h1{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 4rem;
-    color: $salmon;
-    text-align: center;
-    padding-top: 1rem;
-    padding-bottom: 1.5rem;
-    width: 100%;
-    margin-top: 100px;
-  }
+    h1{
+      font-family: 'Montserrat', sans-serif;
+      font-size: 4rem;
+      color: $salmon;
+      text-align: center;
+      padding-top: 1rem;
+      padding-bottom: 1.5rem;
+      width: 100%;
+      margin-top: 100px;
+    }
 }
 
 .account_page_container{
-    background-color: $light-blue;
-    height: 1000px;
-    width: 900px;
-    border-radius: 1%;
-    margin-left: 150px;
-    margin-right: 150px;
-    margin-bottom: 150px;
-    overflow: inherit;
+      position: absolute;
+      background-color: $green;
+      height: 1000px;
+      width: 900px;
+      border-radius: 1%;
+      margin-left: 150px;
+      margin-right: 150px;
+      margin-bottom: 150px;
+      overflow: inherit;
 }
 
-.account_points{
-  position: relative;
-    background-color: $light-green;
-    height: 100px;
-    width: 150px;
-    border-radius: 2%;
-    float: right;
+.user_account_points{
+      position:relative;
+      background-color: $light-green;
+      height: 100px;
+      width: 150px;
+      border-radius: 4%;
+      float: right;
+      margin: 50px;
+      padding: 20px;
+}
+
+
+.user_info{
+      position: relative;
+      background-color: $light-green;
+      min-height: 400px;
+      width: 500px;
+      border-radius: 2%;
+      margin: 50px;
+      clear: right;
+      padding: 20px;
+}
+
+.user_account_rating{
+      position:relative;
+      background-color: $light-green;
+      height: 100px;
+      width: 400px;
+      border-radius: 4%;
+      float: right;
+      margin: 50px;
+      padding: 20px;
+
+}
+
+.user_account_notifications{
+      position:relative;
+      background-color: $light-green;
+      height: 200px;
+      width: 400px;
+      border-radius: 4%;
+      float: right;
+      margin: 50px;
+      padding: 20px;
+
 }
