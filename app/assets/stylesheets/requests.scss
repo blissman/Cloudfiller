@@ -69,3 +69,27 @@
         padding: 20px;
       }
   }
+
+.new_request_page{
+  h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4rem;
+    color: $salmon;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+    width: 100%;
+    margin-top: 100px;
+  }
+}
+
+.new_request_form{
+      background-color: $green;
+      width: 600px;
+      height: 550px;
+      border-radius: 2%;
+      padding: 20px;
+      margin-right: 300px;
+      margin-left: 300px;
+      margin-top: 50px;
+}
