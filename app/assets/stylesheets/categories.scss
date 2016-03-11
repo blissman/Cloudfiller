@@ -56,3 +56,54 @@
     }
   }
 }
+
+.category_requests_show_page{
+      @include outer-container($max-width);
+
+        h1{
+          font-family: 'Montserrat', sans-serif;
+          font-size: 4rem;
+          color: $salmon;
+          text-align: center;
+          padding-top: 1rem;
+          padding-bottom: 1.5rem;
+          width: 100%;
+          margin-top: 100px;
+        }
+}
+
+.category_requests_container{
+      position: absolute;
+      background-color: $green;
+      height: 1000px;
+      width: 900px;
+      border-radius: 1%;
+      margin-left: 150px;
+      margin-right: 150px;
+}
+
+.category_active_request{
+    position: absolute;
+    background-color: $light-green;
+    height: 300px;
+    width: 800px;
+    border-radius: 2%;
+    margin-top: 50px;
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-bottom: 30px;
+
+      li{
+        position: relative;
+        margin: 25px;
+      }
+
+      button{
+        position: relative;
+        border-radius: 4%;
+        background-color: $blue;
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin: 10px
+      }
+}
