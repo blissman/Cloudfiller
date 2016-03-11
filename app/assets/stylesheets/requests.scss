@@ -5,6 +5,7 @@
     font-family: 'Montserrat', sans-serif;
     font-size: 4rem;
     color: $salmon;
+    // text-shadow: 1px 1px $dark-gray, -1px -1px $medium-gray;
     text-align: center;
     padding-top: 1rem;
     padding-bottom: 1.5rem;
@@ -14,12 +15,58 @@
 }
 
 .requests_page_container{
-    background-color: $light-blue;
+    position: absolute;
+    background-color: $green;
     height: 1000px;
     width: 900px;
     border-radius: 1%;
     margin-left: 150px;
     margin-right: 150px;
-    margin-bottom: 150px;
-    overflow: inherit;
+
+  }
+
+.user_active_request{
+    position: relative;
+    background-color: $light-green;
+    text-align: center;
+    height: 200px;
+    width: 800px;
+    border-radius: 2%;
+    margin-top: 50px;
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-bottom: 30px;
+
+    button{
+      padding: 30px;
+      margin: 50px;
+      border-radius: 4%;
+      background-color: $blue;
+      font-size: 1.3rem;
+      font-weight: 600;
+
+    }
 }
+
+
+.old_requests{
+      position: relative;
+      background-color: $light-green;
+      height: 400px;
+      width: 800px;
+      border-radius: 2%;
+      margin-right: 50px;
+      margin-left: 50px;
+      margin-bottom: 50px;
+      overflow: visible;
+      h2{
+        position: relative;
+        text-align: center;
+        color: $blue;
+        margin: 20px;
+      }
+      p{
+        padding: 20px;
+
+      }
+  }
