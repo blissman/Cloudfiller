@@ -1,1 +1,2 @@
-$("#respond_to_request_<%= @request.id %>").html("THIS SHIT WORKED");
+$("#respond_to_request_<%= @request.id %>").html("Thanks!");
+$("#requests_list").load(location.href + " #requests_list");
