@@ -5,7 +5,10 @@ Rails.application.routes.draw do
 
   resources :user_sessions
 
-  resources :users
+  resources :users do
+    resources :requests
+  end
+
   resources :experiences
 
   resources :requests do

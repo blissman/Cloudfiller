@@ -1,28 +1,23 @@
 <h1> Requests Index </h1>
 
 <!-- if there is no active Request render button for new Request -->
+  <% if @user.requests.where("active = ?", true).exists? %>
 
-  <button id="new_request"> <%= link_to "New Request", new_request_path %> </button>
+    <div class="user_active_request">
 
-  <!-- else render active request -->
+      <p>
+        Description: <%= @active_request.description %>
+        <br>
+        Points: <%= @active_request.points %> Expiry: <%= @active_request.expire %>
+      </p>
 
-  <div class="user_active_request">
-    <%#=  @active_request.inspect %>
-    <p>
-      Description: <%= @active_request.description %>
-      <br>
-      Points: <%= @active_request.points %> Expiry: <%= @active_request.expire %>
-    </p>
+      <button id="done_request_btn"> <%= link_to "Done", request_path(@active_request)%> </button>
 
+    </div>
 
-    <!-- show request with most current created at -->
-
-
-    <button id="done_request_btn"> <%= link_to "Done", request_path(@active_request)%> </button>
-
-
-  </div>
-
+  <% else %>
+    <button id="new_request"> <%= link_to "New Request", new_request_path %> </button>
+  <% end %>
 
 <h2> Old Requests </h2>
 
