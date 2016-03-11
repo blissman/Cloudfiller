@@ -52,13 +52,13 @@
 .old_requests{
       position: relative;
       background-color: $light-green;
-      height: 400px;
+      min-height: 400px;
       width: 800px;
       border-radius: 2%;
       margin-right: 50px;
       margin-left: 50px;
       margin-bottom: 50px;
-      overflow: visible;
+      overflow: inherit;;
       h2{
         position: relative;
         text-align: center;
