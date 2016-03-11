@@ -1,35 +1,41 @@
-<h1> Requests Index </h1>
+<div class="user_requests_page">
 
-<!-- if there is no active Request render button for new Request -->
-  <% if @user.requests.where("active = ?", true).exists? %>
+    <h1> Requests Index </h1>
 
-    <div class="user_active_request">
+    <div class="requests_page_container">
 
-      <p>
-        Description: <%= @active_request.description %>
-        <br>
-        Points: <%= @active_request.points %> Expiry: <%= @active_request.expire %>
-      </p>
+      <!-- if there is no active Request render button for new Request -->
+        <% if @user.requests.where("active = ?", true).exists? %>
 
-      <button id="done_request_btn"> <%= link_to "Done", request_path(@active_request)%> </button>
+          <div class="user_active_request">
 
-    </div>
+            <p>
+              Description: <%= @active_request.description %>
+              <br>
+              Points: <%= @active_request.points %> Expiry: <%= @active_request.expire %>
+            </p>
 
-  <% else %>
-    <button id="new_request"> <%= link_to "New Request", new_request_path %> </button>
-  <% end %>
+            <button id="done_request_btn"> <%= link_to "Done", request_path(@active_request)%> </button>
 
-<h2> Old Requests </h2>
+          </div>
 
-  <div class="old_requests_container">
-    <% if @inactive_requests.present? %>
-      <% @inactive_requests.each do |request| %>
-        <%#= request.inspect %>
-        <p>
-          Description: <%= request.description %>
-          <br>
-          Points: <%= request.points %> Expiry: <%= request.expire %>
-        </p>
+        <% else %>
+          <button id="new_request"> <%= link_to "New Request", new_request_path %> </button>
         <% end %>
-    <% end %>
-  </div>
+
+      <h2> Old Requests </h2>
+
+        <div class="old_requests_container">
+          <% if @inactive_requests.present? %>
+            <% @inactive_requests.each do |request| %>
+              <%#= request.inspect %>
+              <p>
+                Description: <%= request.description %>
+                <br>
+                Points: <%= request.points %> Expiry: <%= request.expire %>
+              </p>
+              <% end %>
+          <% end %>
+        </div>
+      </div>
+</div>

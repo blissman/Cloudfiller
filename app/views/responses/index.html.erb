@@ -1,29 +1,35 @@
-<h1>My Responses</h1>
+<div class="user_responses_page">
 
-  <div class="my-responses">
-    <ul id="user_response_list">
+  <h1>My Responses</h1>
+  
+  <div class="responses_page_container">
 
-    <% @responses.each do |response| %>
-      <li>
-        <p>
-          Category: <%= response.request.category.name %>
-        </p>
-        <p>
-          Description: <%= response.request.description %>
-        </p>
-        <p>
-          Question Expires: <%= response.request.expire %>
-        </p>
-        <p>
-          Active: <%= response.request.active %>
-        </p>
-        <p>
-          Points: <%= response.request.points %>
-        </p>
+      <div class="my-responses">
+        <ul id="user_response_list">
 
-      </li>
-      <br>
-    <% end %>
+        <% @responses.each do |response| %>
+          <li>
+            <p>
+              Category: <%= response.request.category.name %>
+            </p>
+            <p>
+              Description: <%= response.request.description %>
+            </p>
+            <p>
+              Question Expires: <%= response.request.expire %>
+            </p>
+            <p>
+              Active: <%= response.request.active %>
+            </p>
+            <p>
+              Points: <%= response.request.points %>
+            </p>
 
-    </ul>
+          </li>
+          <br>
+        <% end %>
+
+        </ul>
+      </div>
   </div>
+</div>

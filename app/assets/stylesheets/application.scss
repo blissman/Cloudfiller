@@ -9,22 +9,26 @@
  // @import "home";
  // @import "users";
  @import 'normalize';
-
  @import 'categories';
-
  @import 'users';
+ @import 'responses';
+ @import 'requests';
+ @import 'messages';
+ @import 'pages';
 
 
 
- html, body{
+
+ html{
       background-color: #7d8faf;
 
-  //   body{
-  //       @include outer-container($max-width);
-  //       background: url("grok_background_img.png") no-repeat;
-  //       background-size: contain;
-  //       min-height: 2000px;
-  //  }
+    body{
+        @include outer-container($max-width);
+        background: url("grok_background_img.jpg") no-repeat;
+        background-size: cover;
+        min-height: 1800px;
+        position: relative;
+   }
  }
 
  .popupform{
@@ -69,16 +73,20 @@ header{
 }
 
 footer{
-      position: relative;
+      position: absolute;
       bottom: 0;
       height: 40px;
-      text-align: center;
+      width:100%;
       background-color: $blue;
       margin: 0;
+
+
+
 
       #copyright{
         @include outer-container($max-width);
         color: $white;
+        text-align: center;
         font-weight: 300;
         padding: 8px;
       }

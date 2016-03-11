@@ -1,3 +1,25 @@
-// Place all the styles related to the Requests controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.user_requests_page{
+    @include outer-container($max-width);
+  h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4rem;
+    color: $salmon;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+    width: 100%;
+    margin-top: 100px;
+  }
+}
+
+.requests_page_container{
+    background-color: $light-blue;
+    height: 1000px;
+    width: 900px;
+    border-radius: 1%;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-bottom: 150px;
+    overflow: inherit;
+}
