@@ -38,13 +38,6 @@ Category.create(name: 'Gender Studies')
 Category.create(name: 'Religion')
 Category.create(name: 'Philosophy')
 
-100.times do |i|
-  Request.create(
-    description: "Description number #{i}",
-    expire: Time.now,
-    points: (1..10).to_a.sample,
-    category: Category.all.sample,
-    active: [true, false].sample,
-    user: User.all.sample
-  )
-end
+Request.create(description: "Help me with science!", expire: nil, points: 3, user_id: 1, category_id: 1)
+Request.create(description: "Help me with science too!", expire: nil, points: 3, user_id: 1, category_id: 1)
+Request.create(description: "Help me with art!", expire: nil, points: 3, user_id: 1, category_id: 2)
