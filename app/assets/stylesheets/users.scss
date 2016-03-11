@@ -1,3 +1,25 @@
-// Place all the styles related to the users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.user_account_page{
+      @include outer-container($max-width);
+}
+
+.account_page_container{
+    background-color: $light-green;
+    height: 1000px;
+    width: 900px;
+    border-radius: 1%;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-bottom: 150px;
+    overflow: inherit;
+
+
+
+}
+// .account_points{
+//     height: 20px;
+//     width: 50px;
+//     border-radius: 4%;
+//     float: right;
+//
+// }
