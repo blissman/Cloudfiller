@@ -3,30 +3,45 @@
   <h1> MY RESPONSES</h1>
 
   <div class="responses_page_container">
-
+    <h2>Active Responses</h2>
       <div class="user_active_responses">
         <ul id="user_response_list">
-
-        <% @responses.each do |response| %>
-          <li>
-            <p>
-              <strong>Category:</strong> <%= response.category.name %>
-            </p>
-            <p>
-              <strong>Description:</strong> <%= response.description %>
-            </p>
-            <p>
-              <strong>Question Expires:</strong> <%= response.expire %>
-            </p>
-            <p>
-              <strong>Active:</strong> <%= response.active %>
-            </p>
-            <p>
-              <strong>Points:</strong> <%= response.points %>
-            </p>
-          </li>
-          <br>
-        <% end %>
+          <% @responses.each do |response| %>
+            <li>
+              <p>
+                <strong>Category:</strong> <%= response.category.name %>
+              </p>
+              <p>
+                <strong>Description:</strong> <%= response.description %>
+              </p>
+              <p>
+                <strong>Question Expires:</strong> <%= response.expire %>
+              </p>
+              <p>
+                <strong>Points:</strong> <%= response.points %>
+              </p>
+            </li>
+            <br>
+          <% end %>
+        </ul>
+      </div>
+    <h2>Completed Responses</h2>
+      <div class="user_inactive_responses">
+        <ul id="user_response_list">
+          <% @oldresponses.each do |response| %>
+            <li>
+              <p>
+                <strong>Category:</strong> <%= response.category.name %>
+              </p>
+              <p>
+                <strong>Description:</strong> <%= response.description %>
+              </p>
+              <p>
+                <strong>Points:</strong> <%= response.points %>
+              </p>
+            </li>
+            <br>
+          <% end %>
         </ul>
       </div>
   </div>
