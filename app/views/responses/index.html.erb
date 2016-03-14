@@ -10,19 +10,19 @@
         <% @responses.each do |response| %>
           <li>
             <p>
-              <strong>Category:</strong> <%= response.request.category.name %>
+              <strong>Category:</strong> <%= response.category.name %>
             </p>
             <p>
-              <strong>Description:</strong> <%= response.request.description %>
+              <strong>Description:</strong> <%= response.description %>
             </p>
             <p>
-              <strong>Question Expires:</strong> <%= response.request.expire %>
+              <strong>Question Expires:</strong> <%= response.expire %>
             </p>
             <p>
-              <strong>Active:</strong> <%= response.request.active %>
+              <strong>Active:</strong> <%= response.active %>
             </p>
             <p>
-              <strong>Points:</strong> <%= response.request.points %>
+              <strong>Points:</strong> <%= response.points %>
             </p>
           </li>
           <br>

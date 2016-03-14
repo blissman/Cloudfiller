@@ -1,7 +1,7 @@
 class ResponsesController < ApplicationController
 
   def index
-    @responses = Response.all.where(user: current_user)
+    @responses = Request.joins(:responses).where(responses: {user_id: current_user}, requests: {active: true})
   end
 
   def show

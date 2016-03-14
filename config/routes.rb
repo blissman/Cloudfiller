@@ -16,7 +16,9 @@ Rails.application.routes.draw do
     resources :messages
   end
 
-  resources :responses
+  resources :responses do
+    resources :requests    
+  end
 
   resources :categories do
     resources :requests
