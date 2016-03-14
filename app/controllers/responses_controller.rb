@@ -14,15 +14,21 @@ class ResponsesController < ApplicationController
   end
 
   def create
-    @request = Request.find(params[:request_id])
-    @response = Response.new
-    @response.user = current_user
-    @response.request = @request
-    @response.save
+    if Request.joins(:responses).where(responses: {user_id: current_user}, requests: {active: true}).length < 3
 
-    respond_to do |format|
-        format.js {}
-        format.html {}
+      @request = Request.find(params[:request_id])
+      @response = Response.new
+      @response.user = current_user
+      @response.request = @request
+      @response.save
+
+      respond_to do |format|
+          format.js {}
+          format.html {}
+      end
+
+    else
+      flash[:alert] = "Oops! You already have 3 active responses. You need to complete one before adding another."
     end
 
   end

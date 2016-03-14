@@ -2,6 +2,10 @@
 
   <h1><%= @category.name.upcase %> REQUESTS </h1>
 
+  <% if flash[:notice] %>
+    <div class="notice"><%= flash[:notice] %></div>
+  <% end %>
+
     <div class="category_requests_container">
         <ul>
           <% @category.requests.where(active: true).each do |request| %>
@@ -24,17 +28,12 @@
                         <br>
                     <% end %>
                   <br>
-
-                  <% if Request.joins(:responses).where(responses: {user_id: current_user}, requests: {active: true}).length < 3 %>
-
                     <button id="respond_to_request_<%= request.id %>">
-                      <%= link_to "Respond",
-                                  "/requests/#{request.id}/responses",
-                                  method: :post,
-                                  remote: true %>
+                        <%= link_to "Respond",
+                                    "/requests/#{request.id}/responses",
+                                    method: :post,
+                                    remote: true %>
                     </button>
-
-                  <% end %>
               </li>
             </div>
       <% end %>

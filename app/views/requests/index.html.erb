@@ -14,6 +14,19 @@
               <strong>Points:</strong> <%= @active_request.points %> Expiry: <%= @active_request.expire %>
             </p>
 
+            <h2>Responses:</h2>
+
+            <% @responders.each do |responder| %>
+              <p>
+                <%= responder.name %>, <%= responder.lastname %>
+                  <% if responder.rating == nil %>
+                    <br> (Rating Pending)
+                  <% else %>
+                    <br> Rating: <%= responder.rating %>
+                  <% end %>
+              </p>
+            <% end %>
+
             <button id="done_request_btn"> <%= link_to "Done", request_path(@active_request)%> </button>
 
         <% else %>
