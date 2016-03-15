@@ -18,7 +18,7 @@
 .responses_page_container{
   position: absolute;
     background-color: $green;
-    height: 1000px;
+    height: auto;
     width: 900px;
     border-radius: 1%;
     margin-left: 150px;
@@ -28,6 +28,19 @@
 }
 
 .user_active_responses{
+    position: relative;
+    background-color: $light-green;
+    height: auto;
+    width: 800px;
+    border-radius: 2%;
+    margin-top: 30px;
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-bottom: 30px;
+    padding: 25px;
+}
+
+.user_inactive_responses{
     position: relative;
     background-color: $light-green;
     height: auto;

@@ -3,8 +3,8 @@
   <h1> MY RESPONSES</h1>
 
   <div class="responses_page_container">
-    <h2>Active Responses</h2>
-      <div class="user_active_responses">
+    <div class="user_active_responses">
+      <h2> Active Responses </h2>
         <ul id="user_response_list">
           <% @responses.each do |response| %>
             <li>
@@ -25,24 +25,27 @@
           <% end %>
         </ul>
       </div>
-    <h2>Completed Responses</h2>
+
       <div class="user_inactive_responses">
-        <ul id="user_response_list">
-          <% @oldresponses.each do |response| %>
-            <li>
-              <p>
-                <strong>Category:</strong> <%= response.category.name %>
-              </p>
-              <p>
-                <strong>Description:</strong> <%= response.description %>
-              </p>
-              <p>
-                <strong>Points:</strong> <%= response.points %>
-              </p>
-            </li>
-            <br>
-          <% end %>
-        </ul>
+        <h2>Completed Responses</h2>
+        <h3><%= page_entries_info @oldresponses %></h3>
+          <ul id="user_response_list">
+              <% @oldresponses.each do |response| %>
+                <li>
+                  <p>
+                    <strong>Category:</strong> <%= response.category.name %>
+                  </p>
+                  <p>
+                    <strong>Description:</strong> <%= response.description %>
+                  </p>
+                  <p>
+                    <strong>Points:</strong> <%= response.points %>
+                  </p>
+                </li>
+                <br>
+              <% end %>
+            <%= paginate @oldresponses %>
+          </ul>
       </div>
   </div>
 </div>
