@@ -4,7 +4,7 @@ class RequestsController < ApplicationController
   def index
     @user = current_user
     @active_request = Request.find_by("active = ? AND user_id = ?", true, @user)
-    @inactive_requests = Request.where("active = ? AND user_id = ?", false, @user).order(created_at: :desc)
+    @inactive_requests = Request.where("active = ? AND user_id = ?", false, @user).order(created_at: :desc).page(params[:page])
     @new_request = Request.new
     @responders = User.joins(:responses).where(responses: {request_id: @active_request})
     # @requests = @active_requests + @inactive_requests

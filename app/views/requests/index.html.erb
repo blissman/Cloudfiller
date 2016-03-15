@@ -42,6 +42,7 @@
       <div class="old_requests">
 
         <h2> Old Requests </h2>
+        <h3><%= page_entries_info @inactive_requests %></h3>
 
           <div class="old_requests_container">
             <% if @inactive_requests.present? %>
@@ -51,10 +52,9 @@
                   <strong>Description:</strong> <%= request.description %>
                   <br>
                   <strong>Points:</strong> <%= request.points %>
-                  <br>
-                  <strong>Requester:</strong> <%= request.user.name %> <%= request.user.lastname %>
                 </p>
-                <% end %>
+              <% end %>
+                <%= paginate @inactive_requests %>
             <% end %>
           </div>
       </div>
