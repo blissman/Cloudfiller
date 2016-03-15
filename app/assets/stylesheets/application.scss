@@ -25,7 +25,7 @@
 
     body{
         @include outer-container($max-width);
-        background: url("grok_background_img.jpg") no-repeat;
+        // background: url("grok_background_img.jpg") no-repeat;
         background-size: cover;
         min-height: 1800px;
         position: relative;
