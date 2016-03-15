@@ -1,9 +1,9 @@
 class User < ActiveRecord::Base
   authenticates_with_sorcery!
-  has_many :requests
-  has_one :experience
+  has_many :requests, :dependent => :delete_all
+  has_one :experience, :dependent => :delete_all
   accepts_nested_attributes_for :experience
-  has_many :responses
+  has_many :responses, :dependent => :delete_all
 
   validates :password, length: { minimum: 3 }, if: -> { new_record? || changes["password"] }
   validates :password, confirmation: true, if: -> { new_record? || changes["password"] }
