@@ -7,7 +7,7 @@
       <div class="user_active_request">
 
           <% if @user.requests.where("active = ?", true).exists? %>
-
+            <h2>Open Request:</h2>
             <p>
               <strong>Description:</strong> <%= @active_request.description %>
               <br>
@@ -30,6 +30,7 @@
             <button id="done_request_btn"> <%= link_to "Done", request_path(@active_request)%> </button>
 
         <% else %>
+          <h2>Create New Request:</h2>
           <button id="new_request"> <%= link_to "New Request", new_request_path %> </button>
         <% end %>
 
