@@ -1,0 +1,1295 @@
+/*
+
+ */
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+/* line 1, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/base/_buttons.scss */
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #fff;
+  border: 0;
+  border-radius: 3px;
+  color: #001855;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 1em;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.75em 1.5em;
+  text-decoration: none;
+  -webkit-transition: background-color 150ms ease;
+  transition: background-color 150ms ease;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+/* line 21, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/base/_buttons.scss */
+button:hover, button:focus, input[type="button"]:hover, input[type="button"]:focus, input[type="reset"]:hover, input[type="reset"]:focus, input[type="submit"]:hover, input[type="submit"]:focus {
+  background-color: #cccccc;
+  color: #fff;
+}
+/* line 27, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/base/_buttons.scss */
+button:disabled, input[type="button"]:disabled, input[type="reset"]:disabled, input[type="submit"]:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+/* line 31, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/base/_buttons.scss */
+button:disabled:hover, input[type="button"]:disabled:hover, input[type="reset"]:disabled:hover, input[type="submit"]:disabled:hover {
+  background-color: #fff;
+}
+
+/* line 1, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/base/_forms.scss */
+fieldset {
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 8, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/base/_forms.scss */
+legend {
+  font-weight: 600;
+  margin-bottom: 0.375em;
+  padding: 0;
+}
+
+/* line 14, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/base/_forms.scss */
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.375em;
+}
+
+/* line 20, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/base/_forms.scss */
+input,
+select {
+  display: block;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 1em;
+}
+
+/* line 27, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/base/_forms.scss */
+input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], input:not([type]), textarea,
+select[multiple] {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 1em;
+  margin-bottom: 0.75em;
+  padding: 0.5em;
+  -webkit-transition: border-color 150ms ease;
+  transition: border-color 150ms ease;
+  width: 100%;
+}
+/* line 41, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/base/_forms.scss */
+input[type="color"]:hover, input[type="date"]:hover, input[type="datetime"]:hover, input[type="datetime-local"]:hover, input[type="email"]:hover, input[type="month"]:hover, input[type="number"]:hover, input[type="password"]:hover, input[type="search"]:hover, input[type="tel"]:hover, input[type="text"]:hover, input[type="time"]:hover, input[type="url"]:hover, input[type="week"]:hover, input:not([type]):hover, textarea:hover,
+select[multiple]:hover {
+  border-color: #b1b1b1;
+}
+/* line 45, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/base/_forms.scss */
+input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="email"]:focus, input[type="month"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="time"]:focus, input[type="url"]:focus, input[type="week"]:focus, input:not([type]):focus, textarea:focus,
+select[multiple]:focus {
+  border-color: #fff;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(242, 242, 242, 0.7);
+  outline: none;
+}
+/* line 51, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/base/_forms.scss */
+input[type="color"]:disabled, input[type="date"]:disabled, input[type="datetime"]:disabled, input[type="datetime-local"]:disabled, input[type="email"]:disabled, input[type="month"]:disabled, input[type="number"]:disabled, input[type="password"]:disabled, input[type="search"]:disabled, input[type="tel"]:disabled, input[type="text"]:disabled, input[type="time"]:disabled, input[type="url"]:disabled, input[type="week"]:disabled, input:not([type]):disabled, textarea:disabled,
+select[multiple]:disabled {
+  background-color: #f2f2f2;
+  cursor: not-allowed;
+}
+/* line 55, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/base/_forms.scss */
+input[type="color"]:disabled:hover, input[type="date"]:disabled:hover, input[type="datetime"]:disabled:hover, input[type="datetime-local"]:disabled:hover, input[type="email"]:disabled:hover, input[type="month"]:disabled:hover, input[type="number"]:disabled:hover, input[type="password"]:disabled:hover, input[type="search"]:disabled:hover, input[type="tel"]:disabled:hover, input[type="text"]:disabled:hover, input[type="time"]:disabled:hover, input[type="url"]:disabled:hover, input[type="week"]:disabled:hover, input:not([type]):disabled:hover, textarea:disabled:hover,
+select[multiple]:disabled:hover {
+  border: 1px solid #ddd;
+}
+
+/* line 61, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/base/_forms.scss */
+textarea {
+  resize: vertical;
+}
+
+/* line 65, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/base/_forms.scss */
+[type="search"] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+/* line 69, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/base/_forms.scss */
+[type="checkbox"],
+[type="radio"] {
+  display: inline;
+  margin-right: 0.375em;
+}
+
+/* line 75, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/base/_forms.scss */
+[type="file"] {
+  margin-bottom: 0.75em;
+  width: 100%;
+}
+
+/* line 80, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/base/_forms.scss */
+select {
+  margin-bottom: 1.5em;
+  max-width: 100%;
+  width: auto;
+}
+
+/* line 1, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/base/_lists.scss */
+ul,
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 8, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/base/_lists.scss */
+dl {
+  margin-bottom: 0.75em;
+}
+/* line 11, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/base/_lists.scss */
+dl dt {
+  font-weight: 600;
+  margin-top: 0.75em;
+}
+/* line 16, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/base/_lists.scss */
+dl dd {
+  margin: 0;
+}
+
+/* line 1, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/base/_tables.scss */
+table {
+  border-collapse: collapse;
+  margin: 0.75em 0;
+  table-layout: fixed;
+  width: 100%;
+}
+
+/* line 8, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/base/_tables.scss */
+th {
+  border-bottom: 1px solid #a6a6a6;
+  font-weight: 600;
+  padding: 0.75em 0;
+  text-align: left;
+}
+
+/* line 15, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/base/_tables.scss */
+td {
+  border-bottom: 1px solid #ddd;
+  padding: 0.75em 0;
+}
+
+/* line 20, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/base/_tables.scss */
+tr,
+td,
+th {
+  vertical-align: middle;
+}
+
+/* line 1, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/base/_typography.scss */
+html {
+  color: #000;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+/* line 8, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/base/_typography.scss */
+h1,
+h2
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 1em;
+  line-height: 1.2;
+  margin: 0 0 0.75em;
+}
+
+/* line 20, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/base/_typography.scss */
+p {
+  margin: 0 0 0.75em;
+  font-size: 1.2rem;
+}
+
+/* line 25, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/base/_typography.scss */
+a {
+  color: #fff;
+  text-decoration: none;
+  -webkit-transition: color 150ms ease;
+  transition: color 150ms ease;
+  font-weight: 300;
+}
+/* line 31, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/base/_typography.scss */
+a:active, a:focus, a:hover {
+  color: #bfbfbf;
+}
+
+/* line 38, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/base/_typography.scss */
+hr {
+  border-bottom: 1px solid #ddd;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  margin: 1.5em 0;
+}
+
+/* line 46, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/base/_typography.scss */
+img,
+picture {
+  margin: 0;
+  max-width: 100%;
+}
+
+/* line 4, /Users/blissman/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/neat-1.7.4/app/assets/stylesheets/grid/_box-sizing.scss */
+html {
+  box-sizing: border-box;
+}
+
+/* line 9, /Users/blissman/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/neat-1.7.4/app/assets/stylesheets/grid/_box-sizing.scss */
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS and IE text size adjust after device orientation change,
+ *    without disabling user zoom.
+ */
+/* line 9, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/vendor/assets/stylesheets/normalize.css */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+/* line 19, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/vendor/assets/stylesheets/normalize.css */
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+/* line 33, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/vendor/assets/stylesheets/normalize.css */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+/* line 54, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/vendor/assets/stylesheets/normalize.css */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+/* line 67, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/vendor/assets/stylesheets/normalize.css */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
+ */
+/* line 77, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/vendor/assets/stylesheets/normalize.css */
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+/* line 89, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/vendor/assets/stylesheets/normalize.css */
+a {
+  background-color: transparent;
+}
+
+/**
+ * Improve readability of focused elements when they are also in an
+ * active/hover state.
+ */
+/* line 98, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/vendor/assets/stylesheets/normalize.css */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+/* line 110, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/vendor/assets/stylesheets/normalize.css */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+/* line 118, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/vendor/assets/stylesheets/normalize.css */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+/* line 127, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/vendor/assets/stylesheets/normalize.css */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+/* line 136, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/vendor/assets/stylesheets/normalize.css */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+/* line 145, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/vendor/assets/stylesheets/normalize.css */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+/* line 154, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/vendor/assets/stylesheets/normalize.css */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+/* line 162, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/vendor/assets/stylesheets/normalize.css */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 170, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/vendor/assets/stylesheets/normalize.css */
+sup {
+  top: -0.5em;
+}
+
+/* line 174, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/vendor/assets/stylesheets/normalize.css */
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+/* line 185, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/vendor/assets/stylesheets/normalize.css */
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+/* line 193, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/vendor/assets/stylesheets/normalize.css */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+/* line 204, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/vendor/assets/stylesheets/normalize.css */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+/* line 212, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/vendor/assets/stylesheets/normalize.css */
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+/* line 221, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/vendor/assets/stylesheets/normalize.css */
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+/* line 229, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/vendor/assets/stylesheets/normalize.css */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+/* line 252, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/vendor/assets/stylesheets/normalize.css */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+/* line 266, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/vendor/assets/stylesheets/normalize.css */
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+/* line 277, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/vendor/assets/stylesheets/normalize.css */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+/* line 290, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/vendor/assets/stylesheets/normalize.css */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+/* line 302, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/vendor/assets/stylesheets/normalize.css */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+/* line 311, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/vendor/assets/stylesheets/normalize.css */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/* line 322, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/vendor/assets/stylesheets/normalize.css */
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+/* line 334, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/vendor/assets/stylesheets/normalize.css */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+/* line 346, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/vendor/assets/stylesheets/normalize.css */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
+ */
+/* line 356, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/vendor/assets/stylesheets/normalize.css */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  box-sizing: content-box;
+  /* 2 */
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+/* line 367, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/vendor/assets/stylesheets/normalize.css */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+/* line 376, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/vendor/assets/stylesheets/normalize.css */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+/* line 387, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/vendor/assets/stylesheets/normalize.css */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+/* line 396, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/vendor/assets/stylesheets/normalize.css */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+/* line 405, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/vendor/assets/stylesheets/normalize.css */
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+/* line 416, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/vendor/assets/stylesheets/normalize.css */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 421, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/vendor/assets/stylesheets/normalize.css */
+td,
+th {
+  padding: 0;
+}
+
+/* line 5, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/categories.scss */
+.category_list_page h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4rem;
+  color: #ffa597;
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1.5rem;
+  margin-left: 350px;
+  width: 500px;
+  margin-top: 100px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* line 19, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/categories.scss */
+.categories {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 20, /Users/blissman/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/bourbon-4.2.6/app/assets/stylesheets/addons/_clearfix.scss */
+.categories::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+/* line 23, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/categories.scss */
+#category_list {
+  margin-left: 14.24477%;
+  margin-top: 80px;
+}
+@media screen and (min-width: 300px) and (max-width: 599px) {
+  /* line 27, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/categories.scss */
+  #category_list > li {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 40.29137%;
+  }
+  /* line 89, /Users/blissman/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/neat-1.7.4/app/assets/stylesheets/grid/_span-columns.scss */
+  #category_list > li:last-child {
+    margin-right: 0;
+  }
+  /* line 78, /Users/blissman/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/neat-1.7.4/app/assets/stylesheets/grid/_omega.scss */
+  #category_list > li:nth-child(2n) {
+    margin-right: 0;
+  }
+  /* line 83, /Users/blissman/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/neat-1.7.4/app/assets/stylesheets/grid/_omega.scss */
+  #category_list > li:nth-child(2n+1) {
+    clear: left;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 899px) {
+  /* line 27, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/categories.scss */
+  #category_list > li {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 23.23176%;
+  }
+  /* line 89, /Users/blissman/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/neat-1.7.4/app/assets/stylesheets/grid/_span-columns.scss */
+  #category_list > li:last-child {
+    margin-right: 0;
+  }
+  /* line 78, /Users/blissman/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/neat-1.7.4/app/assets/stylesheets/grid/_omega.scss */
+  #category_list > li:nth-child(3n) {
+    margin-right: 0;
+  }
+  /* line 83, /Users/blissman/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/neat-1.7.4/app/assets/stylesheets/grid/_omega.scss */
+  #category_list > li:nth-child(3n+1) {
+    clear: left;
+  }
+}
+@media screen and (min-width: 900px) {
+  /* line 27, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/categories.scss */
+  #category_list > li {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 14.70196%;
+  }
+  /* line 89, /Users/blissman/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/neat-1.7.4/app/assets/stylesheets/grid/_span-columns.scss */
+  #category_list > li:last-child {
+    margin-right: 0;
+  }
+  /* line 78, /Users/blissman/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/neat-1.7.4/app/assets/stylesheets/grid/_omega.scss */
+  #category_list > li:nth-child(5n) {
+    margin-right: 0;
+  }
+  /* line 83, /Users/blissman/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/neat-1.7.4/app/assets/stylesheets/grid/_omega.scss */
+  #category_list > li:nth-child(5n+1) {
+    clear: left;
+  }
+}
+/* line 45, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/categories.scss */
+#category_list > li > a {
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: #000;
+  display: block;
+  height: 8rem;
+  width: 10.2rem;
+  padding-top: 2.7rem;
+  background-color: #4bffcf;
+  margin-bottom: 1.6rem;
+  border-radius: 4%;
+}
+
+/* line 65, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/categories.scss */
+.category_requests_show_page {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 20, /Users/blissman/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/bourbon-4.2.6/app/assets/stylesheets/addons/_clearfix.scss */
+.category_requests_show_page::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* line 68, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/categories.scss */
+.category_requests_show_page h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4rem;
+  color: #ffa597;
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1.5rem;
+  margin-left: 300px;
+  width: 600px;
+  margin-top: 100px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* line 82, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/categories.scss */
+.category_requests_container {
+  position: relative;
+  background-color: #4bffcf;
+  height: 1050px;
+  width: 900px;
+  border-radius: 1%;
+  margin-left: 150px;
+  margin-right: 150px;
+  padding: 30px;
+}
+
+/* line 93, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/categories.scss */
+.category_active_request {
+  position: relative;
+  background-color: #aefce4;
+  height: auto;
+  width: 800px;
+  border-radius: 2%;
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  padding: 20px;
+}
+/* line 105, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/categories.scss */
+.category_active_request li {
+  margin: 25px;
+  list-style: none;
+}
+/* line 110, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/categories.scss */
+.category_active_request button {
+  border-radius: 4%;
+  background-color: #001855;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 5px;
+}
+
+/* line 2, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/users.scss */
+.user_account_page {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 20, /Users/blissman/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/bourbon-4.2.6/app/assets/stylesheets/addons/_clearfix.scss */
+.user_account_page::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* line 5, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/users.scss */
+.user_account_page h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4rem;
+  color: #ffa597;
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1.5rem;
+  margin-left: 330px;
+  width: 520px;
+  margin-top: 100px;
+  background: rgba(0, 0, 0, 0.5);
+}
+/* line 17, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/users.scss */
+.user_account_page button {
+  padding: 30px;
+  margin: 10px;
+  border-radius: 4%;
+  background-color: #001855;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+/* line 27, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/users.scss */
+.account_page_container {
+  position: absolute;
+  background-color: #4bffcf;
+  height: 1000px;
+  width: 900px;
+  border-radius: 1%;
+  margin-left: 150px;
+  margin-right: 150px;
+  margin-bottom: 150px;
+  overflow: inherit;
+}
+
+/* line 39, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/users.scss */
+.user_account_points {
+  position: relative;
+  background-color: #aefce4;
+  height: 100px;
+  width: 150px;
+  border-radius: 4%;
+  float: right;
+  margin: 50px;
+  padding: 20px;
+}
+
+/* line 51, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/users.scss */
+.user_info {
+  position: relative;
+  background-color: #aefce4;
+  min-height: 400px;
+  width: 500px;
+  border-radius: 2%;
+  margin: 50px;
+  clear: right;
+  padding: 20px;
+}
+
+/* line 62, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/users.scss */
+.user_account_rating {
+  position: relative;
+  background-color: #aefce4;
+  height: 100px;
+  width: 400px;
+  border-radius: 4%;
+  float: right;
+  margin: 50px;
+  padding: 20px;
+}
+
+/* line 74, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/users.scss */
+.user_account_notifications {
+  position: relative;
+  background-color: #aefce4;
+  height: 200px;
+  width: 400px;
+  border-radius: 4%;
+  float: right;
+  margin: 50px;
+  padding: 20px;
+}
+
+/* line 2, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/responses.scss */
+.user_responses_page {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 20, /Users/blissman/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/bourbon-4.2.6/app/assets/stylesheets/addons/_clearfix.scss */
+.user_responses_page::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* line 4, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/responses.scss */
+.user_responses_page h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4rem;
+  color: #ffa597;
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1.5rem;
+  margin-left: 300px;
+  width: 600px;
+  margin-top: 100px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* line 18, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/responses.scss */
+.responses_page_container {
+  position: absolute;
+  background-color: #4bffcf;
+  height: auto;
+  width: 900px;
+  border-radius: 1%;
+  margin-left: 150px;
+  margin-right: 150px;
+  margin-bottom: 150px;
+  overflow: hidden;
+}
+
+/* line 30, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/responses.scss */
+.user_active_responses {
+  position: relative;
+  background-color: #aefce4;
+  height: auto;
+  width: 800px;
+  border-radius: 2%;
+  margin-top: 30px;
+  margin-right: 50px;
+  margin-left: 50px;
+  margin-bottom: 30px;
+  padding: 25px;
+}
+
+/* line 43, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/responses.scss */
+.user_inactive_responses {
+  position: relative;
+  background-color: #aefce4;
+  height: auto;
+  width: 800px;
+  border-radius: 2%;
+  margin-top: 30px;
+  margin-right: 50px;
+  margin-left: 50px;
+  margin-bottom: 30px;
+  padding: 25px;
+}
+
+/* line 2, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/requests.scss */
+.user_requests_page {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 20, /Users/blissman/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/bourbon-4.2.6/app/assets/stylesheets/addons/_clearfix.scss */
+.user_requests_page::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* line 4, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/requests.scss */
+.user_requests_page h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4rem;
+  color: #ffa597;
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1.5rem;
+  margin-left: 320px;
+  width: 530px;
+  margin-top: 100px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* line 19, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/requests.scss */
+.requests_page_container {
+  position: absolute;
+  background-color: #4bffcf;
+  height: 1000px;
+  width: 900px;
+  border-radius: 1%;
+  margin-left: 150px;
+  margin-right: 150px;
+}
+
+/* line 30, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/requests.scss */
+.user_active_request {
+  position: relative;
+  background-color: #aefce4;
+  height: auto;
+  width: 800px;
+  border-radius: 2%;
+  margin-top: 50px;
+  margin-right: 50px;
+  margin-left: 50px;
+  margin-bottom: 30px;
+  padding: 20px;
+}
+/* line 42, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/requests.scss */
+.user_active_request button {
+  padding: 30px;
+  margin: 10px;
+  border-radius: 4%;
+  background-color: #001855;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+/* line 54, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/requests.scss */
+.old_requests {
+  position: relative;
+  background-color: #aefce4;
+  min-height: 400px;
+  width: 800px;
+  border-radius: 2%;
+  margin-right: 50px;
+  margin-left: 50px;
+  margin-bottom: 50px;
+  overflow: hidden;
+}
+/* line 65, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/requests.scss */
+.old_requests h2 {
+  text-align: center;
+  padding: 20px;
+  font-size: 2rem;
+}
+/* line 70, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/requests.scss */
+.old_requests p {
+  padding: 20px;
+}
+
+/* line 76, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/requests.scss */
+.new_request_page h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4rem;
+  color: #ffa597;
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1.5rem;
+  width: 100%;
+  margin-top: 100px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* line 89, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/requests.scss */
+.new_request_form {
+  background-color: #4bffcf;
+  width: 600px;
+  height: 550px;
+  border-radius: 2%;
+  padding: 20px;
+  margin-right: 300px;
+  margin-left: 300px;
+  margin-top: 50px;
+}
+
+/* line 3, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/pages.scss */
+.about_page h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4rem;
+  color: #ffa597;
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1.5rem;
+  width: 100%;
+  margin-top: 100px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* line 17, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/pages.scss */
+.about_page_container {
+  position: absolute;
+  background-color: #4bffcf;
+  height: 600px;
+  width: 900px;
+  border-radius: 1%;
+  margin-left: 150px;
+  margin-right: 150px;
+}
+/* line 26, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/pages.scss */
+.about_page_container p {
+  font-size: 1.3rem;
+  margin-right: 50px;
+  margin-left: 50px;
+  margin-bottom: 20px;
+}
+/* line 33, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/pages.scss */
+.about_page_container h3 {
+  font-size: 1.7rem;
+  margin: 50px;
+}
+
+/* line 2, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/user_sessions.scss */
+.login_page {
+  background-color: #4bffcf;
+  width: 400px;
+  height: 500px;
+  border-radius: 2%;
+  padding: 20px;
+  margin-right: 400px;
+  margin-left: 400px;
+  margin-top: 200px;
+}
+
+/* line 24, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/application.scss */
+html {
+  background-color: #7d8faf;
+}
+/* line 27, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/application.scss */
+html body {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  background: url("grok_background_img.jpg") no-repeat;
+  background-size: cover;
+  min-height: 1800px;
+  position: relative;
+}
+/* line 20, /Users/blissman/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/bourbon-4.2.6/app/assets/stylesheets/addons/_clearfix.scss */
+html body::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+/* line 36, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/application.scss */
+.popupform {
+  padding: 1rem 2rem;
+}
+
+/* line 40, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/application.scss */
+header {
+  background-color: #001855;
+  height: 75px;
+  padding: 10px;
+}
+
+/* line 46, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/application.scss */
+.navbar {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 20, /Users/blissman/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/bourbon-4.2.6/app/assets/stylesheets/addons/_clearfix.scss */
+.navbar::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* line 49, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/application.scss */
+.navbar img {
+  height: 50px;
+  width: auto;
+  float: left;
+}
+/* line 55, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/application.scss */
+.navbar .nav_links {
+  text-align: center;
+}
+/* line 58, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/application.scss */
+.navbar .nav_links li {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border: solid white 2px;
+  margin: 10px;
+  clear: both;
+}
+/* line 64, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/application.scss */
+.navbar .nav_links li a {
+  color: white;
+}
+/* line 68, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/application.scss */
+.navbar .nav_links .log_btns {
+  text-align: center;
+  float: right;
+  margin: 10px;
+  padding: 5px;
+}
+
+/* line 77, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/application.scss */
+footer {
+  position: absolute;
+  bottom: 0;
+  height: 40px;
+  width: 100%;
+  background-color: #001855;
+  margin: 0;
+}
+/* line 88, /Users/blissman/Desktop/Bitmaker/Projects/Cloudfiller/app/assets/stylesheets/application.scss */
+footer #copyright {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #fff;
+  text-align: center;
+  font-weight: 300;
+  padding: 8px;
+}
+/* line 20, /Users/blissman/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/bourbon-4.2.6/app/assets/stylesheets/addons/_clearfix.scss */
+footer #copyright::after {
+  clear: both;
+  content: "";
+  display: table;
+}
