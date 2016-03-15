@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .category_list_page{
+    @include outer-container($max-width);
   h1{
     font-family: 'Montserrat', sans-serif;
     font-size: 4rem;
@@ -16,45 +17,56 @@
   }
 
 }
-.categories {
-  @include outer-container($max-width);
+
+.categories{
+    margin-top: 80px;
+
+    @include media($small-screen-only) {
+      margin-left: 4%;
+    }
+
+    @include media($medium-screen-only) {
+            margin-left: 7%;
+    }
+
+    @include media($large-screen-up) {
+      margin-left: 11.5%;
+    }
+
 }
 
 #category_list {
-  @include shift(1.67);
-  margin-top: 80px;
 
   & > li {
     @include media($small-screen-only) {
-        @include span-columns(5);
+        @include span-columns(6);
         @include omega(2n);
-
       }
 
     @include media($medium-screen-only) {
-        @include span-columns(3);
+        @include span-columns(4);
         @include omega(3n);
-
       }
 
       @include media($large-screen-up) {
-        @include span-columns(2);
+        @include span-columns(2.2);
         @include omega(5n);
       }
 
   & > a {
+      display: block;
+      clear: both;
+      height: 7rem;
+      width: 8.5rem;
       text-align: center;
-      font-size: 1.2rem;
       font-family: 'Montserrat', sans-serif;
+      font-size: 1rem;
       font-weight: 600;
       color: $black;
-      display: block;
-      height: 8rem;
-      width: 10.2rem;
-      padding-top: 2.7rem;
       background-color: $green;
-      margin-bottom: 1.6rem;
+      padding-top: 2.5rem;
       border-radius: 4%;
+      margin-bottom: 1.2rem;
     }
     // &:hover:active{
     //   background-color: $light-green;
