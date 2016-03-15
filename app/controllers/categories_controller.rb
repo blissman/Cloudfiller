@@ -3,7 +3,7 @@ skip_before_action :require_login, only: [:index]
 
   def index
     @user = User.new
-    @categories = Category.all
+    @categories = Category.all.order('name ASC')
   end
 
   def show
