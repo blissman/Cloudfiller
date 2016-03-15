@@ -11,7 +11,9 @@
             <p>
               <strong>Description:</strong> <%= @active_request.description %>
               <br>
-              <strong>Points:</strong> <%= @active_request.points %> Expiry: <%= @active_request.expire %>
+              <strong>Points:</strong> <%= @active_request.points %>
+              <br>
+              <strong>Expiry:</strong> <%= @active_request.expire %>
             </p>
 
             <h2>Responses:</h2>
@@ -48,7 +50,9 @@
                 <p>
                   <strong>Description:</strong> <%= request.description %>
                   <br>
-                  <strong>Points:</strong> <%= request.points %> Expiry: <%= request.expire %>
+                  <strong>Points:</strong> <%= request.points %>
+                  <br>
+                  <strong>Requester:</strong> <%= request.user.name %> <%= request.user.lastname %>
                 </p>
                 <% end %>
             <% end %>
