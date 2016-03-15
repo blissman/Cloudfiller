@@ -32,12 +32,14 @@
                           <br>
                       <% end %>
                     <br>
+                    <% if specific_request.user != current_user %>
                       <button id="respond_to_request_<%= request.id %>">
                           <%= link_to "Respond",
                                       "/requests/#{request.id}/responses",
                                       method: :post,
                                       remote: true %>
                       </button>
+                    <% end %>
                 </li>
               </div>
             <% end %>
