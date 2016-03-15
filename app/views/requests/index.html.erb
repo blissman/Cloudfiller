@@ -9,6 +9,8 @@
           <% if @user.requests.where("active = ?", true).exists? %>
             <h2>Open Request:</h2>
             <p>
+              <strong>Category:</strong> <%= @active_request.category.name %>
+              <br>
               <strong>Description:</strong> <%= @active_request.description %>
               <br>
               <strong>Points:</strong> <%= @active_request.points %>
@@ -49,6 +51,8 @@
               <% @inactive_requests.each do |request| %>
                 <%#= request.inspect %>
                 <p>
+                  <strong>Category:</strong> <%= request.category.name %>
+                  <br>
                   <strong>Description:</strong> <%= request.description %>
                   <br>
                   <strong>Points:</strong> <%= request.points %>

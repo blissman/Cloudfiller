@@ -8,6 +8,7 @@ skip_before_action :require_login, only: [:index]
 
   def show
     @category = Category.find(params[:id])
+    @requests = @category.requests.where(active: true).page(params[:page])
   end
 
   def new

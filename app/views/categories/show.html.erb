@@ -7,36 +7,38 @@
   <% end %>
 
     <div class="category_requests_container">
+      <h3><%= page_entries_info @requests %></h3>
         <ul>
-          <% @category.requests.where(active: true).each do |request| %>
-            <div class="category_active_request">
-              <li>
-                <p>
-                  <strong>Description:</strong> <%= request.description %>
-                    <br>
-                  <strong>Points:</strong> <%= request.points %>
-                    <br>
-                  <strong>Request Expires:</strong> <%= request.expire %>
-                </p>
+            <% @requests.each do |request| %>
+              <div class="category_active_request">
+                <li>
+                  <p>
+                    <strong>Description:</strong> <%= request.description %>
+                      <br>
+                    <strong>Points:</strong> <%= request.points %>
+                      <br>
+                    <strong>Request Expires:</strong> <%= request.expire %>
+                  </p>
 
-                <% specific_request = request %>
-                    <strong>Responders:</strong> <br>
-                    <% specific_request.responses.each do |response| %>
-                      Name: <%= response.user.name %> <%= response.user.lastname %>
-                        <br>
-                      Rating: <%= response.user.rating %>
-                        <br>
-                    <% end %>
-                  <br>
-                    <button id="respond_to_request_<%= request.id %>">
-                        <%= link_to "Respond",
-                                    "/requests/#{request.id}/responses",
-                                    method: :post,
-                                    remote: true %>
-                    </button>
-              </li>
-            </div>
-      <% end %>
+                  <% specific_request = request %>
+                      <strong>Responders:</strong> <br>
+                      <% specific_request.responses.each do |response| %>
+                        Name: <%= response.user.name %> <%= response.user.lastname %>
+                          <br>
+                        Rating: <%= response.user.rating %>
+                          <br>
+                      <% end %>
+                    <br>
+                      <button id="respond_to_request_<%= request.id %>">
+                          <%= link_to "Respond",
+                                      "/requests/#{request.id}/responses",
+                                      method: :post,
+                                      remote: true %>
+                      </button>
+                </li>
+              </div>
+            <% end %>
+          <%= paginate @requests %>
       </div>
     </ul>
   </div>
