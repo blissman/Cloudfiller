@@ -8,6 +8,9 @@
 
     <div class="category_requests_container">
       <h3><%= page_entries_info @requests %></h3>
+      <% if Request.joins(:responses).where(responses: {user_id: current_user}, requests: {active: true}).length >= 3 %>
+        <h4>Oops! You already have 3 active responses. You need to complete one before adding another.</h4>
+      <% end %>
         <ul>
             <% @requests.each do |request| %>
               <div class="category_active_request">
