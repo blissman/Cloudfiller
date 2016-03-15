@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   authenticates_with_sorcery!
   has_many :requests, :dependent => :delete_all
-  has_one :experience, :dependent => :delete_all
+  has_one :experience, :dependent => :delete
   accepts_nested_attributes_for :experience
   has_many :responses, :dependent => :delete_all
 
