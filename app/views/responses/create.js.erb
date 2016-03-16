@@ -1,2 +1,3 @@
 $("#respond_to_request_<%= @request.id %>").html("Thanks!");
-$("#requests_list").load(location.href + " #requests_list");
+$("#request_response_<%= @request.id %>").html("<%= j render '/responses/request_response', request: @request %>")
+// $("#requests_list").load(location.href + " #requests_list");

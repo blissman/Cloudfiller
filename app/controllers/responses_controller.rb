@@ -23,8 +23,8 @@ class ResponsesController < ApplicationController
       @response.save
 
       respond_to do |format|
-          format.js {}
-          format.html {}
+          format.js { }
+          format.html { redirect_to category_request_path }
       end
 
     else

@@ -23,6 +23,7 @@
                     <strong>Request Expires:</strong> <%= request.expire %>
                   </p>
 
+<<<<<<< Updated upstream
                   <% specific_request = request %>
                       <strong>Responders:</strong> <br>
                       <% specific_request.responses.each do |response| %>
@@ -33,8 +34,16 @@
                       <% end %>
                     <br>
                     <% if specific_request.user == current_user %>
+=======
+        <div id="request_response_<%= request.id %>">
+
+                <%= render "/responses/request_response", request: request %>
+
+                  </div>
+                    <% if request.user == current_user %>
+>>>>>>> Stashed changes
                     <% elsif Request.joins(:responses).where(responses: { user_id: current_user }, requests: { active: true }).length >= 3 %>
-                    <% elsif Request.joins(:responses).where(responses: { user_id: current_user }, requests: { id: specific_request }).exists? %>
+                    <% elsif Request.joins(:responses).where(responses: { user_id: current_user }, requests: { id: request }).exists? %>
                     <% else %>
                       <button id="respond_to_request_<%= request.id %>">
                           <%= link_to "Respond",
