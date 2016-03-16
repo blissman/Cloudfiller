@@ -68,15 +68,15 @@
               <% if @user.rating == nil %>
                 <%= "Participate in the community for a rating!" %>
               <% else %>
-                <%= @user.rating %>
+                <%= @user.rating %> <div class="notification_rating"> &#9733; </div>
               <% end %>
             </p>
           </div>
 
           <div class="user_account_notifications">
-            <p>
-              <strong>Notifications:</strong> No pending updates.
-            </p>
+
+              <%= render "notifications" %>
+
           </div>
     </div>
   </div>
