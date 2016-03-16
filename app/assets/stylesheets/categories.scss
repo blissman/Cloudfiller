@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .category_list_page{
     @include outer-container($max-width);
+
   h1{
     font-family: 'Montserrat', sans-serif;
     font-size: 4rem;
@@ -39,6 +40,7 @@
 #category_list {
 
   & > li {
+
     @include media($small-screen-only) {
         @include span-columns(6);
         @include omega(2n);
@@ -68,10 +70,14 @@
       padding-top: 2.5rem;
       border-radius: 4%;
       margin-bottom: 1.2rem;
+
+      &:hover{
+        background-color: $light-green;
+        }
+      &:active{
+        background-color: darken($green, 15%);
+      }
     }
-    // &:hover:active{
-    //   background-color: $light-green;
-    //   }
   }
 }
 
