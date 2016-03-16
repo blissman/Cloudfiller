@@ -1,8 +1,8 @@
 class ResponsesController < ApplicationController
 
   def index
-    @responses = Request.joins(:responses).where(responses: {user_id: current_user}, requests: {active: true})
-    @oldresponses = Request.joins(:responses).where(responses: {user_id: current_user}, requests: {active: false}).page(params[:page])
+    @requests = Request.joins(:responses).where(responses: {user_id: current_user}, requests: {active: true})
+    @oldrequests = Request.joins(:responses).where(responses: {user_id: current_user}, requests: {active: false}).page(params[:page])
   end
 
   def show
@@ -43,8 +43,8 @@ class ResponsesController < ApplicationController
 
   def destroy
     @response = Response.find(params[:id])
-    @response.destory
-    redirect_to user_path
+    @response.destroy
+    redirect_to responses_path
   end
 
 end

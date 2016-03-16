@@ -6,24 +6,24 @@
     <div class="user_active_responses">
       <h2> Active Responses </h2>
         <ul id="user_response_list">
-          <% @responses.each do |response| %>
+          <% @requests.each do |request| %>
             <li>
               <p>
-                <strong>Category:</strong> <%= response.category.name %>
+                <strong>Category:</strong> <%= request.category.name %>
               </p>
               <p>
-                <strong>Description:</strong> <%= response.description %>
+                <strong>Description:</strong> <%= request.description %>
               </p>
               <p>
-                <strong>Question Expires:</strong> <%= response.expire %>
+                <strong>Question Expires:</strong> <%= request.expire %>
               </p>
               <p>
-                <strong>Points:</strong> <%= response.points %>
+                <strong>Points:</strong> <%= request.points %>
               </p>
             </li>
             <br>
 
-            <button> <%= link_to 'Remove', @response, method: :delete %> </button>
+            <button> <%= link_to 'Remove', response_path, method: :delete %> </button>
 
           <% end %>
         </ul>
@@ -31,23 +31,23 @@
 
       <div class="user_inactive_responses">
         <h2>Completed Responses</h2>
-        <h3><%= page_entries_info @oldresponses %></h3>
+        <h3><%= page_entries_info @oldrequests %></h3>
           <ul id="user_response_list">
-              <% @oldresponses.each do |response| %>
+              <% @oldrequests.each do |request| %>
                 <li>
                   <p>
-                    <strong>Category:</strong> <%= response.category.name %>
+                    <strong>Category:</strong> <%= request.category.name %>
                   </p>
                   <p>
-                    <strong>Description:</strong> <%= response.description %>
+                    <strong>Description:</strong> <%= request.description %>
                   </p>
                   <p>
-                    <strong>Points:</strong> <%= response.points %>
+                    <strong>Points:</strong> <%= request.points %>
                   </p>
                 </li>
                 <br>
               <% end %>
-            <%= paginate @oldresponses %>
+            <%= paginate @oldrequests %>
           </ul>
       </div>
   </div>
