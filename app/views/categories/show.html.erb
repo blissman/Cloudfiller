@@ -23,25 +23,12 @@
                     <strong>Request Expires:</strong> <%= request.expire %>
                   </p>
 
-<<<<<<< Updated upstream
-                  <% specific_request = request %>
-                      <strong>Responders:</strong> <br>
-                      <% specific_request.responses.each do |response| %>
-                        Name: <%= response.user.name %> <%= response.user.lastname %>
-                          <br>
-                        Rating: <%= response.user.rating %>
-                          <br>
-                      <% end %>
-                    <br>
-                    <% if specific_request.user == current_user %>
-=======
         <div id="request_response_<%= request.id %>">
 
                 <%= render "/responses/request_response", request: request %>
 
                   </div>
                     <% if request.user == current_user %>
->>>>>>> Stashed changes
                     <% elsif Request.joins(:responses).where(responses: { user_id: current_user }, requests: { active: true }).length >= 3 %>
                     <% elsif Request.joins(:responses).where(responses: { user_id: current_user }, requests: { id: request }).exists? %>
                     <% else %>
