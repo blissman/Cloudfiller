@@ -1,2 +1,2 @@
-$("#respond_to_request_<%= @request.id %>").html("Thanks!");
+$("#respond_to_request_<%= @request.id %>").hide();
 $("#request_response_<%= @request.id %>").html("<%= j render '/responses/request_response', request: @request %>")
