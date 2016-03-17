@@ -25,7 +25,6 @@ class RequestsController < ApplicationController
     @categories = Category.order("name")
     @request = Request.new(request_params)
     @request.user = current_user
-    # @active_request = Request.update("active = ?", true)
     if @request.save
       redirect_to requests_path
     else
@@ -41,7 +40,12 @@ class RequestsController < ApplicationController
     # byebug
     @active_request = Request.find(params[:id])
     @active_request.update_attributes(request_params)
-    render js: "" # TODO: actually render something meaningful
+    # render js: "update"
+
+    respond_to do |format|
+      format.html { redirect_to :back }
+      format.js {}
+    end
   end
 
   def destroy

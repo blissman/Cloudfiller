@@ -31,7 +31,12 @@
               </p>
             <% end %>
 
-            <button id="done_request_btn"> <%= link_to "Done", request_path(@active_request), method: :post, remote: true %> </button>
+            <!-- <button id="done_request_btn"> <%#= link_to "Done", request_path(@active_request), remote: true %> </button> -->
+
+            <%= form_for @active_request, remote: true do |f| %>
+                     <%= f.hidden_field :active, value: false %>
+                     <%= f.submit "Done" %>
+                   <% end %>
 
         <% else %>
           <h2>Create New Request:</h2>
