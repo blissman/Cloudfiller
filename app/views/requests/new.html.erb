@@ -8,10 +8,23 @@
 
         <% if @request.errors.any? %>
           <div id="error_explanation">
-            <h4><%= pluralize(@request.errors.count, "error") %> prohibited this user from being saved:</h4>
+            <h4><%= pluralize(@request.errors.count, "error") %> prohibited this request from being saved:</h4>
 
             <ul>
               <% @request.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+            </ul>
+
+          </div>
+        <% end %>
+
+        <% if @user.errors.any? %>
+          <div id="error_explanation">
+            <h4><%= pluralize(@user.errors.count, "error") %> prohibited this request from being saved:</h4>
+
+            <ul>
+              <% @user.errors.full_messages.each do |message| %>
                 <li><%= message %></li>
               <% end %>
             </ul>

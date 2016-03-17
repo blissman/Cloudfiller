@@ -17,11 +17,13 @@ class RequestsController < ApplicationController
   end
 
   def new
+    @user = current_user
     @request = Request.new
     @categories = Category.order("name")
   end
 
   def create
+    @user = current_user
     @categories = Category.order("name")
     @request = Request.new(request_params)
     @request.user = current_user

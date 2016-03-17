@@ -14,4 +14,13 @@ class User < ActiveRecord::Base
   validates :email, uniqueness: true
   validates :name, presence: true
   validates :lastname, presence: true
+  validates :points, presence: true
+  validate :user_points_must_be_positive
+
+  def user_points_must_be_positive
+    if self.points < 0
+      errors.add(:points,": you don't have enough points for that.")
+    end
+  end
+
 end

@@ -1,9 +1,6 @@
 class Request < ActiveRecord::Base
   before_create do
     self.active = true
-  end
-
-  after_create do
     self.user.points = self.user.points - self.points
     self.user.save
   end
@@ -13,6 +10,16 @@ class Request < ActiveRecord::Base
   has_many :responses
 
   validates :category_id, :description, presence: true
-  validates :expire,
-  validates :points, numericality: { only_integer: true, :greater_than_or_equal_to 1, :less_than_or_equal_to self.user.points }
+  validates :expire, presence: true
+  validates :points, numericality: { only_integer: true, greater_than_or_equal_to: 1 }
+  validate :expiration_date_limits
+
+  def expiration_date_limits
+    if self.expire < Date.today
+      errors.add(:expire, "can't be in the past")
+    elsif self.expire > (Date.today + 30.days)
+      errors.add(:expire, "can't be more than 30 days in the future")
+    end
+  end
+
 end
