@@ -1,17 +1,25 @@
-<h4> Notifications </h4>
+<div id="notifications_partial">
+
+  <h4> Notifications </h4>
+  <!--
+  show past rating
+
+  responders user.Name
+
+  star rating
+
+  points gianed -->
+
+
+
+
+  <button id="clear_notifications">
+    <%= link_to "Clear", user_url,  remote: true %>
+  </button>
+
 <!--
-show past rating
+  $("#clear_notifications").click(function(){
+      $("user_account_notifications").hide();
+  }); -->
 
-responders user.Name
-
-star rating
-
-points gianed -->
-
-
-<div id="notifications_list">
-
-<button> <%= link_to "Clear", :id => "close-it" %> </button>
-<button> <%= image_tag("button.png", :id => "close-it") %> </button>
-
-</div>
+  </div>
