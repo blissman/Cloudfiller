@@ -3,10 +3,12 @@ class RequestsController < ApplicationController
 
   def index
     @user = current_user
-    @active_request = Request.find_by("active = ? AND user_id = ?", true, @user)
-    @inactive_requests = Request.where("active = ? AND user_id = ?", false, @user).order(created_at: :desc).page(params[:page])
-    @new_request = Request.new
-    @responders = User.joins(:responses).where(responses: {request_id: @active_request})
+    if @user.requests.where(active: true)
+      @request = @user.requests.where(active: true).first
+      @responders = User.joins(:responses).where(responses: {request_id: @request})
+    end
+    @inactive_requests = Request.where(active: false).order(created_at: :desc).page(params[:page])
+    # @responders = User.joins(:responses).where(responses: {request_id: @active_request})
     # @requests = @active_requests + @inactive_requests
     # @requests = Request.all
     # for active it will always be the most recent date
@@ -27,7 +29,6 @@ class RequestsController < ApplicationController
     @categories = Category.order("name")
     @request = Request.new(request_params)
     @request.user = current_user
-    # @active_request = Request.update("active = ?", true)
     if @request.save
       redirect_to requests_path
     else
@@ -41,9 +42,16 @@ class RequestsController < ApplicationController
 
   def update
     # byebug
-    @active_request = Request.find(params[:id])
-    @active_request.update_attributes(request_params)
-    render js: "" # TODO: actually render something meaningful
+    @request = Request.find(params[:id])
+    @request.active = params[:request][:active]
+    @request.save
+    @inactive_requests = Request.where(active: false).order(created_at: :desc).page(params[:page])
+    # render js: "update"
+
+    respond_to do |format|
+      format.html { redirect_to :back }
+      format.js {}
+    end
   end
 
   def destroy

@@ -37,13 +37,3 @@ Category.create(name: 'Environment')
 Category.create(name: 'Gender Studies')
 Category.create(name: 'Religion')
 Category.create(name: 'Philosophy')
-
-User.create(name: "Bliss", lastname: "Man", email: "blissman@gmail.com", password: "password", password_confirmation: "password", points: 90)
-
-Request.create(description: "Help me with science!", expire: nil, points: 3, user_id: 4, category_id: 1)
-Request.create(description: "Help me with science too!", expire: nil, points: 3, user_id: 3, category_id: 1)
-Request.create(description: "Help me with art!", expire: nil, points: 3, user_id: 2, category_id: 2)
-
-Response.create(user_id: 1, request_id: 1)
-Response.create(user_id: 1, request_id: 2)
-Response.create(user_id: 1, request_id: 3)
