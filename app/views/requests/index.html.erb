@@ -6,41 +6,19 @@
 
       <div class="user_active_request">
 
-          <% if @user.requests.where("active = ?", true).exists? %>
-            <h2>Open Request:</h2>
-            <p>
-              <strong>Category:</strong> <%= @active_request.category.name %>
-              <br>
-              <strong>Description:</strong> <%= @active_request.description %>
-              <br>
-              <strong>Points:</strong> <%= @active_request.points %>
-              <br>
-              <strong>Expiry:</strong> <%= @active_request.expire %>
-            </p>
+        <% if @user.requests.where("active = ?", true).exists? %>
 
-            <h2>Responses:</h2>
+          <%= render "active_request", object: @request %>
 
-            <% @responders.each do |responder| %>
-              <p>
-                <%= responder.name %>, <%= responder.lastname %>
-                  <% if responder.rating == nil %>
-                    <br> (Rating Pending)
-                  <% else %>
-                    <br> Rating: <%= responder.rating %>
-                  <% end %>
-              </p>
-            <% end %>
-
-            <!-- <button id="done_request_btn"> <%#= link_to "Done", request_path(@active_request), remote: true %> </button> -->
-
-            <%= form_for @active_request, remote: true do |f| %>
-                     <%= f.hidden_field :active, value: false %>
-                     <%= f.submit "Done" %>
-                   <% end %>
+          <%= form_for [@user, @request], remote: true do |f| %>
+            <%= f.hidden_field :active, value: false %>
+            <%= f.submit "Done" %>
+          <% end %>
 
         <% else %>
-          <h2>Create New Request:</h2>
-          <button id="new_request"> <%= link_to "New Request", new_request_path %> </button>
+
+          <%= render 'create_request' %>
+
         <% end %>
 
       </div>
@@ -50,22 +28,12 @@
 
         <h2> Old Requests </h2>
         <h3><%= page_entries_info @inactive_requests %></h3>
-
-          <div class="old_requests_container">
-            <% if @inactive_requests.present? %>
-              <% @inactive_requests.each do |request| %>
-                <%#= request.inspect %>
-                <p>
-                  <strong>Category:</strong> <%= request.category.name %>
-                  <br>
-                  <strong>Description:</strong> <%= request.description %>
-                  <br>
-                  <strong>Points:</strong> <%= request.points %>
-                </p>
-              <% end %>
-                <%= paginate @inactive_requests %>
-            <% end %>
-          </div>
+          <% if @inactive_requests.present? %>
+            <div class="old_requests_container">
+              <%= render @inactive_requests %>
+            </div>
+            <%= paginate @inactive_requests %>
+          <% end %>
       </div>
     </div>
 </div>

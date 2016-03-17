@@ -1,0 +1,27 @@
+
+
+            <h2>Open Request:</h2>
+            <p>
+              <strong>Category:</strong> <%= @request.category.name %>
+              <br>
+              <strong>Description:</strong> <%= @request.description %>
+              <br>
+              <strong>Points:</strong> <%= @request.points %>
+              <br>
+              <strong>Expiry:</strong> <%= @request.expire %>
+            </p>
+
+            <h2>Responses:</h2>
+
+            <% @responders.each do |responder| %>
+              <p>
+                <%= responder.name %>, <%= responder.lastname %>
+                  <% if responder.rating == nil %>
+                    <br> (Rating Pending)
+                  <% else %>
+                    <br> Rating: <%= responder.rating %>
+                  <% end %>
+              </p>
+            <% end %>
+
+            <!-- <button id="done_request_btn"> <%#= link_to "Done", request_path(@active_request), remote: true %> </button> -->
