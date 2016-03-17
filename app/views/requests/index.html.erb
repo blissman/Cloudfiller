@@ -11,7 +11,7 @@
           <%= render "active_request", object: @request %>
 
           <%= form_for [@user, @request], remote: true do |f| %>
-            <%= f.hidden_field :active, value: false %>
+            <%= f.hidden_field :active, value: false, method: :patch %>
             <%= f.submit "Done" %>
           <% end %>
 
@@ -27,13 +27,14 @@
       <div class="old_requests">
 
         <h2> Old Requests </h2>
-        <h3><%= page_entries_info @inactive_requests %></h3>
-          <% if @inactive_requests.present? %>
+
             <div class="old_requests_container">
-              <%= render @inactive_requests %>
+              <h3><%= page_entries_info @inactive_requests %></h3>
+                <% if @inactive_requests.present? %>
+                  <%= render @inactive_requests %>
+                  <%= paginate @inactive_requests %>
+                  <% end %>
             </div>
-            <%= paginate @inactive_requests %>
-          <% end %>
       </div>
     </div>
 </div>
