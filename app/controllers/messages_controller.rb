@@ -1,41 +1,44 @@
 class MessagesController < ApplicationController
 
-  def index
-    @messages = Message.all
+  before_action do
+    @conversation = Conversation.find(params[:conversation_id])
   end
 
-  def show
-    @message = Message.find(params[:id])
+def index
+  @messages = @conversation.messages
+
+  if @messages.length > 10
+    @over_ten = true
+    @messages = @messages[-10..-1]
   end
 
-  def new
-    @message = Message.new
+  if params[:m]
+    @over_ten = false
+    @messages = @conversation.messages
   end
 
-  def create
-    @message = Message.new(message_params)
-    if @message.save
-      render json: "ok"
-    else
-      render json: "fail"
+  if @messages.last
+    if @messages.last.user_id != current_user.id
+      @messages.last.read = true;
     end
   end
 
-  def edit
-    # not in use
-  end
+  @message = @conversation.messages.new
+end
 
-  def update
-    # not in use
-  end
+def new
+  @message = @conversation.messages.new
+end
 
-  def destroy
-    # not in use
+def create
+  @message = @conversation.messages.new(message_params)
+  if @message.save
+    redirect_to conversation_messages_path(@conversation)
   end
+end
 
-  private
+private
   def message_params
-    params.require(:message).permit(:description)
+    params.require(:message).permit(:body, :user_id)
   end
-
 end
