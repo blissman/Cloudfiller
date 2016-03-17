@@ -20,6 +20,14 @@
               <p>
                 <strong>Points:</strong> <%= request.points %>
               </p>
+
+              <button id="responder_message_btn">
+                <%= link_to "Message me!",
+                conversations_path(sender_id: current_user.id,
+                recipient_id: request.user_id),
+                method: "post"%>
+              </button>
+
             </li>
             <br>
 

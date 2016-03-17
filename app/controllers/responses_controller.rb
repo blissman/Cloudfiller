@@ -42,6 +42,7 @@ class ResponsesController < ApplicationController
   end
 
   def destroy
+    @request = Request.find(params[:request_id])
     @response = Response.find(params[:id])
     @response.destroy
     redirect_to responses_path

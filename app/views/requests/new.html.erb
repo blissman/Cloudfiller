@@ -6,6 +6,19 @@
 
       <%= form_for @request, url: {action: "create"} do |form| %>
 
+        <% if @request.errors.any? %>
+          <div id="error_explanation">
+            <h4><%= pluralize(@request.errors.count, "error") %> prohibited this user from being saved:</h4>
+
+            <ul>
+              <% @request.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+            </ul>
+
+          </div>
+        <% end %>
+
         <div class="form_field">
           <%= form.label :Category %>
           <%= form.collection_select :category_id, @categories, :id, :name, include_blank: true %>
