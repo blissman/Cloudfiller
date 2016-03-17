@@ -7,6 +7,11 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    respond_to do |format|
+      format.html { }
+      format.js {  }
+    end
+
   end
 
   # GET /users/new
