@@ -1,1 +1,1 @@
-$("#done_request_btn%>").html("<%= j render 'request_path' %>")
+$(".requests_page_container").html("request_path")
