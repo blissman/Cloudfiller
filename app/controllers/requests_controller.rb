@@ -7,7 +7,8 @@ class RequestsController < ApplicationController
       @request = @user.requests.where(active: true).first
       @responders = User.joins(:responses).where(responses: {request_id: @request})
     end
-    @inactive_requests = Request.where(active: false).order(created_at: :desc).page(params[:page])
+
+    @inactive_requests = Request.where("user_id = ? AND active = ?", @user, false).order(created_at: :desc).page(params[:page])
     # @responders = User.joins(:responses).where(responses: {request_id: @active_request})
     # @requests = @active_requests + @inactive_requests
     # @requests = Request.all

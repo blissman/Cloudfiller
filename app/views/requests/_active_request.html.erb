@@ -22,6 +22,14 @@
                     <br> Rating: <%= responder.rating %>
                   <% end %>
               </p>
+
+              <button id="responder_message_btn">
+                <%= link_to "Message me!",
+                conversations_path(sender_id: current_user.id,
+                recipient_id: responder.id),
+                method: "post"%>
+              </button>
+              
             <% end %>
 
             <!-- <button id="done_request_btn"> <%#= link_to "Done", request_path(@active_request), remote: true %> </button> -->
