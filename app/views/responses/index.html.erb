@@ -23,7 +23,7 @@
             </li>
             <br>
 
-            <button> <%= link_to 'Remove', response_path, method: :delete %> </button>
+            <button> <%= link_to 'Remove', response_path(response.request), method: :delete %> </button>
 
           <% end %>
         </ul>
