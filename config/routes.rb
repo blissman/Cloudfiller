@@ -17,13 +17,16 @@ Rails.application.routes.draw do
   end
 
   resources :responses do
-    resources :requests    
+    resources :requests
   end
 
   resources :categories do
     resources :requests
   end
 
+  resources :conversations do
+    resources :messages
+  end
 
   get 'login' => 'user_sessions#new', :as => :login
   post 'logout' => 'user_sessions#destroy', :as => :logout
