@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
   resources :experiences
 
+  resources :ratings
+
   resources :requests do
     resources :responses
     resources :messages
