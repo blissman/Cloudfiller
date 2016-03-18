@@ -13,6 +13,10 @@ class RequestsController < ApplicationController
     # @requests = @active_requests + @inactive_requests
     # @requests = Request.all
     # for active it will always be the most recent date
+    respond_to do |format|
+      format.html { }
+      format.js { }
+    end
   end
 
   def show
