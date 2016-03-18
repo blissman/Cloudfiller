@@ -2,13 +2,6 @@ class Rating < ActiveRecord::Base
 
   belongs_to :user
 
-  before_save do
-    if self.total_ratings == nil
-      self.total_ratings = 1
-    else
-      self.total_ratings += 1
-    end
-  end
-
+  validates :rating, numericality: { only_integer: true, greater_than_or_equal_to: 1, less_than_or_equal_to: 5 }
 
 end
