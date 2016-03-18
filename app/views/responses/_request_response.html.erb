@@ -4,10 +4,10 @@
       Name: <%= response.user.name %> <%= response.user.lastname %>
         <br>
       Rating:
-      <% if response.user.rating == nil %>
+      <% if response.user.ratings.average(:rating) == nil %>
         (Rating Pending)
       <% else %>
-        <%= response.user.rating %>
+        <%= response.user.ratings.average(:ratings) %>
       <% end %>
         <br>
     <% end %>
