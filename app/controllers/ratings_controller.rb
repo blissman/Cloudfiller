@@ -6,9 +6,8 @@ class RatingsController < ApplicationController
 
   def create
     @rating = Rating.new(rating_params)
-    @rating.total_ratings = 0
     if @rating.save
-      redirect_to user_path
+      redirect_to root_path
     else
       render :new
     end
@@ -20,13 +19,13 @@ class RatingsController < ApplicationController
 
   def update
     @rating = Rating.find(params[:id])
-    @rating.update_attributes(experience_params)
+    @rating.update_attributes(rating_params)
     redirect_to user_path
   end
 
   private
 
   def rating_params
-    params.require(:rating).permit(:user_id, :rating, :total_ratings)
+    params.require(:rating).permit(:user_id, :rating)
   end
 end
