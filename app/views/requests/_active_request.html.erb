@@ -16,10 +16,10 @@
             <% @responders.each do |responder| %>
               <p>
                 <%= responder.name %>, <%= responder.lastname %>
-                  <% if responder.rating == nil %>
+                  <% if responder.ratings.average(:rating) == nil %>
                     <br> (Rating Pending)
                   <% else %>
-                    <br> Rating: <%= responder.rating %>
+                    <br> Rating: <%= responder.ratings.average(:rating) %>
                   <% end %>
               </p>
 
