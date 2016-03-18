@@ -94,3 +94,15 @@
       margin-left: 300px;
       margin-top: 50px;
 }
+
+
+.confirm_delete_msg{
+      background-color: $green;
+      width: 600px;
+      height: auto;
+      border-radius: 2%;
+      padding: 20px;
+      margin-right: 45%;
+      margin-top: 30px;
+      z-index:100;
+}
