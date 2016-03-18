@@ -7,7 +7,14 @@
       <% if response.user.ratings.average(:rating) == nil %>
         (Rating Pending)
       <% else %>
-        <%= response.user.ratings.average(:ratings) %>
+        <div class="star-ratings-css">
+          <div class="star-ratings-css-top" style="width: <%= response.user.ratings.average(:rating)/5.0*100.0 %>%">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+          <div class="star-ratings-css-bottom">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+        </div>
       <% end %>
         <br>
     <% end %>

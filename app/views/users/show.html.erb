@@ -68,7 +68,7 @@
               <% if @user.ratings.average(:rating) == nil %>
                 <%= "Participate in the community for a rating!" %>
               <% else %>
-                <%= @user.ratings.average(:rating) %>/5
+                <%= @user.ratings.average(:rating) %> / 5.0
                 (<%= @user.ratings.count %> ratings total)
                 <div class="notification_rating">
                   <div class="star-ratings-css">
