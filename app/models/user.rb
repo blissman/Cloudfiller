@@ -2,7 +2,9 @@ class User < ActiveRecord::Base
   authenticates_with_sorcery!
   has_many :requests, :dependent => :delete_all
   has_one :experience, :dependent => :delete
+  has_many :ratings, :dependent => :delete_all
   accepts_nested_attributes_for :experience
+  accepts_nested_attributes_for :ratings
   has_many :responses, :dependent => :delete_all
   has_many :messages, :dependent => :delete_all
   has_many :conversations, :dependent => :delete_all

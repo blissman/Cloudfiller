@@ -65,10 +65,21 @@
           <div class="user_account_rating">
             <p>
               <strong>Current rating:</strong>
-              <% if @user.rating == nil %>
+              <% if @user.ratings == nil %>
                 <%= "Participate in the community for a rating!" %>
               <% else %>
-                <%= @user.rating %> <div class="notification_rating"> &#9733; </div>
+                <%= @user.ratings.average(:rating) %>/5
+                (<%= @user.ratings.count %> ratings total)
+                <div class="notification_rating">
+                  <div class="star-ratings-css">
+                    <div class="star-ratings-css-top" style="width: <%= @user.ratings.average(:rating)/5.0*100.0 %>%">
+                      <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                    <div class="star-ratings-css-bottom">
+                      <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                  </div>
+                </div>
               <% end %>
             </p>
           </div>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160317134011) do
+ActiveRecord::Schema.define(version: 20160318160005) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,6 +50,13 @@ ActiveRecord::Schema.define(version: 20160317134011) do
   add_index "messages", ["conversation_id"], name: "index_messages_on_conversation_id", using: :btree
   add_index "messages", ["user_id"], name: "index_messages_on_user_id", using: :btree
 
+  create_table "ratings", force: :cascade do |t|
+    t.integer  "user_id"
+    t.float    "rating"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "requests", force: :cascade do |t|
     t.text     "description"
     t.date     "expire"
@@ -73,12 +80,10 @@ ActiveRecord::Schema.define(version: 20160317134011) do
     t.string   "lastname"
     t.string   "email",            null: false
     t.integer  "points"
-    t.float    "rating"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
     t.string   "crypted_password"
     t.string   "salt"
-    t.integer  "total_ratings"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

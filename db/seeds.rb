@@ -37,3 +37,5 @@ Category.create(name: 'Environment')
 Category.create(name: 'Gender Studies')
 Category.create(name: 'Religion')
 Category.create(name: 'Philosophy')
+
+User.create(name:"Bliss", lastname: "Man", email:"blissman@gmail.com", password:"password", password_confirmation:"password", points: 100)
