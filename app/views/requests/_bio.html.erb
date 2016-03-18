@@ -1,20 +1,22 @@
 
 <div id="bio_form">
-<h2> hello </h2>
 
     <% @responders.each do |responder| %>
-      <p> <strong>Education:</strong>
-        <%= responder.experience.education %>
-      </p>
+      <% if responder.experience != nil %>
+        <p> <strong>Education:</strong>
+          <%= responder.experience.education %>
+        </p>
 
-      <p> <strong>Job Experience:</strong>
-        <%= responder.experience.job %>
-      </p>
+        <p> <strong>Job Experience:</strong>
+          <%= responder.experience.job %>
+        </p>
 
-      <p> <strong>Knowledge:</strong>
-        <%= responder.experience.knowledge %>
-      </p>
-
+        <p> <strong>Knowledge:</strong>
+          <%= responder.experience.knowledge %>
+        </p>
+      <% else %>
+        <p> Sorry! This user has not yet provided any extended bio information.</p>
+      <% end %>
 
                   <button id="responder_message_btn">
                     <%= link_to "Message me!",
