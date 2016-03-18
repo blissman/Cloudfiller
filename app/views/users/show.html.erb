@@ -65,7 +65,7 @@
           <div class="user_account_rating">
             <p>
               <strong>Current rating:</strong>
-              <% if @user.ratings == nil %>
+              <% if @user.ratings.average(:rating) == nil %>
                 <%= "Participate in the community for a rating!" %>
               <% else %>
                 <%= @user.ratings.average(:rating) %>/5
