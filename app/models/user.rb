@@ -7,7 +7,8 @@ class User < ActiveRecord::Base
   accepts_nested_attributes_for :ratings
   has_many :responses, :dependent => :delete_all
   has_many :messages, :dependent => :delete_all
-  has_many :conversations, :dependent => :delete_all
+  has_many :conversations, :foreign_key => :sender_id, :dependent => :delete_all
+  has_many :conversations, :foreign_key => :recipient_id, :dependent => :delete_all
 
   validates :password, length: { minimum: 3 }, if: -> { new_record? || changes["password"] }
   validates :password, confirmation: true, if: -> { new_record? || changes["password"] }
