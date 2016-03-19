@@ -14,12 +14,12 @@
             <h2>Responses:</h2>
 
             <% @responders.each do |responder| %>
-              <p>
+              <div class="responder_name_rating">
                 <%= responder.name %>, <%= responder.lastname %>
                   <% if responder.ratings.average(:rating) == nil %>
                       (Rating Pending)
-
-                    <div id="responder_bio_form"> <button> <%= link_to 'Bio', requests_path, remote: true %> </button> </div>
+              </div>
+                    <div id="responder_bio_form_btn"> <button> <%= link_to 'Bio', requests_path, remote: true %> </button> </div>
 
                   <% else %>
                     <br> Rating: <%= responder.ratings.average(:rating) %>
