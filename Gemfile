@@ -35,6 +35,9 @@ gem 'autoprefixer-rails'
 gem 'kaminari'
 # Use Unicorn as the app server
 # gem 'unicorn'
+# Use Whenever to schedule expiry dates for requests
+gem 'whenever', :require => false
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
