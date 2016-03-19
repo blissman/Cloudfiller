@@ -47,10 +47,11 @@ class RequestsController < ApplicationController
 
   def update
     # byebug
+    @user = current_user
     @request = Request.find(params[:id])
     @request.active = params[:request][:active]
     @request.save
-    @inactive_requests = Request.where(active: false).order(created_at: :desc).page(params[:page])
+    @inactive_requests = Request.where("user_id = ? AND active = ?", @user, false).order(created_at: :desc).page(params[:page])
     # render js: "update"
 
     respond_to do |format|
