@@ -14,8 +14,10 @@ Rails.application.routes.draw do
   resources :ratings
 
   resources :requests do
+    resources :conversations do
+      resources :messages
+    end
     resources :responses
-    resources :messages
   end
 
   resources :responses do
@@ -26,9 +28,6 @@ Rails.application.routes.draw do
     resources :requests
   end
 
-  resources :conversations do
-    resources :messages
-  end
 
   get 'login' => 'user_sessions#new', :as => :login
   post 'logout' => 'user_sessions#destroy', :as => :logout
