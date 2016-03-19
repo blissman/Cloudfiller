@@ -3,6 +3,12 @@ class ConversationsController < ApplicationController
 def index
   @users = User.all
   @conversations = Conversation.all
+
+  respond_to do |format|
+    format.html { }
+    format.js {  }
+  end
+
 end
 
 def create
@@ -13,7 +19,12 @@ def create
     @conversation = Conversation.create!(conversation_params)
   end
 
-  redirect_to request_conversation_messages_path(@request, @conversation)
+  respond_to do |format|
+    format.html { render :back }
+    format.js {  }
+  end
+
+  # redirect_to request_conversation_messages_path(@request, @conversation)
 end
 
 private
