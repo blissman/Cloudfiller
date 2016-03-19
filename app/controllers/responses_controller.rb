@@ -45,8 +45,9 @@ class ResponsesController < ApplicationController
     # @request = Request.find(params[:id])
     # @request.response = Response.find(params[:id])
     # @response = Response.find(params[:id])
-  
+
     @request = Request.find(params[:request_id])
+    @response = Response.find(params[:id])
     @response.destroy
     redirect_to responses_path
   end
