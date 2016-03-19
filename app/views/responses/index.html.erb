@@ -30,8 +30,12 @@
 
             </li>
             <br>
-
-            <button> <%= link_to 'Remove', request_response_path(request, request.responses.where(user_id: current_user).first), method: :delete %> </button>
+            <!-- Button for removing an active response (if the user hasn't been contacted already) -->
+            <button>
+              <%= link_to 'Remove', request_response_path(request,
+                request.responses.where(user_id: current_user).first),
+                method: :delete %>
+            </button>
 
           <% end %>
         </ul>
