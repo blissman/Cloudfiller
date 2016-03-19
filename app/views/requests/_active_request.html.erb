@@ -15,17 +15,30 @@
 
             <% @responders.each do |responder| %>
               <div class="responder_name_rating">
+
                 <%= responder.name %>, <%= responder.lastname %>
                   <% if responder.ratings.average(:rating) == nil %>
-                      (Rating Pending)
-              </div>
-                    <div id="responder_bio_form_btn"> <button> <%= link_to 'Bio', requests_path, remote: true %> </button> </div>
-
+                    <br> (Rating Pending)
                   <% else %>
                     <br> Rating: <%= responder.ratings.average(:rating) %>
                   <% end %>
-              </p>
+                    <br>
+                  <button id="responder_message_btn">
+                    <%= link_to "Message me!",
+                    request_conversations_path(request_id: @request,
+                    sender_id: current_user.id,
+                    recipient_id: responder.id),
+                    method: "post"%>
+                  </button>
 
+                  <!-- Link to Bio Button -->
+                  <div id="responder_bio_form_btn">
+                    <button>
+                      <%= link_to 'Bio', requests_path, remote: true %>
+                    </button>
+                  </div>
+
+              </div>
             <% end %>
 
             <!-- <button id="done_request_btn"> <%#= link_to "Done", request_path(@active_request), remote: true %> </button> -->
