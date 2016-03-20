@@ -7,6 +7,7 @@ class RatingsController < ApplicationController
   def create
     @rating = Rating.new(rating_params)
     if @rating.save
+      @rating.create_activity :create, owner: current_user
       redirect_to root_path
     else
       render :new

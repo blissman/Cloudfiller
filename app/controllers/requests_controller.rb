@@ -51,6 +51,7 @@ class RequestsController < ApplicationController
     @request = Request.find(params[:id])
     @request.active = params[:request][:active]
     @request.save
+    @request.create_activity :update, owner: current_user
     @inactive_requests = Request.where("user_id = ? AND active = ?", @user, false).order(created_at: :desc).page(params[:page])
     # render js: "update"
 

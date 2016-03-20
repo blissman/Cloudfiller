@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   # Tracking for Notifications (defaults to create, update, destroy)
-  include PublicActivity::Model
-  tracked only: :update, owner: ->(controller, model) { controller && controller.current_user }
+  include PublicActivity::Common
+  # tracked only: :update, owner: ->(controller, model) { controller && controller.current_user }
 
   # Sorcery authentication
   authenticates_with_sorcery!
