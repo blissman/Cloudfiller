@@ -1,2 +1,2 @@
 
-$('#responder_message_btn').html("<%= j render partial:'conversation', locals: { conversation:  @conversation, request: @request, message: @message } %>");
+$('#responder_message_btn').html("<%= j render @conversation %>");
