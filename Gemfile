@@ -38,7 +38,7 @@ gem 'kaminari'
 # Use Whenever to schedule expiry dates for requests
 gem 'whenever', :require => false
 
-
+gem 'public_activity'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
