@@ -22,6 +22,6 @@ set :environment, "development"
 
 # Learn more: http://github.com/javan/whenever
 
-every 1.day, at: '21:01' do
+every 1.day, at: '02:30' do
   runner "Request.expire_requests"
 end
