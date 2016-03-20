@@ -5,7 +5,7 @@
 
 # Example:
 #
-set :output, "/Users/blissman/Desktop/cron_log.log"
+# set :output, "/Users/blissman/Desktop/cron_log.log"
 #
 # setting environment to development to test that crontab is working correctly . . .
 # SET TO PRODUCTION OR REMOVE BEFORE DEPLOY!
