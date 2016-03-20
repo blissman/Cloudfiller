@@ -9,7 +9,7 @@
 #
 # setting environment to development to test that crontab is working correctly . . .
 # SET TO PRODUCTION OR REMOVE BEFORE DEPLOY!
-set :environment, "development"
+# set :environment, "development"
 # every 2.hours do
 #   command "/usr/bin/some_great_command"
 #   runner "MyModel.some_method"
