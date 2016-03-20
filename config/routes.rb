@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
-  get 'activities/index'
-
   root "categories#index"
+
+  resources :activities
 
   resources :password_resets
 
