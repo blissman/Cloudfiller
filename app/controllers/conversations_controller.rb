@@ -11,7 +11,7 @@ def create
     @conversation = Conversation.between(params[:sender_id], params[:recipient_id]).first
   else
     @conversation = Conversation.create!(conversation_params)
-    @conversation.create_activity :create, owner: current_user
+    @conversation.create_activity :create, owner: current_user, recipient: User.find(@conversation.recipient_id)
   end
 
   redirect_to request_conversation_messages_path(@request, @conversation)
