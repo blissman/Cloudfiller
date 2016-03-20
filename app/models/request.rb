@@ -8,6 +8,7 @@ class Request < ActiveRecord::Base
   belongs_to :user
   belongs_to :category
   has_many :responses
+  has_many :conversations
 
   validates :category_id, :description, presence: true
   validates :points, numericality: { only_integer: true, greater_than_or_equal_to: 1 }

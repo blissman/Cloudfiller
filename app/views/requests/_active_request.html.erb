@@ -1,31 +1,34 @@
-
-
-            <h2>Open Request:</h2>
+          <h2>Open Request:</h2>
             <p>
               <strong>Category:</strong> <%= @request.category.name %>
-              <br>
+                <br>
               <strong>Description:</strong> <%= @request.description %>
-              <br>
+                <br>
               <strong>Points:</strong> <%= @request.points %>
-              <br>
+                <br>
               <strong>Expiry:</strong> <%= @request.expire %>
             </p>
 
-            <h2>Responses:</h2>
+          <h2>Responses:</h2>
 
             <% @responders.each do |responder| %>
               <div class="responder_name_rating">
-                <%= responder.name %>, <%= responder.lastname %>
-                  <% if responder.ratings.average(:rating) == nil %>
-                      (Rating Pending)
-              </div>
-                    <div id="responder_bio_form_btn"> <button> <%= link_to 'Bio', requests_path, remote: true %> </button> </div>
 
+                <%= responder.name %> <%= responder.lastname %>
+                  <% if responder.ratings.average(:rating) == nil %>
+                    <br> (Rating Pending)
                   <% else %>
                     <br> Rating: <%= responder.ratings.average(:rating) %>
                   <% end %>
-              </p>
+                    <br>
+                  <!-- Link to Bio Button -->
+                  <div id="responder_bio_form_btn">
+                    <button>
+                      <%= link_to 'Bio', requests_path, remote: true %>
+                    </button>
+                  </div>
 
+              </div>
             <% end %>
 
             <!-- <button id="done_request_btn"> <%#= link_to "Done", request_path(@active_request), remote: true %> </button> -->
