@@ -1,7 +1,7 @@
 <div id="msg_form">
 
 <div class="ui segment">
-  <% @messages.each do |message| %>
+  <% conversation.messages.each do |message| %>
     <% if message.body %>
       <% user = User.find(message.user_id) %>
         <div class="item">
@@ -19,7 +19,7 @@
   <% end %>
 </div>
 
-<%= form_for [@request, @conversation, @message], html: {class: "ui reply form"} do |f| %>
+<%= form_for [request, conversation, message], html: {class: "ui reply form"} do |f| %>
   <div class="field">
     <%= f.text_area :body, class: "form-control" %>
   </div>

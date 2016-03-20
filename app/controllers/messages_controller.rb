@@ -33,14 +33,17 @@ end
 
 def create
   @message = @conversation.messages.new(message_params)
-  if @message.save
-
+  # if @message.save
       respond_to do |format|
-        format.html { render :back }
-        format.js {  }
+        if @message.save
+          format.html { }
+          format.js { request: @request, conversation: @conversation }
+        else
+          format.html { redirect_to :back }
+          format.js { render :new }
+        end
       end
     # redirect_to request_conversation_messages_path(@request, @conversation)
-  end
 end
 
 private

@@ -20,7 +20,7 @@ def create
   end
 
   respond_to do |format|
-    format.html { render :back }
+    format.html { }
     format.js {  }
   end
 
