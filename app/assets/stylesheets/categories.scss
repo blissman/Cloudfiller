@@ -1,116 +1,101 @@
-// Place all the styles related to the Categories controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-.category_list_page{
+
+// ******************** Category Index Page ********************
+.category_list_page {
     @include outer-container($max-width);
-
-  h1{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 4rem;
-    color: $salmon;
-    text-align: center;
-    padding-top: 1rem;
-    padding-bottom: 1.5rem;
-    margin-left: 25%;
-    margin-right:25%;
-    width: 50%;
-    margin-top: 100px;
-    background: rgba(0, 0, 0, .5);
-  }
-
+    h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 4rem;
+        color: $salmon;
+        text-align: center;
+        padding-top: 1rem;
+        padding-bottom: 1.5rem;
+        margin-left: 25%;
+        margin-right: 25%;
+        width: 50%;
+        margin-top: 100px;
+        background: rgba(0, 0, 0, .5);
+    }
 }
-
-.categories{
+.categories {
     margin-top: 80px;
-
     @include media($small-screen-only) {
-      margin-left: 4%;
+        margin-left: 4%;
     }
-
     @include media($medium-screen-only) {
-            margin-left: 7%;
+        margin-left: 7%;
     }
-
     @include media($large-screen-up) {
-      margin-left: 11.5%;
+        margin-left: 11.5%;
     }
-
 }
-
 #category_list {
-
-  & > li {
-
-    @include media($small-screen-only) {
-        @include span-columns(6);
-        @include omega(2n);
-      }
-
-    @include media($medium-screen-only) {
-        @include span-columns(4);
-        @include omega(3n);
-      }
-
-      @include media($large-screen-up) {
-        @include span-columns(2.2);
-        @include omega(5n);
-      }
-
-  & > a {
-      display: block;
-      clear: both;
-      height: 7rem;
-      width: 8.5rem;
-      text-align: center;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 1rem;
-      font-weight: 600;
-      color: $black;
-      background-color: $green;
-      padding-top: 2.5rem;
-      border-radius: 4%;
-      margin-bottom: 1.2rem;
-
-      &:hover{
-        background-color: $light-green;
+    & > li {
+        @include media($small-screen-only) {
+            @include span-columns(6);
+            @include omega(2n);
         }
-      &:active{
-        background-color: darken($green, 15%);
-      }
+        @include media($medium-screen-only) {
+            @include span-columns(4);
+            @include omega(3n);
+        }
+        @include media($large-screen-up) {
+            @include span-columns(2.2);
+            @include omega(5n);
+        }
+        & > a {
+            display: block;
+            clear: both;
+            height: 7rem;
+            width: 8.5rem;
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: $black;
+            background-color: $green;
+            padding-top: 2.5rem;
+            border-radius: 4%;
+            margin-bottom: 1.2rem;
+            &:hover {
+                background-color: $light-green;
+            }
+            &:active {
+                background-color: darken($green, 15%);
+            }
+        }
     }
-  }
 }
 
-.category_requests_show_page{
-      @include outer-container($max-width);
+// ******************** Category Show Page ********************
 
-        h1{
-          font-family: 'Montserrat', sans-serif;
-          font-size: 4rem;
-          color: $salmon;
-          text-align: center;
-          padding-top: 1rem;
-          padding-bottom: 1.5rem;
-          margin-left: 25%;
-          margin-right:25%;
-          width: 50%;
-          margin-top: 100px;
-          background: rgba(0, 0, 0, .5);
-        }
+.category_requests_show_page {
+    @include outer-container($max-width);
+    h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 4rem;
+        color: $salmon;
+        text-align: center;
+        padding-top: 1rem;
+        padding-bottom: 1.5rem;
+        margin-left: 25%;
+        margin-right: 25%;
+        width: 50%;
+        margin-top: 100px;
+        background: rgba(0, 0, 0, .5);
+    }
 }
-
-.category_requests_container{
-      position: relative;;
-      background-color: $green;
-      height: 1050px;
-      width: 900px;
-      border-radius: 1%;
-      margin-left: 150px;
-      margin-right: 150px;
-      padding: 30px;
+.category_requests_container {
+    position: relative;
+    ;
+    background-color: $green;
+    height: 1050px;
+    width: 900px;
+    border-radius: 1%;
+    margin-left: 150px;
+    margin-right: 150px;
+    padding: 30px;
 }
-
-.category_active_request{
+.category_active_request {
     position: relative;
     background-color: $light-green;
     height: auto;
@@ -121,17 +106,15 @@
     margin-left: 20px;
     margin-bottom: 10px;
     padding: 20px;
-
-      li{
+    li {
         margin: 25px;
         list-style: none;
-      }
-
-      button{
+    }
+    button {
         border-radius: 4%;
         background-color: $blue;
         font-size: 1.3rem;
         font-weight: 600;
         margin: 5px;
-      }
+    }
 }
