@@ -65,3 +65,19 @@ position: absolute;
 .rating2 a {
   float:none
 }
+
+// ********************* Rating Form *********************
+
+#rating_form{
+  position: fixed;
+  background-color: darken($salmon, 5%);
+  width: 600px;
+  height: auto;
+  border-radius: 2%;
+  padding: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index:100;
+  text-align: center;
+}
