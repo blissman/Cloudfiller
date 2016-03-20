@@ -18,144 +18,71 @@
  @import 'user_sessions';
 
 
-
-
- html{
-      background-color: #7d8faf;
-
-    body{
-        @include outer-container($max-width);
-        background-image: url("grok_background_img.jpg"), linear-gradient(white, black);
-        background-size: cover;
-        min-height: 1800px;
-        position: relative;
-   }
+ html {
+     background-color: #7d8faf;
+     body {
+         @include outer-container($max-width);
+         background-image: url("grok_background_img.jpg"), linear-gradient(white, black);
+         background-size: cover;
+         min-height: 1800px;
+         position: relative;
+     }
  }
-
- .popupform{
-   padding: 1rem 2rem;
+ .popupform {
+     padding: 1rem 2rem;
  }
-
-header{
-    background-color: $blue;
-    height: 75px;
-    padding: 10px;
-}
-
-.navbar {
-    @include outer-container($max-width);
-
-          img{
-            height: 50px;
-            width: auto;
-            float: left;
-          }
-
-         .nav_links{
-                  text-align: center;
-
-             li {
-                  display: inline-block;
-                  padding: 0.2rem 0.6rem;
-                  border: solid white 2px;
-                  margin: 10px;
-                  clear: both;
-                    a {
-                      color: white;
-                    }
-            }
-            .log_btns{
-                    text-align: center;
-                    float: right;
-                    margin: 10px;
-                    padding: 5px;
-              }
-          }
-}
-
-footer{
-      position: absolute;
-      bottom: 0;
-      height: 40px;
-      width:100%;
-      background-color: $blue;
-      margin: 0;
-
-
-
-
-      #copyright{
-        @include outer-container($max-width);
-        color: $white;
-        text-align: center;
-        font-weight: 300;
-        padding: 8px;
-      }
-
-}
-
-// Star Ratings Styles
-.star-ratings-css {
-  unicode-bidi: bidi-override;
-  color: #c5c5c5;
-  font-size: 25px;
-  height: 25px;
-  width: 125px;
-  margin: 0 auto;
-  position: relative;
-  padding: 0;
-  text-shadow: 0px 1px 0 #a2a2a2;
-
-  .star-ratings-css-top {
-    color: #e7711b;
-    padding: 0;
-    text-shadow: 0px 1px 0 #ab5414;
-    position: absolute;
-    z-index: 1;
-    display:block;
-    left: 0px;
-    overflow: hidden;
-  }
-  .star-ratings-css-bottom { z-index: 0; }
-}
-
-// ratings input styles
-.rating {
-  width: 226px;
-  margin: 0 auto 1em;
-  font-size: 25px;
-  overflow:hidden;
-}
-.rating input {
-float: right;
-opacity: 0;
-position: absolute;
-}
-.rating a,
-.rating label {
-  float:right;
-  color: #c5c5c5;
-  text-decoration: none;
-  -webkit-transition: color .4s;
-  -moz-transition: color .4s;
-  -o-transition: color .4s;
-  transition: color .4s;
-  text-shadow: 0px 1px 0 #a2a2a2;
-}
-.rating label:hover ~ label,
-.rating input:focus ~ label,
-.rating label:hover,
-.rating a:hover,
-.rating a:hover ~ a,
-.rating a:focus,
-.rating a:focus ~ a		{
-  color: #e7711b;
-  text-shadow: 0px 1px 0 #ab5414;
-  cursor: pointer;
-}
-.rating2 {
-  direction: rtl;
-}
-.rating2 a {
-  float:none
-}
+ header {
+     background-color: $blue;
+     height: auto;
+     padding: 10px;
+ }
+ .navbar {
+     @include outer-container($max-width);
+     a > img {
+         height: 40px;
+         width: auto;
+         float: left;
+         margin: 0.4rem;
+         margin-right: 2rem;
+     }
+     ul {
+         overflow: auto;
+         li > a {
+             text-align: center;
+             display: inline-block;
+             padding: 0.2rem 0.6rem;
+             border: solid white 2px;
+             margin: 10px;
+             float: left;
+             color: white;
+             &:hover {
+                 border: solid $light-blue 2px;
+                 color: $light-blue;
+             }
+             &:active {
+                 background-color: darken($green, 15%);
+             }
+         }
+     }
+     .log_btns {
+         text-align: center;
+         float: right;
+         margin: 10px;
+         padding: 5px;
+     }
+ }
+ footer {
+     position: absolute;
+     bottom: 0;
+     height: 40px;
+     width: 100%;
+     background-color: $blue;
+     margin: 0;
+     #copyright {
+         @include outer-container($max-width);
+         color: $white;
+         text-align: center;
+         font-weight: 300;
+         padding: 8px;
+     }
+ }
