@@ -1,3 +1,67 @@
-// Place all the styles related to the Ratings controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// Star Ratings Styles
+.star-ratings-css {
+  unicode-bidi: bidi-override;
+  color: #c5c5c5;
+  font-size: 25px;
+  height: 25px;
+  width: 125px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0;
+  text-shadow: 0px 1px 0 #a2a2a2;
+
+  .star-ratings-css-top {
+    color: #e7711b;
+    padding: 0;
+    text-shadow: 0px 1px 0 #ab5414;
+    position: absolute;
+    z-index: 1;
+    display:block;
+    left: 0px;
+    overflow: hidden;
+  }
+  .star-ratings-css-bottom { z-index: 0; }
+}
+
+// ratings input styles
+
+.rating {
+  width: 226px;
+  margin: 0 auto 1em;
+  font-size: 25px;
+  overflow:hidden;
+}
+.rating input {
+float: right;
+opacity: 0;
+position: absolute;
+}
+.rating a,
+.rating label {
+  float:right;
+  color: #c5c5c5;
+  text-decoration: none;
+  -webkit-transition: color .4s;
+  -moz-transition: color .4s;
+  -o-transition: color .4s;
+  transition: color .4s;
+  text-shadow: 0px 1px 0 #a2a2a2;
+}
+.rating label:hover ~ label,
+.rating input:focus ~ label,
+.rating label:hover,
+.rating a:hover,
+.rating a:hover ~ a,
+.rating a:focus,
+.rating a:focus ~ a		{
+  color: #e7711b;
+  text-shadow: 0px 1px 0 #ab5414;
+  cursor: pointer;
+}
+.rating2 {
+  direction: rtl;
+}
+.rating2 a {
+  float:none
+}
