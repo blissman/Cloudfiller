@@ -5,8 +5,11 @@
 
 # Example:
 #
-# set :output, "/path/to/my/cron_log.log"
+set :output, "/Users/blissman/Desktop/cron_log.log"
 #
+# setting environment to development to test that crontab is working correctly . . .
+# SET TO PRODUCTION OR REMOVE BEFORE DEPLOY!
+set :environment, "development"
 # every 2.hours do
 #   command "/usr/bin/some_great_command"
 #   runner "MyModel.some_method"
@@ -19,6 +22,6 @@
 
 # Learn more: http://github.com/javan/whenever
 
-every 1.day, at: '2:30am' do
-
+every 1.day, at: '21:01' do
+  runner "Request.expire_requests"
 end

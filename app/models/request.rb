@@ -24,4 +24,15 @@ class Request < ActiveRecord::Base
     end
   end
 
+  def self.expire_requests
+    Request.all.each do |request|
+      if request.active == true
+        if request.expire <= Date.today
+          request.active = false
+          request.save
+        end
+      end
+    end
+  end
+
 end
