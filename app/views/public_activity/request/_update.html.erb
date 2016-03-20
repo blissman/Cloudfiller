@@ -1,0 +1,7 @@
+completed a request
+
+<% if activity.trackable %>
+  <%= link_to activity.trackable.active, activity.trackable.description %>
+<% else %>
+  which has since been removed
+<% end %>
