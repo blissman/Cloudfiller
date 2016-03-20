@@ -3,6 +3,12 @@ class ConversationsController < ApplicationController
 def index
   @users = User.all
   @conversations = Conversation.all
+
+  respond_to do |format|
+    format.html { }
+    format.js {  }
+  end
+
 end
 
 def create
@@ -14,7 +20,12 @@ def create
     @conversation.create_activity :create, owner: current_user, recipient: User.find(@conversation.recipient_id)
   end
 
-  redirect_to request_conversation_messages_path(@request, @conversation)
+  respond_to do |format|
+    format.html { }
+    format.js {  }
+  end
+
+  # redirect_to request_conversation_messages_path(@request, @conversation)
 end
 
 private
