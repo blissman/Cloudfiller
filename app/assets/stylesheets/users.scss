@@ -82,28 +82,33 @@
 // ******************** User Account Edit Form ********************
 
 .edit_user_form {
-    background-color: $green;
-    width: 600px;
-    height: auto;
-    border-radius: 2%;
-    padding: 20px;
-    margin-right: 300px;
-    margin-left: 300px;
-    margin-top: 50px;
+  position: relative;
+  background-color: $green;
+  width: 40rem;
+  height: auto;
+  border-radius: 2%;
+  padding: 2rem;
+  margin-top: 5rem;
+  left: 50%;
+  transform: translate(-50%, -0%);
+  overflow: auto;
 }
 
 // ******************** Delete User Account Confirmation Popup ********************
 
 .confirm_delete_msg {
     position: fixed;
-    background-color: darken($salmon, 5%);
-    width: 600px;
+    background-color: darken($salmon, 10%);
     height: auto;
     border-radius: 2%;
-    padding: 20px;
+    border: 5px solid $salmon;
+    padding: 2rem;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 100;
     text-align: center;
+      h2{
+        color: $white;
+      }
 }

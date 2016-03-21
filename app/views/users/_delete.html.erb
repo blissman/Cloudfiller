@@ -1,7 +1,11 @@
 
   <div class="confirm_delete_msg">
 
-  <p><strong> Are you sure you want to permanently delete your account? </strong></p>
-    <button> <%= link_to 'Delete', @user, method: :delete %> </button>
+    <h2>Are you sure you want to <br> permanently delete your account?</h2>
+
+    <br>
+
+    <%= button_to 'Delete', @user, method: :delete %>
+
 
   </div>
