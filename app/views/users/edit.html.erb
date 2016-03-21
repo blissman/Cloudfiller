@@ -1,6 +1,9 @@
 <div class="edit_user_form">
 
-    <h1>Editing User</h1>
+    <h2>Edit</h2>
+
+    <br>
+
     <%= form_for(@user) do |f| %>
       <% if @user.errors.any? %>
         <div id="error_explanation">
@@ -15,36 +18,40 @@
       <% end %>
 
       <div class="field">
-        <%= f.label :name %><br>
+        <%= f.label :name %>
         <%= f.text_field :name %>
       </div>
       <div class="field">
-        <%= f.label "Last Name" %><br />
+        <%= f.label "Last Name" %>
         <%= f.text_field :lastname %>
       </div>
       <div class="field">
-        <%= f.label :email %><br>
+        <%= f.label :email %>
         <%= f.text_field :email %>
       </div>
+
+        <br>
+        <br>
 
       <%= f.fields_for :experience do |exp_form| %>
 
           <div class="field">
             <%= exp_form.label :education %>
-            <%= exp_form.text_field :education %>
+            <%= exp_form.text_area :education %>
           </div>
           <div class="field">
             <%= exp_form.label :job %>
-            <%= exp_form.text_field :job %>
+            <%= exp_form.text_area :job %>
           </div>
           <div class="field">
             <%= exp_form.label :knowledge %>
-            <%= exp_form.text_field :knowledge %>
+            <%= exp_form.text_area :knowledge %>
           </div>
       <% end %>
+          <br>
 
       <div class="actions">
-        <%= f.submit %>
+        <%= f.submit "Submit" %>
       </div>
 
     <% end %>

@@ -1,8 +1,10 @@
 <div class="new_request_page">
 
-  <h1> New Request </h1>
-
     <div class="new_request_form">
+
+      <h2> New Request </h2>
+
+      <br>
 
       <%= form_for @request, url: {action: "create"} do |form| %>
 
@@ -61,7 +63,7 @@
           <br>
 
         <div class="submit">
-          <%= form.submit %>
+          <%= form.submit "Submit" %>
         </div>
 
       <% end %>
