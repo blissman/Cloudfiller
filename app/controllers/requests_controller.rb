@@ -70,8 +70,8 @@ class RequestsController < ApplicationController
 
 private
 
-def request_params
-  params.require(:request).permit(:description, :expire, :points, :active, :category_id)
-end
+  def request_params
+    params.require(:request).permit(:description, :expire, :points, :active, :category_id)
+  end
 
 end

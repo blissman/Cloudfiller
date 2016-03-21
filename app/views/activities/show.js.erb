@@ -2,4 +2,9 @@ $('.user_account_notifications').hide();
 $('#clear_notifications').click(function( event ) {
   event.preventDefault();
   $( this ).hide();
+  //       $.ajax ({
+  //       method: "POST",
+  //       url: $(this).attr("href"),
+  //       data: { request: {active: false}, _method: "patch" }
+  //     });
 });

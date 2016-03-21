@@ -2,7 +2,7 @@ class Rating < ActiveRecord::Base
   # Tracking for Notifications (defaults to create, update, destroy)
   include PublicActivity::Common
   # tracked owner: ->(controller, model) { controller && controller.current_user }
-
+  
   # ActiveRecord Relationships
   belongs_to :user
 
