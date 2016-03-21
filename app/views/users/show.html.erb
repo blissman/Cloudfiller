@@ -9,34 +9,34 @@
       <div class="user_info">
         <div class="name_contact">
           <p>
-            <strong>Name:</strong>
+            <h4>Name</h4>
             <%= @user.name %>
           </p>
           <p>
-            <strong>Last name:</strong>
+            <h4>Last name</h4>
             <%= @user.lastname %>
           </p>
           <p>
-            <strong>Email:</strong>
+            <h4>Email</h4>
             <%= @user.email %>
           </p>
         </div>
 
         <div class="user_experiences">
           <p>
-            <strong>Education:</strong>
+            <h4>Education</h4>
             <% if @user.experience != nil %>
               <%= @user.experience.education %>
             <% end %>
           </p>
           <p>
-            <strong>Job Experience:</strong>
+            <h4>Job Experience</h4>
             <% if @user.experience != nil %>
               <%= @user.experience.job %>
             <% end %>
           </p>
           <p>
-            <strong>Knowledge:</strong>
+            <h4>Knowledge</h4>
             <% if @user.experience != nil %>
               <%= @user.experience.knowledge %>
             <% end %>
@@ -62,7 +62,7 @@
 
           <h3>Rating</h3>
           <% if @user.ratings.average(:rating)== nil %>
-            <h4> Participate in the community for a rating! </h4>
+            <h5> Participate in the community for a rating! </h5>
           <% else %>
             <%= @user.ratings.average(:rating) %>/5 (<%= @user.ratings.count %> ratings total)
           <div class="notification_rating">
