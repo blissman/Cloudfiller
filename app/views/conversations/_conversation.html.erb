@@ -1,32 +1,35 @@
 <div id="msg_form">
 
-<div class="ui segment">
-  <% conversation.messages.each do |message| %>
-    <% if message.body %>
-      <% user = User.find(message.user_id) %>
-        <div class="item">
-          <div class="content">
-            <div class="header"><strong><%= user.name %></strong>     <%= message.message_time %></div>
-              <div class="list">
-                <div class="item">
-                  <i class="right triangle icon"></i>
-                    <%= message.body %>
+  <div class="ui segment">
+    <% conversation.messages.each do |message| %>
+      <% if message.body %>
+        <% user = User.find(message.user_id) %>
+          <div class="item">
+            <div class="content">
+              <div class="header"><strong><%= user.name %></strong>     <%= message.message_time %></div>
+                <div class="list">
+                  <div class="item">
+                    <i class="right triangle icon"></i>
+                      <%= message.body %>
+                  </div>
                 </div>
-              </div>
+            </div>
           </div>
-        </div>
+      <% end %>
     <% end %>
-  <% end %>
-</div>
+  </div>
 
-<%= form_for [request, conversation, message], html: {class: "ui reply form"} do |f| %>
-  <div class="field">
-    <%= f.text_area :body, class: "form-control" %>
-  </div>
-    <%= f.text_field :user_id, value: current_user.id, type: "hidden" %>
-  <div>
-    <%= f.submit "Add Reply", class: "ui blue labeled submit icon button" %>
-  </div>
-<% end %>
+  <%#= @request.inspect %>
+  <%#= @conversation.inspect %>
+
+  <%= form_for [conversation.messages.create], url: request_conversation_messages_path(@request, @conversation), html: {class: "ui reply form"}, remote: true do |f| %>
+    <div class="field">
+      <%= f.text_area :body, class: "form-control" %>
+    </div>
+      <%= f.text_field :user_id, value: current_user.id, type: "hidden" %>
+    <div>
+      <%= f.submit "Add Reply", class: "ui blue labeled submit icon button", id:"reply_btn" %>
+    </div>
+  <% end %>
 
 </div>

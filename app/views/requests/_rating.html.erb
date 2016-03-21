@@ -1,35 +1,43 @@
-<div id="rating_form">
+<% responders = User.joins(:responses).where(responses: {request_id: Request.find(params[:id])}) %>
 
+  <% if responders.length > 0 %>
 
-  <% responders = User.joins(:responses).where(responses: {request_id: Request.find(params[:id])}) %>
+    <div id="rating_form">
 
-  <h3>Please select who helped you, and rate them accordingly:</h3>
+      <h3>Please select who helped you, and rate them accordingly:</h3>
 
-  <form action="/ratings" method="post">
+      <form action="/ratings" method="post">
 
-    <% responders.each do |responder| %>
-      <div class="responder_name_rating">
-        <input name="rating[user_id]" id="user_id" type="radio" value="<%= responder.id %>" required>
-          <%= responder.name %> <%= responder.lastname %>
-        <% if responder.ratings.average(:rating) == nil %>
-          <br> (Rating Pending)
-        <% else %>
-          <br> Rating: <%= responder.ratings.average(:rating) %>
+        <% responders.each do |responder| %>
+          <div class="responder_name_rating">
+            <input name="rating[user_id]" id="user_id" type="radio" value="<%= responder.id %>" required>
+              <%= responder.name %> <%= responder.lastname %>
+            <% if responder.ratings.average(:rating) == nil %>
+              <br> (Rating Pending)
+            <% else %>
+              <br> Rating: <%= responder.ratings.average(:rating) %>
+            <% end %>
+              <br>
         <% end %>
-          <br>
-    <% end %>
-    <div class="rating">
-      <fieldset>
-        <input type="hidden" name="rating[request_id]" value="<%= Request.find(params[:id]).id %>">
-        <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-        <input name="rating[rating]" id="e5" type="radio" value=5 required></a><label for="e5">★</label>
-        <input name="rating[rating]" id="e4" type="radio" value=4></a><label for="e4">★</label>
-        <input name="rating[rating]" id="e3" type="radio" value=3></a><label for="e3">★</label>
-        <input name="rating[rating]" id="e2" type="radio" value=2></a><label for="e2">★</label>
-        <input name="rating[rating]" id="e1" type="radio" value=1></a><label for="e1">★</label>
-      </fieldset>
-    </div>
-      <input type="submit" value="Submit">
-  </form>
 
-</div>
+        <div class="rating">
+          <fieldset>
+            <input type="hidden" name="rating[request_id]" value="<%= Request.find(params[:id]).id %>">
+            <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+            <input name="rating[rating]" id="e5" type="radio" value=5 required></a><label for="e5">★</label>
+            <input name="rating[rating]" id="e4" type="radio" value=4></a><label for="e4">★</label>
+            <input name="rating[rating]" id="e3" type="radio" value=3></a><label for="e3">★</label>
+            <input name="rating[rating]" id="e2" type="radio" value=2></a><label for="e2">★</label>
+            <input name="rating[rating]" id="e1" type="radio" value=1></a><label for="e1">★</label>
+          </fieldset>
+        </div>
+          <input type="submit" value="Submit">
+      </form>
+
+    </div>
+
+  <% else %>
+    <div id="rating_form">
+      <%= button_to 'Continue', requests_path, method: :get %>
+    </div>
+  <% end %>
