@@ -16,7 +16,7 @@ class ActivitiesController < ApplicationController
 
   def destroy
 
-    @activities.destroy
+    @activities.destroy_all
 
     respond_to do |format|
       format.html { }
