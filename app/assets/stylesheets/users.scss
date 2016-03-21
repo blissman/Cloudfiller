@@ -53,21 +53,20 @@
     height: auto;
     margin: 1rem;
     overflow: auto;
-}
-
-#points{
-  position: relative;
-  border-radius: 50%;
-  margin-left: 7.5rem;
-  width: 6rem;
-  height: 6rem;
-  color: $blue;
-  background-color: $white;
-    p{
-      text-align: center;
-      font-size: 3rem;
-      padding: 1rem;
-    }
+      #points{
+        position: relative;
+        border-radius: 50%;
+        width: 6rem;
+        height: 6rem;
+        margin-left: 6rem;
+        color: $blue;
+        background-color: $white;
+          p{
+            text-align: center;
+            font-size: 3rem;
+            padding: 1rem;
+          }
+      }
 }
 
 .user_info {
@@ -77,6 +76,17 @@
     height: auto;
     margin: 2rem;
     margin-right: 10rem;
+      p{
+        margin: 0 0 $small-spacing;
+        font-size: 1.4rem;
+        font-weight: 500;
+        color: $black;
+      }
+      span{
+        font-size: 1.3rem;
+        font-weight: 400;
+        color: shade($light-green, 30%);
+      }
 }
 
 .user_account_rating {
