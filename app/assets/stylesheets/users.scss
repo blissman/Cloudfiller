@@ -26,28 +26,14 @@
     }
 }
 
-.edit_delete_user_btns{
-  position: absolute;
-  height: auto;
-    button {
-      position: relative;
-      display: inline-block;
-      padding: 10px, 15px;
-      margin: 10px;
-      border-radius: 4%;
-      background-color: $blue;
-      font-size: 1em;
-      font-weight: 600;
-    }
-}
 .account_page_container {
     position: absolute;
     background-color: $green;
     height: auto;
     width: 900px;
     border-radius: 1%;
-    margin-left: 150px;
-    margin-right: 150px;
+    margin-left: 200px;
+    margin-right: 200px;
     margin-bottom: 150px;
     overflow: auto;
 }
