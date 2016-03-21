@@ -1,7 +1,15 @@
-completed a request
+<% if activity.owner == nil && activity.trackable %>
 
-<% if activity.trackable %>
-  <%= link_to activity.trackable.active, activity.trackable.description %>
+  The request <%= activity.trackable.description %> has expired.
+
 <% else %>
-  which has since been removed
+
+  completed a request:
+
+  <% if activity.trackable %>
+    <%= activity.trackable.description %>
+  <% else %>
+    which has since been removed
+  <% end %>
+
 <% end %>
