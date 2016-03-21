@@ -40,41 +40,36 @@
     position: relative;
     background-color: $light-green;
     height: auto;
-    width: 150px;
+    width: 250px;
     border-radius: 4%;
-    float: right;
-    margin: 20px;
-    margin-top: 20px;
+    margin: 25px;
     padding: 20px;
 }
 .user_info {
     position: relative;
     background-color: $light-green;
-    min-height: 400px;
-    width: 500px;
+    height: auto;
+    width: 850px;
     border-radius: 2%;
-    margin: 20px;
-    clear: both;
+    margin: 25px;
     padding: 20px;
 }
 .user_account_rating {
     position: relative;
     background-color: $light-green;
     height: auto;
-    width: 400px;
+    width: 500px;
     border-radius: 4%;
-    float: right;
-    margin: 50px;
+    margin: 25px;
     padding: 20px;
 }
 .user_account_notifications {
     position: relative;
     background-color: $light-green;
     height: auto;
-    width: 400px;
+    width: 850px;
     border-radius: 4%;
-    float: right;
-    margin: 50px;
+    margin: 25px;
     padding: 20px;
 }
 
