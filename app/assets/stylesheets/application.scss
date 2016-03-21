@@ -23,7 +23,7 @@
          @include outer-container($max-width);
          background-image: url("grok_background_img.jpg"), linear-gradient(white, black);
          background-size: cover;
-         min-height: 1600px;
+         min-height: 1800px;
          position: relative;
      }
  }
