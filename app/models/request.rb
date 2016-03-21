@@ -15,6 +15,7 @@ class Request < ActiveRecord::Base
   belongs_to :category
   has_many :responses
   has_many :conversations
+  has_many :ratings
 
   # ActiveRecord Validations
   validates :category_id, :description, presence: true
