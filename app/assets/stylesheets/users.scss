@@ -2,8 +2,7 @@
 // ******************** User Account Show ********************
 
 .user_account_page {
-    @include outer-container($max-width);
-    h1 {
+      h1 {
         font-family: 'Montserrat', sans-serif;
         font-size: 4rem;
         color: $salmon;
@@ -17,59 +16,66 @@
         background: rgba(0, 0, 0, .5);
     }
     button {
-        padding: 30px;
+        padding: 10px, 15px;
         margin: 10px;
         border-radius: 4%;
         background-color: $blue;
-        font-size: 1.3rem;
+        font-size: 1em;
         font-weight: 600;
     }
 }
+
 .account_page_container {
-    position: absolute;
-    background-color: $green;
-    height: auto;
-    width: 900px;
-    border-radius: 1%;
-    margin-left: 150px;
-    margin-right: 150px;
-    margin-bottom: 150px;
-    overflow: auto;
+  position: relative;
+  background-color: $green;
+  height: auto;
+  min-height: 45rem;
+  width: 55rem;
+  border-radius: 1%;
+  margin-top: 5rem;
+  left: 50%;
+  transform: translate(-50%, -0%);
+  overflow: auto;
 }
+
+.user_info_points_rating{
+  position: relative;
+  background-color: $light-green;
+  height: auto;
+  width: 52rem;
+  border-radius: 2%;
+  margin: 1.5rem;
+  overflow: auto;
+}
+
 .user_account_points {
     position: relative;
-    background-color: $light-green;
     height: auto;
-    width: 250px;
-    border-radius: 4%;
-    margin: 25px;
-    padding: 20px;
+    margin: 1.5rem;
 }
+
 .user_info {
     position: relative;
-    background-color: $light-green;
+    float: left;
+    clear: right;
     height: auto;
-    width: 850px;
-    border-radius: 2%;
-    margin: 25px;
-    padding: 20px;
+    margin: 1.5rem;
+    margin-right: 50px;
 }
+
 .user_account_rating {
     position: relative;
-    background-color: $light-green;
     height: auto;
-    width: 500px;
-    border-radius: 4%;
-    margin: 25px;
-    padding: 20px;
+    margin: 1.5rem;
 }
+
 .user_account_notifications {
     position: relative;
     background-color: $light-green;
     height: auto;
-    width: 850px;
-    border-radius: 4%;
-    margin: 25px;
+    width: 52rem;
+    border-radius: 2%;
+    margin: 1.5rem;
     padding: 20px;
 }
 
@@ -85,6 +91,7 @@
     margin-left: 300px;
     margin-top: 50px;
 }
+
 // ******************** Delete User Account Confirmation Popup ********************
 
 .confirm_delete_msg {

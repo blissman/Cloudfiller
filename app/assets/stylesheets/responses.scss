@@ -17,39 +17,34 @@
 }
 
 .responses_page_container{
-  position: absolute;
-    background-color: $green;
-    height: auto;
-    width: 900px;
-    border-radius: 1%;
-    margin-left: 150px;
-    margin-right: 150px;
-    margin-bottom: 150px;
-    overflow: hidden;
+  position: relative;
+  background-color: $green;
+  height: auto;
+  min-height: 45rem;
+  width: 55rem;
+  border-radius: 1%;
+  margin-top: 5rem;
+  left: 50%;
+  transform: translate(-50%, -0%);
+  overflow: auto;
 }
 
 .user_active_responses{
-    position: relative;
-    background-color: $light-green;
-    height: auto;
-    width: 800px;
-    border-radius: 2%;
-    margin-top: 30px;
-    margin-right: 50px;
-    margin-left: 50px;
-    margin-bottom: 30px;
-    padding: 25px;
+  position: relative;
+  background-color: $light-green;
+  height: auto;
+  width: 52rem;
+  border-radius: 2%;
+  margin: 1.5rem;
+  padding: 20px;
 }
 
 .user_inactive_responses{
-    position: relative;
-    background-color: $light-green;
-    height: auto;
-    width: 800px;
-    border-radius: 2%;
-    margin-top: 30px;
-    margin-right: 50px;
-    margin-left: 50px;
-    margin-bottom: 30px;
-    padding: 25px;
+  position: relative;
+  background-color: $light-green;
+  height: auto;
+  width: 52rem;
+  border-radius: 2%;
+  margin: 1.5rem;
+  padding: 20px;
 }

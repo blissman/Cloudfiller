@@ -17,27 +17,26 @@
 }
 
 .requests_page_container{
-    position: absolute;
-    background-color: $green;
-    height: auto;
-    width: 900px;
-    border-radius: 1%;
-    margin-left: 150px;
-    margin-right: 150px;
-
+  position: relative;
+  background-color: $green;
+  height: auto;
+  min-height: 45rem;
+  width: 55rem;
+  border-radius: 1%;
+  margin-top: 5rem;
+  left: 50%;
+  transform: translate(-50%, -0%);
+  overflow: auto;
   }
 
 .user_active_request{
-    position: relative;
-    background-color: $light-green;
-    height: auto;
-    width: 800px;
-    border-radius: 2%;
-    margin-top: 50px;
-    margin-right: 50px;
-    margin-left: 50px;
-    margin-bottom: 30px;
-    padding: 20px;
+  position: relative;
+  background-color: $light-green;
+  height: auto;
+  width: 52rem;
+  border-radius: 2%;
+  margin: 25px;
+  padding: 20px;
 
     button{
       padding: 30px;
@@ -65,15 +64,13 @@
 
 
 .old_requests{
-      position: relative;
-      background-color: $light-green;
-      min-height: 400px;
-      width: 800px;
-      border-radius: 2%;
-      margin-right: 50px;
-      margin-left: 50px;
-      margin-bottom: 50px;
-      overflow: hidden;
+  position: relative;
+  background-color: $light-green;
+  height: auto;
+  width: 52rem;
+  border-radius: 2%;
+  margin: 1.5rem;
+  padding: 20px;
 
       h2{
         text-align: center;
@@ -98,7 +95,7 @@
     width: 50%;
     margin-top: 100px;
     background: rgba(0, 0, 0, .5);
-  }
+  }  
 }
 
 .new_request_form{
