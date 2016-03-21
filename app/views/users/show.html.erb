@@ -54,17 +54,15 @@
       </div>
 
       <div class="user_account_points">
-        <p>
-          <strong>Current points:</strong>
-          <p><%= @user.points %></p>
-        </p>
+          <h3>Points</h3>
+          <div id="points"><p><%= @user.points %></p></div>
       </div>
 
       <div class="user_account_rating">
-        <p>
-          <strong>Current rating:</strong>
+
+          <h3>Rating</h3>
           <% if @user.ratings.average(:rating)== nil %>
-            <p><%="Participate in the community for a rating!" %></p>
+            <h4> Participate in the community for a rating! </h4>
           <% else %>
             <%= @user.ratings.average(:rating) %>/5 (<%= @user.ratings.count %> ratings total)
           <div class="notification_rating">
@@ -78,7 +76,6 @@
             </div>
           </div>
           <% end %>
-        </p>
       </div>
     </div>
 
