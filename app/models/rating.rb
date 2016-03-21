@@ -3,6 +3,14 @@ class Rating < ActiveRecord::Base
   include PublicActivity::Common
   # tracked owner: ->(controller, model) { controller && controller.current_user }
 
+  # callback for adding user points on rating
+  before_create do
+    if self.user != self.request.user
+      self.user.points = self.user.points + self.request.points
+      self.user.save
+    end
+  end
+
   # ActiveRecord Relationships
   belongs_to :request
   belongs_to :user
