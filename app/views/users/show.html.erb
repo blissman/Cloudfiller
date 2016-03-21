@@ -5,6 +5,7 @@
     <div class="account_page_container">
 
       <!-- <p id="notice"><%= notice %></p> -->
+    <div class="user_info_points_rating">
       <div class="user_info">
           <p>
             <strong>Name:</strong>
@@ -50,9 +51,7 @@
 
         </div class="edit_delete_user_btns">
 
-        <button> <%= link_to 'Edit', edit_user_path(@user) %> </button>
-
-        <div id="delete_account"> <button> <%= link_to 'Delete', user_url, remote: true %> </button> </div>
+        <button> <%= link_to 'Edit', edit_user_path(@user) %> </button><div id="delete_account"> <button> <%= link_to 'Delete', user_url, remote: true %> </button> </div>
 
         </div>
 
@@ -84,6 +83,7 @@
               <% end %>
             </p>
           </div>
+        </div>
 
           <div class="user_account_notifications">
 
