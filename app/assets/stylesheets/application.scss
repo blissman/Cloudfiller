@@ -21,20 +21,19 @@
      background-color: #7d8faf;
      body {
          @include outer-container($max-width);
-         background-image: url("grok_background_img.jpg");
+         background-image: url("grok_back_image.png");
          background-size: cover;
-         min-height: 1800px;
+         min-height: 1500px;
          position: relative;
-         z-index: 2;
      }
  }
 
 .gradient_background{
-  background: linear-gradient( transparent 0%, black 60%);
+  background: linear-gradient( transparent 0%, black 70%);
   background-size: cover;
-  min-height: 1800px;
+  min-height: 1500px;
   position: relative;
-  z-index: 3;
+  z-index: 2;
 }
 
  .popupform {
@@ -95,6 +94,7 @@
      width: 100%;
      background-color: $blue;
      margin: 0;
+     z-index: 3;
      #copyright {
          @include outer-container($max-width);
          color: $white;
