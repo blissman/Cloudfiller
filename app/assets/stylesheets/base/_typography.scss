@@ -24,15 +24,21 @@ h4{
   margin: 0 0 $small-spacing;
   font-size: 1.3rem;
   font-weight: 400;
+  color: shade($light-green, 30%);
+}
+h5{
+  margin: 0 0 $small-spacing;
+  font-size: 1.3rem;
+  font-weight: 400;
   color: darken($light-blue, 10%);
 }
-h5,
 h6 {
   font-family: $heading-font-family;
   font-size: $base-font-size;
   line-height: $heading-line-height;
   margin: 0 0 $small-spacing;
 }
+
 
 p {
   margin: 0 0 $small-spacing;
