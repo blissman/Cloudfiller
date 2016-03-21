@@ -6,11 +6,9 @@ class RatingsController < ApplicationController
 
   def create
     @rating = Rating.new(rating_params)
-    if @rating.save
-      @rating.create_activity :create, owner: current_user, recipient: User.find(@rating.user_id)
-      redirect_to root_path
-    else
-      render :new
+    if @rating.save!
+      # @rating.create_activity :create, owner: current_user, recipient: User.find(@rating.user_id)
+      redirect_to user_path(current_user)
     end
   end
 
@@ -27,6 +25,6 @@ class RatingsController < ApplicationController
   private
 
   def rating_params
-    params.require(:rating).permit(:user_id, :rating)
+    params.require(:rating).permit(:user_id, :rating, :request_id)
   end
 end
