@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-    @activities = PublicActivity::Activity.order("created_at desc").where("(owner_id = ? AND owner_type = ?) OR (recipient_id = ? AND recipient_type = ?)", current_user, "User", current_user, "User" )
+    @activities = PublicActivity::Activity.order("created_at desc").where("(owner_id = ? AND owner_type = ?) OR (recipient_id = ? AND recipient_type = ?)", current_user, "User", current_user, "User" ).page(params[:page])
     respond_to do |format|
       format.html { }
       format.js {  }
