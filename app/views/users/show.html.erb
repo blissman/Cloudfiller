@@ -51,7 +51,8 @@
 
         </div class="edit_delete_user_btns">
 
-        <button> <%= link_to 'Edit', edit_user_path(@user) %> </button><div id="delete_account"> <button> <%= link_to 'Delete', user_url, remote: true %> </button> </div>
+        <button> <%= link_to 'Edit', edit_user_path(@user) %> </button>
+        <button id="delete_account"> <%= link_to 'Delete', user_url, remote: true %> </button>
 
         </div>
 
