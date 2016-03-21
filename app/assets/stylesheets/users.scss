@@ -17,12 +17,27 @@
         background: rgba(0, 0, 0, .5);
     }
     button {
-        padding: 30px;
+        padding: 10px, 15px;
         margin: 10px;
         border-radius: 4%;
         background-color: $blue;
-        font-size: 1.3rem;
+        font-size: 1em;
         font-weight: 600;
+    }
+}
+
+.edit_delete_user_btns{
+  position: absolute;
+  height: auto;
+    button {
+      position: relative;
+      display: inline-block;
+      padding: 10px, 15px;
+      margin: 10px;
+      border-radius: 4%;
+      background-color: $blue;
+      font-size: 1em;
+      font-weight: 600;
     }
 }
 .account_page_container {
