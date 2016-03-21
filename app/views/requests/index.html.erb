@@ -8,12 +8,16 @@
 
         <% if @user.requests.where("active = ?", true).exists? %>
 
-          <%= render "active_request", object: @request %>
+          <h2> My Request </h2>
 
-          <%= form_for [@user, @request], remote: true do |f| %>
+          <div class="done_btn">
+            <%= form_for [@user, @request], remote: true do |f| %>
             <%= f.hidden_field :active, value: false, method: :patch %>
             <%= f.submit "Done" %>
           <% end %>
+        </div>
+
+          <%= render "active_request", object: @request %>
 
         <% else %>
 

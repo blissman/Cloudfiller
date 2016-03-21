@@ -41,19 +41,6 @@
   left: 50%;
   transform: translate(-50%, -0%);
   overflow: auto;
-  }
-
-.old_requests{
-  position: relative;
-  background-color: $light-green;
-  height: auto;
-  width: 52rem;
-  border-radius: 2%;
-  margin: 1.5rem;
-  padding: 20px;
-  }
-.inactive_requests{
-  margin-left: 3rem;
     span{
       margin: 0 0 $small-spacing;
       font-size: 1.3rem;
@@ -66,6 +53,27 @@
       font-weight: 500;
       color: $black;
     }
+  }
+
+.old_requests{
+  position: relative;
+  background-color: $light-green;
+  height: auto;
+  width: 52rem;
+  border-radius: 2%;
+  margin: 1.5rem;
+  padding: 20px;
+  }
+
+.active_request{
+  margin-left: 3rem;
+  margin-right: 3rem;
+
+}
+.inactive_requests{
+  margin-left: 3rem;
+  margin-right: 3rem;
+
 }
 
 
@@ -79,7 +87,17 @@
   border-radius: 2%;
   margin: 25px;
   padding: 20px;
+}
 
+.done_btn{
+  position: relative;
+  float: right;
+}
+
+.responder_name_rating{
+  position: relative;
+  text-align: center;
+  margin: 1rem;
 }
 
 #bio_form{

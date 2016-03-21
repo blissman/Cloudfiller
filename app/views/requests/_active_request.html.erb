@@ -1,24 +1,27 @@
-          <h2>Open Request:</h2>
-            <p>
-              <strong>Category:</strong> <%= @request.category.name %>
-                <br>
-              <strong>Description:</strong> <%= @request.description %>
-                <br>
-              <strong>Points:</strong> <%= @request.points %>
-                <br>
-              <strong>Expiry:</strong> <%= @request.expire %>
-            </p>
 
-          <h2>Responses:</h2>
+          <div class="active_request">
+            <p>
+              <span>Category: &emsp; </span> <%= @request.category.name %>
+                <br>
+              <span>Description: &emsp; </span> <%= @request.description %>
+                <br>
+              <span>Points: &emsp; </span> <%= @request.points %>
+                <br>
+              <span>Expiry: &emsp; </span> <%= @request.expire %>
+            </p>
+          </div>
+
+          <h2>Responses</h2>
 
             <% @responders.each do |responder| %>
               <div class="responder_name_rating">
 
-                <%= responder.name %> <%= responder.lastname %>
-                  <% if responder.ratings.average(:rating) == nil %>
-                    <br> (Rating Pending)
-                  <% else %>
-                    <br> Rating: <%= '%.2f' % responder.ratings.average(:rating) %>/5
+                <p><%= responder.name %> <%= responder.lastname %>
+                    <% if responder.ratings.average(:rating) == nil %>
+                      (Rating Pending)
+                    <% else %>
+                      <br> Rating: <%= '%.2f' % responder.ratings.average(:rating) %>/5
+                </p>
                     <div class="star-ratings-css">
                       <div class="star-ratings-css-top" style="width: <%= responder.ratings.average(:rating)/5.0*100.0 %>%">
                         <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
@@ -31,9 +34,7 @@
                     <br>
                   <!-- Link to Bio Button -->
                   <div id="responder_bio_form_btn">
-                    <button>
-                      <%= link_to 'Bio', requests_path, remote: true %>
-                    </button>
+                      <%= button_to 'Bio', requests_path, remote: true %>
                   </div>
 
               </div>
