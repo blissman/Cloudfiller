@@ -64,7 +64,7 @@
           <% if @user.ratings.average(:rating)== nil %>
             <h4> Participate in the community for a rating! </h4>
           <% else %>
-            <%= @user.ratings.average(:rating) %>/5 (<%= @user.ratings.count %> ratings total)
+            <%= '%.2f' % @user.ratings.average(:rating) %>/5 (<%= @user.ratings.count %> ratings total)
           <div class="notification_rating">
             <div class="star-ratings-css">
               <div class="star-ratings-css-top" style="width: <%= @user.ratings.average(:rating)/5.0*100.0 %>%">
@@ -86,7 +86,7 @@
               <button id="clear_notifications">
                 <%= link_to "Clear", activity_url, remote: true %>
               </button>
-              
+
     </div>
   </div>
 </div>

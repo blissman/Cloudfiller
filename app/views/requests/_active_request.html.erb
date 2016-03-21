@@ -18,7 +18,15 @@
                   <% if responder.ratings.average(:rating) == nil %>
                     <br> (Rating Pending)
                   <% else %>
-                    <br> Rating: <%= responder.ratings.average(:rating) %>
+                    <br> Rating: <%= '%.2f' % responder.ratings.average(:rating) %>/5
+                    <div class="star-ratings-css">
+                      <div class="star-ratings-css-top" style="width: <%= responder.ratings.average(:rating)/5.0*100.0 %>%">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                      </div>
+                      <div class="star-ratings-css-bottom">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                      </div>
+                    </div>
                   <% end %>
                     <br>
                   <!-- Link to Bio Button -->
