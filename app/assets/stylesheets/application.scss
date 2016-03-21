@@ -21,12 +21,22 @@
      background-color: #7d8faf;
      body {
          @include outer-container($max-width);
-         background-image: url("grok_background_img.jpg"), linear-gradient(white, black);
+         background-image: url("grok_background_img.jpg");
          background-size: cover;
          min-height: 1800px;
          position: relative;
+         z-index: 2;
      }
  }
+
+.gradient_background{
+  background: linear-gradient( transparent 0%, black 60%);
+  background-size: cover;
+  min-height: 1800px;
+  position: relative;
+  z-index: 3;
+}
+
  .popupform {
      padding: 1rem 2rem;
  }
