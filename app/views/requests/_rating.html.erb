@@ -1,11 +1,28 @@
 <div id="rating_form">
 
+
+  <% responders = User.joins(:responses).where(responses: {request_id: Request.find(params[:id])}) %>
+
+  <h3>Please select who helped you, and rate them accordingly:</h3>
+
   <form action="/ratings" method="post">
+
+    <% responders.each do |responder| %>
+      <div class="responder_name_rating">
+        <input name="rating[user_id]" id="user_id" type="radio" value="<%= responder.id %>" required>
+          <%= responder.name %> <%= responder.lastname %>
+        <% if responder.ratings.average(:rating) == nil %>
+          <br> (Rating Pending)
+        <% else %>
+          <br> Rating: <%= responder.ratings.average(:rating) %>
+        <% end %>
+          <br>
+    <% end %>
     <div class="rating">
       <fieldset>
-        <input type="hidden" name="rating[user_id]" value="1">
+        <input type="hidden" name="rating[request_id]" value="<%= Request.find(params[:id]).id %>">
         <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-        <input name="rating[rating]" id="e5" type="radio" value=5></a><label for="e5">★</label>
+        <input name="rating[rating]" id="e5" type="radio" value=5 required></a><label for="e5">★</label>
         <input name="rating[rating]" id="e4" type="radio" value=4></a><label for="e4">★</label>
         <input name="rating[rating]" id="e3" type="radio" value=3></a><label for="e3">★</label>
         <input name="rating[rating]" id="e2" type="radio" value=2></a><label for="e2">★</label>
