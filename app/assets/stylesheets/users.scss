@@ -34,16 +34,17 @@
     margin-left: 150px;
     margin-right: 150px;
     margin-bottom: 150px;
-    overflow: inherit;
+    overflow: auto;
 }
 .user_account_points {
     position: relative;
     background-color: $light-green;
-    height: 100px;
+    height: auto;
     width: 150px;
     border-radius: 4%;
     float: right;
-    margin: 50px;
+    margin: 20px;
+    margin-top: 20px;
     padding: 20px;
 }
 .user_info {
@@ -52,14 +53,14 @@
     min-height: 400px;
     width: 500px;
     border-radius: 2%;
-    margin: 50px;
-    clear: right;
+    margin: 20px;
+    clear: both;
     padding: 20px;
 }
 .user_account_rating {
     position: relative;
     background-color: $light-green;
-    height: 100px;
+    height: auto;
     width: 400px;
     border-radius: 4%;
     float: right;
