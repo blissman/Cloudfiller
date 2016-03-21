@@ -2,8 +2,7 @@
 // ******************** User Account Show ********************
 
 .user_account_page {
-    @include outer-container($max-width);
-    h1 {
+      h1 {
         font-family: 'Montserrat', sans-serif;
         font-size: 4rem;
         color: $salmon;
