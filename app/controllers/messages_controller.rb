@@ -37,7 +37,7 @@ def create
       respond_to do |format|
         if @message.save
           format.html { }
-          format.js { request: @request, conversation: @conversation }
+          format.js { }
         else
           format.html { redirect_to :back }
           format.js { render :new }
