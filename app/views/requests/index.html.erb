@@ -17,7 +17,7 @@
 
         <% else %>
 
-          <%= render 'create_request' %>
+        <div class="new_request_btn">  <%= render 'create_request' %> </div>
 
         <% end %>
 
@@ -29,11 +29,12 @@
         <h2> Old Requests </h2>
 
             <div class="old_requests_container">
-              <!-- <h3><%#= page_entries_info @inactive_requests %></h3> -->
+              <div class="inactive_requests">
                 <% if @inactive_requests.present? %>
                   <%= render @inactive_requests %>
                   <%= paginate @inactive_requests %>
                   <% end %>
+              </div>
             </div>
       </div>
     </div>
