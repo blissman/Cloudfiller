@@ -17,14 +17,16 @@
 }
 
 .requests_page_container{
-    position: absolute;
-    background-color: $green;
-    height: auto;
-    width: 900px;
-    border-radius: 1%;
-    margin-left: 150px;
-    margin-right: 150px;
-
+  position: relative;
+  background-color: $green;
+  height: auto;
+  min-height: 45rem;
+  width: 55rem;
+  border-radius: 1%;
+  margin-top: 5rem;
+  left: 50%;
+  transform: translate(-50%, -0%);
+  overflow: auto;
   }
 
 .user_active_request{

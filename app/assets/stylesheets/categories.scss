@@ -86,14 +86,15 @@
 }
 .category_requests_container {
     position: relative;
-    ;
     background-color: $green;
-    height: 1050px;
-    width: 900px;
+    height: auto;
+    min-height: 45rem;
+    width: 55rem;
     border-radius: 1%;
-    margin-left: 150px;
-    margin-right: 150px;
-    padding: 30px;
+    margin-top: 5rem;
+    left: 50%;
+    transform: translate(-50%, -0%);
+    overflow: auto;
 }
 .category_active_request {
     position: relative;
