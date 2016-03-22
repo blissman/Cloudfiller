@@ -33,6 +33,7 @@
   width: 55rem;
   border-radius: 1%;
   margin-top: 5rem;
+  margin-bottom: 5rem;
   left: 50%;
   transform: translate(-50%, -0%);
   overflow: auto;
@@ -52,7 +53,7 @@
     position: relative;
     height: auto;
     margin: 1rem;
-    overflow: auto;
+    overflow: hidden;
       #points{
         position: relative;
         border-radius: 50%;
