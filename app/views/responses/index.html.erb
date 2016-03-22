@@ -19,8 +19,8 @@
                 <strong>Points: &emsp; </strong> <%= request.points %>
               </p>
               <% if request.conversations.where(recipient_id: current_user).exists? %>
-                <div id="conversation">
-                  <%= button_to 'Respond!',
+                <div id="responder_message_btn">
+                  <%= button_to 'Message me!',
                   request_conversations_path(request_id: request.id,
                   sender_id: request.user_id,
                   recipient_id: current_user.id),
