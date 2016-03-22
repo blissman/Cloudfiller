@@ -3,10 +3,12 @@
 
 .rating {
   width: 226px;
-  margin: 0 auto 1em;
+  margin: 0;
   font-size: 25px;
   overflow:hidden;
-  border: none;
+    fieldset{
+        border: none;
+    }
 }
 .rating input {
 float: right;
@@ -46,8 +48,10 @@ position: absolute;
 
 #rating_form{
   position: fixed;
-  background-color: darken($salmon, 5%);
-  width: 600px;
+  background-color: darken($salmon, 10%);
+  border: 5px solid $salmon;
+  min-width: 25rem;
+  width: auto;
   height: auto;
   border-radius: 2%;
   padding: 20px;

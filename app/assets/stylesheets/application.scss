@@ -24,7 +24,7 @@
          @include outer-container($max-width);
          background-image: url("grok_back_image.png");
          background-size: cover;
-         min-height: 1500px;
+         min-height: 1700px;
          position: relative;
      }
  }
@@ -32,7 +32,8 @@
 .gradient_background{
   background: linear-gradient( transparent 0%, black 70%);
   background-size: cover;
-  min-height: 1500px;
+  min-height: 1700px;
+  height: auto;
   position: relative;
   z-index: 2;
 }
@@ -98,16 +99,16 @@
         padding-right: 1rem;
      }
  }
-
- .box_space{
-   position: relative;
-   min-height: 2rem;
-   height:auto;
-   background-color: $black;
-   width: 100%;
-   clear: both;
-
- }
+ //
+ // .box_space{
+ //   position: relative;
+ //   bottom: 0;
+ //   min-height: 2rem;
+ //   height:auto;
+ //   background-color: $black;
+ //   width: 100%;
+ //   clear: both;
+ // }
 
  // ******************** Footer ********************
 
