@@ -15,7 +15,7 @@
             <% if responder.ratings.average(:rating) == nil %>
               <br> (Rating Pending)
             <% else %>
-              <br> Rating: <%= responder.ratings.average(:rating) %>
+              <br> Rating: <%= '%.2f' % responder.ratings.average(:rating) %>/5
             <% end %>
               <br>
         <% end %>
