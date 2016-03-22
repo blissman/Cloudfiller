@@ -8,7 +8,7 @@ class RatingsController < ApplicationController
     @rating = Rating.new(rating_params)
     if @rating.save!
       # @rating.create_activity :create, owner: current_user, recipient: User.find(@rating.user_id)
-      redirect_to user_path(current_user)
+      redirect_to requests_path
     end
   end
 

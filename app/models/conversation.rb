@@ -11,11 +11,10 @@ class Conversation < ActiveRecord::Base
 
   # ActiveRecord Validations
   validates :request_id, presence: true
-  validates_uniqueness_of :sender_id, :scope => :recipient_id
-  validates :request_id, presence: true
+  # validates_uniqueness_of :sender_id, :scope => :recipient_id
 
   # Scope (prevents duplicate conversations between sender and recipient)
   scope :between, -> (sender_id,recipient_id) do
-    where("(conversations.sender_id = ? AND conversations.recipient_id =?) OR (conversations.sender_id = ? AND conversations.recipient_id =?)", sender_id,recipient_id, recipient_id, sender_id)
+    where("(conversations.sender_id = ? AND conversations.recipient_id = ?) OR (conversations.sender_id = ? AND conversations.recipient_id = ?)", sender_id, recipient_id, recipient_id, sender_id)
   end
 end

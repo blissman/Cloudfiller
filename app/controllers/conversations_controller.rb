@@ -13,8 +13,8 @@ end
 
 def create
   @request = Request.find(params[:request_id])
-  if Conversation.between(params[:sender_id],params[:recipient_id]).where("request_id = ?", @request).present?
-    @conversation = Conversation.between(params[:sender_id], params[:recipient_id]).where("request_id = ?", @request).first
+  if Conversation.between(params[:sender_id],params[:recipient_id]).where("request_id = ?", @request.id).present?
+    @conversation = Conversation.between(params[:sender_id], params[:recipient_id]).where("request_id = ?", @request.id).first
   else
     @conversation = Conversation.create!(conversation_params)
     @conversation.create_activity :create, owner: current_user, recipient: User.find(@conversation.recipient_id)
