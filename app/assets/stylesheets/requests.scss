@@ -2,7 +2,6 @@
 // ******************** Request Page ********************
 
 .user_requests_page{
-    @include outer-container($max-width);
   h1{
     font-family: 'Montserrat', sans-serif;
     font-size: 4rem;
@@ -95,16 +94,22 @@
 
 .responder_name_rating{
   position: relative;
-  text-align: center;
-  margin: 1rem;
+  padding: 1rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
 }
 
 #bio_form{
+  position: relative;
   background-color: $white;
-  width: 400px;
+  width: 41rem;
   height: auto;
   border-radius: 2%;
-  padding: 20px;
+  padding: 2rem;
+}
+
+#responder_message_btn{
+  margin: 1rem;
 }
 
 // ******************** New Request Page ********************
