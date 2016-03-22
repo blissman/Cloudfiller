@@ -7,21 +7,13 @@ class ActivitiesController < ApplicationController
 
   def show
 
-    respond_to do |format|
-      format.html { }
-      format.js { }
-    end
-
-  end
-
-  def destroy
-
     @activities.destroy_all
 
     respond_to do |format|
       format.html { }
       format.js { }
     end
+
   end
 
   private
