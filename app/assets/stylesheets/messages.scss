@@ -1,3 +1,15 @@
-// Place all the styles related to the Messages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// ******************** Message Box Form ********************
+
+
+#msg_form{
+  position: relative;
+  background-color: lighten($light-blue, 10%);
+  width: 37rem;
+  height: auto;
+  border-radius: 2%;
+  padding: 1rem;
+  margin-left: 1rem;
+  font-size: 1.2rem;
+  text-align: center;
+}

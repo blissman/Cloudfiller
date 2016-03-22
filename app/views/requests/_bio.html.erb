@@ -4,17 +4,17 @@
       <% if responder.experience != nil %>
 
         <p>
-          <strong>Education:</strong>
+          <p>Education</p>
           <%= responder.experience.education %>
         </p>
 
         <p>
-          <strong>Job Experience:</strong>
+          <p>Job Experience</p>
           <%= responder.experience.job %>
         </p>
 
         <p>
-          <strong>Knowledge:</strong>
+          <p>Knowledge</p>
           <%= responder.experience.knowledge %>
         </p>
 
@@ -23,14 +23,14 @@
         <p> Sorry! This user has not yet provided any extended bio information.</p>
 
       <% end %>
+      </div>
 
-        <button id="responder_message_btn">
-          <%= link_to "Message me!",
+        <div id="responder_message_btn">
+          <%= button_to "Message me!",
           request_conversations_path(request_id: @request,
           sender_id: current_user.id,
           recipient_id: responder.id),
           method: "post", remote: true %>
-        </button>
+        </div>
 
     <% end %>
-</div>
