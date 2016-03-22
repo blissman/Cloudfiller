@@ -84,7 +84,16 @@
         margin-top: 100px;
         background: rgba(0, 0, 0, .5);
     }
+    .page_entries{
+      position: relative;
+      text-align: center;
+      height: auto;
+      margin: 1rem;
+
+    }
 }
+
+
 .category_requests_container {
     position: relative;
     background-color: $green;
@@ -105,15 +114,23 @@
     border-radius: 2%;
     margin: 1.5rem;
     padding: 20px;
-    li {
-        margin: 25px;
-        list-style: none;
-    }
-    button {
-        border-radius: 4%;
-        background-color: $blue;
+      span{
+        margin: 0 0 $small-spacing;
         font-size: 1.3rem;
-        font-weight: 600;
-        margin: 5px;
-    }
+        font-weight: 400;
+        color: darken($light-blue, 10%);
+      }
+      p{
+        margin: 0 0 $small-spacing;
+        font-size: 1.4rem;
+        font-weight: 500;
+        color: $black;
+      }
+      button {
+          border-radius: 4%;
+          background-color: $blue;
+          font-size: 1.3rem;
+          font-weight: 600;
+          margin: 5px;
+      }
 }
