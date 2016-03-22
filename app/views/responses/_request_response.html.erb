@@ -1,20 +1,18 @@
 
     <h6>Responders</h6>
-    <% request.responses.each do |response| %>
-    <span><%= response.user.name %> <%= response.user.lastname %>
-      <% if response.user.ratings.average(:rating) == nil %>
-        (Rating Pending) </span>
-      <% else %>
-      <%= '%.2f' % response.user.ratings.average(:rating) %>/5
-        <div class="star-ratings-css">
-          <div class="star-ratings-css-top" style="width: <%= response.user.ratings.average(:rating)/5.0*100.0 %>%">
-            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-          </div>
-          <div class="star-ratings-css-bottom">
-            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-          </div>
-        </div>
-      <% end %>
-        <br>
-    <% end %>
-  <br>
+      <% request.responses.each do |response| %>
+        <span><%= response.user.name %> <%= response.user.lastname %></span>
+              <% if response.user.ratings.average(:rating) == nil %>
+              <br>
+              <span>(Rating Pending)</span>
+              <% else %>
+              <span><%= '%.2f' % response.user.ratings.average(:rating) %>/5</span>
+                <div class="star_ratings">
+                  <div class="star_ratings" style="width: <%= response.user.ratings.average(:rating)/5.0*100.0 %>%">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                  </div>
+                </div>
+              <% end %>
+              <br>
+              <% end %>
+              <br>
