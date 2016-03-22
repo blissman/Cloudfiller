@@ -5,7 +5,7 @@ class Request < ActiveRecord::Base
 
   # Callback for removing points from user during Request create
   before_create do
-    # self.active = true
+    self.active = true
     self.user.points = self.user.points - self.points
     self.user.save
   end
