@@ -1,11 +1,9 @@
 
-    <strong>Responders:</strong> <br>
+    <h6>Responders</h6>
     <% request.responses.each do |response| %>
-      Name: <%= response.user.name %> <%= response.user.lastname %>
-        <br>
-      Rating:
+    <span><%= response.user.name %> <%= response.user.lastname %>
       <% if response.user.ratings.average(:rating) == nil %>
-        (Rating Pending)
+        (Rating Pending) </span>
       <% else %>
       <%= '%.2f' % response.user.ratings.average(:rating) %>/5
         <div class="star-ratings-css">
