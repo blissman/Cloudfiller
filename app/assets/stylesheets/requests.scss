@@ -2,6 +2,7 @@
 // ******************** Request Page ********************
 
 .user_requests_page{
+  @include outer-container($max-width);
   h1{
     font-family: 'Montserrat', sans-serif;
     font-size: 4rem;
@@ -62,6 +63,7 @@
   border-radius: 2%;
   margin: 1.5rem;
   padding: 20px;
+  overflow: auto;
   }
 
 .active_request{
