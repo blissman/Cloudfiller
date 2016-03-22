@@ -1,4 +1,7 @@
 
+// ******************** Response Page ********************
+
+
 .user_responses_page{
     @include outer-container($max-width);
   h1{
@@ -27,6 +30,18 @@
   left: 50%;
   transform: translate(-50%, -0%);
   overflow: auto;
+    span{
+      margin: 0 0 $small-spacing;
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: darken($light-blue, 10%);
+    }
+    p{
+      margin: 0 0 $small-spacing;
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: $black;
+    }
 }
 
 .user_active_responses{
@@ -37,6 +52,10 @@
   border-radius: 2%;
   margin: 1.5rem;
   padding: 20px;
+  #user_response_list{
+      margin-left: 3rem;
+      margin-right: 3rem;
+  }
 }
 
 .user_inactive_responses{
@@ -47,4 +66,8 @@
   border-radius: 2%;
   margin: 1.5rem;
   padding: 20px;
+  #user_old_response_list{
+      margin-left: 3rem;
+      margin-right: 3rem;
+  }
 }

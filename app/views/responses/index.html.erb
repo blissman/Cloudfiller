@@ -5,59 +5,56 @@
   <div class="responses_page_container">
     <div class="user_active_responses">
       <h2> Active Responses </h2>
+      <br>
         <ul id="user_response_list">
           <% @requests.each do |request| %>
             <li>
               <p>
-                <strong>Category:</strong> <%= request.category.name %>
-              </p>
-              <p>
-                <strong>Description:</strong> <%= request.description %>
-              </p>
-              <p>
-                <strong>Question Expires:</strong> <%= request.expire %>
-              </p>
-              <p>
-                <strong>Points:</strong> <%= request.points %>
+                <strong>Category: &emsp; </strong> <%= request.category.name %>
+              <br>
+                <strong>Description: &emsp; </strong> <%= request.description %>
+              <br>
+                <strong>Question Expires: &emsp; </strong> <%= request.expire %>
+              <br>
+                <strong>Points: &emsp; </strong> <%= request.points %>
               </p>
               <% if request.conversations.where(recipient_id: current_user).exists? %>
-                <button id="responder_message_btn">
-                  <%= link_to "Message me!",
+                <div id="responder_message_btn">
+                  <%= button_to 'Message me!',
                   request_conversations_path(request_id: request,
                   sender_id: current_user.id,
                   recipient_id: request.user_id),
-                  method: "post", remote: true%>
-                </button>
+                  method: 'post' %>
+                </div>
+
               <% else %>
-                <button>
-                  <%= link_to 'Remove', request_response_path(request,
+
+                  <%= button_to 'Remove', request_response_path(request,
                     request.responses.where(user_id: current_user).first),
                     method: :delete %>
-                </button>
+                <br>
+
               <% end %>
             </li>
             <br>
-            <!-- Button for removing an active response (if the user hasn't been contacted already) -->
-
-
           <% end %>
         </ul>
       </div>
 
       <div class="user_inactive_responses">
-        <h2>Completed Responses</h2>
-        <h3><%= page_entries_info @oldrequests %></h3>
-          <ul id="user_response_list">
+        <h2>Completed Request Responses</h2>
+        <br>
+        <h4><%= page_entries_info @oldrequests %></h4>
+        <br>
+          <ul id="user_old_response_list">
               <% @oldrequests.each do |request| %>
                 <li>
                   <p>
-                    <strong>Category:</strong> <%= request.category.name %>
-                  </p>
-                  <p>
-                    <strong>Description:</strong> <%= request.description %>
-                  </p>
-                  <p>
-                    <strong>Points:</strong> <%= request.points %>
+                    <span>Category: &emsp; </span> <%= request.category.name %>
+                    <br>
+                    <span>Description: &emsp; </span> <%= request.description %>
+                    <br>
+                    <span>Points: &emsp; </span> <%= request.points %>
                   </p>
                 </li>
                 <br>
