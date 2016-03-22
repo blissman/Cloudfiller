@@ -1,12 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
-
-
 Category.create(name: 'Science')
 Category.create(name: 'Art')
 Category.create(name: 'History')
@@ -38,4 +29,54 @@ Category.create(name: 'Gender Studies')
 Category.create(name: 'Religion')
 Category.create(name: 'Philosophy')
 
-User.create(name:"Bliss", lastname: "Man", email:"blissman@gmail.com", password:"password", password_confirmation:"password", points: 100)
+# Test users
+User.create(name:"Bliss", lastname: "Man", email:"blissman@gmail.com", password:"password", password_confirmation:"password", points: 10)
+User.create(name:"Parker", lastname: "Fitzgerald", email:"pfitzgerald@gmail.com", password:"password", password_confirmation:"password", points: 10)
+User.create(name:"Arianna", lastname: "Aguiar", email:"aaguiar@gmail.com", password:"password", password_confirmation:"password", points: 10)
+User.create(name:"Maximilian", lastname: "Logan", email:"mlogan@gmail.com", password:"password", password_confirmation:"password", points: 10)
+User.create(name:"Hermione", lastname: "Granger", email:"hgranger@hogwarts.edu", password:"password", password_confirmation:"password", points: 10)
+
+# Inactive requests
+Request.create(description: "Can you give me a religious analysis of the Ghent Altarpiece?", expire: "2016-03-28", points: 2, user_id: 3, active: false, category_id: 2)
+Request.create(description: "Can an expert give me more details about the end of van Gogh's life?", expire: "2016-03-28", points: 2, user_id: 3, active: false, category_id: 2)
+Request.create(description: "Who can help me verify if my diptych is authentic?", expire: "2016-03-30", points: 3, user_id: 3, active: false, category_id: 2)
+
+Request.create(description: "How much power can I expect to make if I turbo my RB25?", expire: "2016-03-28", points: 2, user_id: 1, active: false, category_id: 19)
+Request.create(description: "What are the widest wheels I can fit on a 2000 Skyline R-34 GT-S?", expire: "2016-03-28", points: 3, user_id: 1, active: false, category_id: 19)
+
+Request.create(description: "Are there any Nicolas Cage experts who can help me with the biography I'm writing?", expire: "2016-03-27", points: 2, user_id: 2, active: false, category_id: 20)
+
+Request.create(description: "Which countries don't extradite their citizens?", expire: "2016-03-28", points: 2, user_id: 4, active: false, category_id: 22)
+Request.create(description: "Has anyone been to the island of Moldovia?", expire: "2016-03-28", points: 2, user_id: 4, active: false, category_id: 22)
+
+Request.create(description: "Are there any experts who can help me with Arithmancy?", expire: "2016-03-28", points: 2, user_id: 5, active: false, category_id: 23)
+
+# Active requests
+Request.create(description: "Engineering request: Is it worthwhile to set up a water sprayer on my front-mount intercooler?", expire: "2016-03-28", points: 2, user_id: 1, active: true, category_id: 19)
+Request.create(description: "I'm writing a screenplay based on the excellent 'National Treasure' series. Is there anyone in the industry that can critique it?", expire: "2016-03-28", points: 2, user_id: 2, active: true, category_id: 20)
+Request.create(description: "I'm trying to find an expert on Jan Van Eyck's hairstyles. Are there any experts in this field?", expire: "2016-03-28", points: 2, user_id: 3, active: true, category_id: 2)
+Request.create(description: "What's the fastest way for me to travel from England to Sokovia?", expire: "2016-03-28", points: 2, user_id: 4, active: true, category_id: 22)
+Request.create(description: "Can someone explain the Flamel's First Principle of Arithmancy to me?", expire: "2016-03-28", points: 2, user_id: 5, active: true, category_id: 23)
+
+# Ratings
+Rating.create(user_id: 1, rating: 5, request_id: 1)
+Rating.create(user_id: 2, rating: 5, request_id: 2)
+Rating.create(user_id: 3, rating: 4, request_id: 3)
+Rating.create(user_id: 4, rating: 5, request_id: 4)
+Rating.create(user_id: 5, rating: 5, request_id: 5)
+Rating.create(user_id: 2, rating: 5, request_id: 6)
+Rating.create(user_id: 3, rating: 5, request_id: 7)
+Rating.create(user_id: 5, rating: 5, request_id: 8)
+Rating.create(user_id: 1, rating: 5, request_id: 9)
+
+# responses
+Response.create(user_id: 2, request_id: 10)
+Response.create(user_id: 1, request_id: 11)
+Response.create(user_id: 1, request_id: 12)
+Response.create(user_id: 1, request_id: 13)
+Response.create(user_id: 1, request_id: 14)
+Response.create(user_id: 5, request_id: 10)
+Response.create(user_id: 4, request_id: 10)
+Response.create(user_id: 5, request_id: 11)
+Response.create(user_id: 5, request_id: 13)
+Response.create(user_id: 4, request_id: 13)
