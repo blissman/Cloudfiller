@@ -1,9 +1,4 @@
 
-// Star Ratings Styles
-.star_ratings{
-
-}
-
 // ratings input styles
 
 .rating {
@@ -11,6 +6,7 @@
   margin: 0 auto 1em;
   font-size: 25px;
   overflow:hidden;
+  border: none;
 }
 .rating input {
 float: right;

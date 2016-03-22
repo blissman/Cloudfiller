@@ -1,13 +1,13 @@
 
           <div class="active_request">
             <p>
-              <span>Category: &emsp; </span> <%= @request.category.name %>
+              <strong>Category: &emsp; </strong> <%= @request.category.name %>
                 <br>
-              <span>Description: &emsp; </span> <%= @request.description %>
+              <strong>Description: &emsp; </strong> <%= @request.description %>
                 <br>
-              <span>Points: &emsp; </span> <%= @request.points %>
+              <strong>Points: &emsp; </strong> <%= @request.points %>
                 <br>
-              <span>Expiry: &emsp; </span> <%= @request.expire %>
+              <strong>Expiry: &emsp; </strong> <%= @request.expire %>
             </p>
           </div>
 
@@ -20,13 +20,10 @@
                     <% if responder.ratings.average(:rating) == nil %>
                       (Rating Pending)
                     <% else %>
-                      <br> Rating: <%= '%.2f' % responder.ratings.average(:rating) %>/5
+                      <br> <span> Rating: <%= '%.2f' % responder.ratings.average(:rating) %>/5 </span>
                 </p>
-                    <div class="star-ratings-css">
-                      <div class="star-ratings-css-top" style="width: <%= responder.ratings.average(:rating)/5.0*100.0 %>%">
-                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                      </div>
-                      <div class="star-ratings-css-bottom">
+                    <div class="star_ratings">
+                      <div class="star_ratings" style="width: <%= responder.ratings.average(:rating)/5.0*100.0 %>%">
                         <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
                       </div>
                     </div>

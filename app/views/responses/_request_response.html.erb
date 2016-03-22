@@ -1,12 +1,13 @@
   <div class="responders_category_show">
     <h6>Responders</h6>
       <% request.responses.each do |response| %>
-        <span><%= response.user.name %> <%= response.user.lastname %></span>
+        <span><%= response.user.name %> <%= response.user.lastname %>
               <% if response.user.ratings.average(:rating) == nil %>
+              
               <br>
               <span>(Rating Pending)</span>
               <% else %>
-              <span><%= '%.2f' % response.user.ratings.average(:rating) %>/5</span>
+              <span> Rating: <%= '%.2f' % response.user.ratings.average(:rating) %>/5</span>
                 <div class="star_ratings">
                   <div class="star_ratings" style="width: <%= response.user.ratings.average(:rating)/5.0*100.0 %>%">
                     <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
