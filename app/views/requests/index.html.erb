@@ -9,7 +9,7 @@
         <% if @user.requests.where("active = ?", true).exists? %>
 
           <h2> My Request </h2>
-
+          <br>
           <div class="done_btn">
             <%= form_for [@user, @request], remote: true do |f| %>
             <%= f.hidden_field :active, value: false, method: :patch %>
@@ -32,6 +32,7 @@
 
         <h2> Old Requests </h2>
 
+          <br>
             <div class="old_requests_container">
               <div class="inactive_requests">
                 <% if @inactive_requests.present? %>
