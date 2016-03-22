@@ -1,10 +1,13 @@
-<h3>Notifications</h3>
 
-<% @activities.each do |activity| %>
-  <div class="activity">
-    <%= activity.owner.name%>
-    <%= render_activity activity %>
-  </div>
-  <br>
-<% end %>
-<%= paginate @activities %>
+  <h2>Notifications</h2>
+    <br>
+  <div class="user_notifications">
+    <% @activities.each do |activity| %>
+      <div class="activity">
+        <%= activity.owner.name%>
+        <%= render_activity activity %>
+      </div>
+    <% end %>
+
+  <div class="paginate_user_notifications"> <%= paginate @activities %> </div>
+</div>

@@ -1,3 +1,27 @@
-// Place all the styles related to the activities controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// ******************** Notifications User Account Page ********************
+
+.user_notifications{
+  height: auto;
+  background-color: $white;
+  border-radius: 1%;
+  padding: 1rem;
+  margin: 1rem;
+}
+.activity{
+  margin: 0 0 $small-spacing;
+  font-size: 1.2rem;
+  color: darken($salmon, 15%);
+  padding-left: 2rem;
+}
+
+.paginate_user_notifications{
+  font-size: 1rem;
+  font-weight: 400;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  a{
+    color: shade($light-green, 50%);
+  }
+
+}

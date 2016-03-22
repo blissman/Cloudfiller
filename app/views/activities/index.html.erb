@@ -1,8 +1,12 @@
-<h4>Notifications</h4>
+<div class="user_notifications">
 
-<% @activities.each do |activity| %>
-  <div class="activity">
-    <%= activity.owner.name%>
-    <%= render_activity activity %>
-  </div>
-<% end %>
+  <h4>Notifications</h4>
+
+  <% @activities.each do |activity| %>
+    <div class="activity">
+      <%= activity.owner.name%>
+      <%= render_activity activity %>
+    </div>
+  <% end %>
+  
+</div>

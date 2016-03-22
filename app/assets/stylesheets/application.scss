@@ -13,6 +13,7 @@
  @import 'pages';
  @import 'user_sessions';
  @import 'ratings';
+ @import 'activities';
 
  // ******************** Application Layout ********************
 
@@ -55,11 +56,22 @@
          width: auto;
          float: left;
          margin: 0.6rem;
-         margin-right: 11rem;
      }
      ul {
          overflow: auto;
-         li > a {
+         li{
+          margin-left: 10.5rem;
+           @include media($small-screen-only) {
+            display: none;
+           }
+           @include media($medium-screen-only) {
+            margin-left: 1rem;
+           }
+           @include media($large-screen-up) {
+
+           }
+
+          a {
              text-align: center;
              display: inline-block;
              padding: 0.2rem 0.8rem;
@@ -77,11 +89,13 @@
                  color: $white;
              }
          }
+       }
      }
      .log_btns {
-         text-align: center;
-         float: right;
-         padding: 25px;
+        text-align: center;
+        float: right;
+        padding-top: 1.7rem;
+        padding-right: 1rem;
      }
  }
 
