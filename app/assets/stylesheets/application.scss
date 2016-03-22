@@ -88,18 +88,17 @@
  // ******************** Footer ********************
 
  footer {
+    @include outer-container($max-width);
      position: absolute;
      bottom: 0;
-     height: 40px;
+     height: 5rem;
      width: 100%;
      background-color: $blue;
      margin: 0;
      z-index: 3;
-     #copyright {
-         @include outer-container($max-width);
+       #copyright{
          color: $white;
          text-align: center;
-         font-weight: 300;
-         padding: 8px;
-     }
+         padding: 1.3rem;
+         }
  }
