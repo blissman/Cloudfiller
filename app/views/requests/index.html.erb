@@ -13,7 +13,7 @@
           <div class="done_btn">
             <%= form_for [@user, @request], remote: true do |f| %>
             <%= f.hidden_field :active, value: false, method: :patch %>
-            <%= f.submit "Done" %>
+            <%= f.submit "Clear Request" %>
           <% end %>
         </div>
 
