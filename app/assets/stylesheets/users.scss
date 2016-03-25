@@ -2,34 +2,33 @@
 // ******************** User Account Show ********************
 
 .user_account_page {
-      h1 {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 4rem;
-        color: $salmon;
-        text-align: center;
-        padding-top: 1rem;
-        padding-bottom: 1.5rem;
-        margin-left: 25%;
-        margin-right: 25%;
-        width: 50%;
-        margin-top: 100px;
-        background: rgba(0, 0, 0, .5);
-    }
-    button {
-        padding: 10px, 15px;
-        margin: 10px;
-        border-radius: 4%;
-        background-color: $blue;
-        font-size: 1em;
-        font-weight: 600;
-    }
+  h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4rem;
+    color: $salmon;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 50%;
+    margin-top: 100px;
+    background: rgba(0, 0, 0, .5);
+  }
+  button {
+    padding: 10px, 15px;
+    margin: 10px;
+    border-radius: 4%;
+    background-color: $blue;
+    font-size: 1em;
+    font-weight: 600;
+  }
 }
 
 .account_page_container {
   position: relative;
   background-color: $green;
   height: auto;
-  // min-height: 45rem;
   width: 55rem;
   border-radius: 1%;
   margin-top: 5rem;
@@ -39,7 +38,7 @@
   overflow: auto;
 }
 
-.user_info_points_rating{
+.user_info_points_rating {
   position: relative;
   background-color: $light-green;
   height: auto;
@@ -49,70 +48,71 @@
   overflow: auto;
 }
 
-.user_account_points {
-    position: relative;
-    height: auto;
-    margin: 1rem;
-    overflow: hidden;
-      #points{
-        position: relative;
-        border-radius: 50%;
-        width: 6rem;
-        height: 6rem;
-        margin: auto;
-        color: $blue;
-        background-color: $white;
-          p{
-            text-align: center;
-            font-size: 3rem;
-            padding: 1rem;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-          }
-      }
+.user_info {
+  position: relative;
+  float: left;
+  clear: right;
+  height: auto;
+  width: 25rem;
+  margin: 2rem;
+  margin-right: 10rem;
+    p {
+      margin: 0 0 $small-spacing;
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: $black;
+    }
+    span {
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: shade($light-green, 30%);
+    }
 }
 
-.user_info {
-    position: relative;
-    float: left;
-    clear: right;
-    height: auto;
-    margin: 2rem;
-    margin-right: 10rem;
-      p{
-        margin: 0 0 $small-spacing;
-        font-size: 1.4rem;
-        font-weight: 500;
-        color: $black;
-      }
-      span{
-        font-size: 1.3rem;
-        font-weight: 400;
-        color: shade($light-green, 30%);
-      }
+.user_account_points {
+  position: relative;
+  height: auto;
+  margin: 1rem;
+  overflow: hidden;
+    #points {
+      position: relative;
+      border-radius: 50%;
+      width: 6rem;
+      height: 6rem;
+      margin: auto;
+      color: $blue;
+      background-color: $white;
+        p {
+          text-align: center;
+          font-size: 3rem;
+          padding: 1rem;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+    }
 }
 
 .user_account_rating {
-    text-align: center;
-    position: relative;
-    height: auto;
-    margin: 1rem;
-      h3{
-        margin-top: 2rem;
-        margin-bottom: 0.5rem;
-      }
+  text-align: center;
+  position: relative;
+  height: auto;
+  margin: 1rem;
+    h3 {
+      margin-top: 2rem;
+      margin-bottom: 0.5rem;
+    }
 }
 
 .user_account_notifications {
-    position: relative;
-    background-color: $light-green;
-    height: auto;
-    width: 52rem;
-    border-radius: 2%;
-    margin: 1.5rem;
-    padding: 20px;
+  position: relative;
+  background-color: $light-green;
+  height: auto;
+  width: 52rem;
+  border-radius: 2%;
+  margin: 1.5rem;
+  padding: 20px;
 }
 
 // ******************** User Account Edit Form ********************
@@ -133,18 +133,18 @@
 // ******************** Delete User Account Confirmation Popup ********************
 
 .confirm_delete_msg {
-    position: fixed;
-    background-color: darken($salmon, 10%);
-    height: auto;
-    border-radius: 2%;
-    border: 5px solid $salmon;
-    padding: 2rem;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 100;
-    text-align: center;
-      h2{
-        color: $white;
-      }
+  position: fixed;
+  background-color: darken($salmon, 10%);
+  height: auto;
+  border-radius: 2%;
+  border: 5px solid $salmon;
+  padding: 2rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  text-align: center;
+    h2{
+      color: $white;
+    }
 }
