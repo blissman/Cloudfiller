@@ -3,6 +3,9 @@
 verb (US) informal
   - to understand (something) intuitively or by empathy
 
+View a demo of Grok online!
+https://grokthegrackle.herokuapp.com/
+
 = Problem:
 We live in an age where we can Google almost anything. But sometimes there are
 questions Google just can't answer easily, and we want to find someone to ask.
@@ -11,4 +14,3 @@ But what if there's nobody in our social circle who can answer the question?
 
 = Solution:
 That's where Grok comes in: bridging gaps and connecting communities.
-["View a demo of Grok online!""](https://grokthegrackle.herokuapp.com/)
