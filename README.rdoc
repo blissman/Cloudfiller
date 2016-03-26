@@ -2,7 +2,6 @@
 /ɡräk/
 verb (US) informal
   - to understand (something) intuitively or by empathy
-    "because of all the commercials, children grok things immediately"
 
 = Problem:
 We live in an age where we can Google almost anything. But sometimes there are
@@ -12,3 +11,4 @@ But what if there's nobody in our social circle who can answer the question?
 
 = Solution:
 That's where Grok comes in: bridging gaps and connecting communities.
+[View a demo of Grok online!](https://grokthegrackle.herokuapp.com/)
