@@ -2,6 +2,7 @@
 /ɡräk/
 verb (US) informal
   - to understand (something) intuitively or by empathy
+  - **etymology** mid 20th century: a word coined by Robert Heinlein (1907–88), American science fiction writer, in *Stranger in a Strange Land*
 
 View a demo of Grok online!
 https://grokthegrackle.herokuapp.com/
