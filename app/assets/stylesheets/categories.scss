@@ -1,9 +1,8 @@
-
 // ******************** Category Index Page ********************
 
 .category_list_page {
   @include outer-container($max-width);
-    h1{
+    h1 {
       font-family: 'Montserrat', sans-serif;
       font-size: 4rem;
       color: $salmon;
@@ -17,52 +16,53 @@
       background: rgba(0, 0, 0, .5);
     }
 }
-.categories{
+
+.categories {
   margin-top: 100px;
   @include media($small-screen-only) {
-      margin-left: 4%;
+    margin-left: 4%;
   }
   @include media($medium-screen-only) {
-      margin-left: 7%;
+    margin-left: 7%;
   }
   @include media($large-screen-up) {
-      margin-left: 11.5%;
+    margin-left: 11.5%;
   }
 }
 
-#category_list{
-  & > li{
+#category_list {
+  & > li {
     @include media($small-screen-only) {
-        @include span-columns(6);
-        @include omega(2n);
+      @include span-columns(6);
+      @include omega(2n);
     }
     @include media($medium-screen-only) {
-        @include span-columns(4);
-        @include omega(3n);
+      @include span-columns(4);
+      @include omega(3n);
     }
     @include media($large-screen-up) {
-        @include span-columns(2.2);
-        @include omega(5n);
+      @include span-columns(2.2);
+      @include omega(5n);
     }
-      & > a {
-        display: block;
-        clear: both;
-        height: 7rem;
-        width: 8.5rem;
-        text-align: center;
-        font-family: 'Montserrat', sans-serif;
-        font-size: 1rem;
-        font-weight: 600;
-        color: $black;
-        background-color: $green;
-        padding-top: 2.5rem;
-        border-radius: 4%;
-        margin-bottom: 1.2rem;
-        &:hover {
-            background-color: $light-green;
-        }
-        &:active {
-            background-color: darken($green, 15%);
+    & > a {
+      display: block;
+      clear: both;
+      height: 7rem;
+      width: 8.5rem;
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: $black;
+      background-color: $green;
+      padding-top: 2.5rem;
+      border-radius: 4%;
+      margin-bottom: 1.2rem;
+      &:hover {
+        background-color: $light-green;
+      }
+      &:active {
+        background-color: darken($green, 15%);
       }
     }
   }
@@ -70,30 +70,30 @@
 
 // ******************** Category Show Page ********************
 
-.category_requests_show_page{
+.category_requests_show_page {
   @include outer-container($max-width);
-    h1{
-      font-family: 'Montserrat', sans-serif;
-      font-size: 4rem;
-      color: $salmon;
-      text-align: center;
-      padding-top: 1rem;
-      padding-bottom: 1.5rem;
-      margin-left: 25%;
-      margin-right: 25%;
-      width: 50%;
-      margin-top: 100px;
-      background: rgba(0, 0, 0, .5);
-    }
-    .page_entries{
-      position: relative;
-      text-align: center;
-      height: auto;
-      margin: 1rem;
-    }
+  h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4rem;
+    color: $salmon;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 50%;
+    margin-top: 100px;
+    background: rgba(0, 0, 0, .5);
+  }
+  .page_entries {
+    position: relative;
+    text-align: center;
+    height: auto;
+    margin: 1rem;
+  }
 }
 
-.category_requests_container{
+.category_requests_container {
   position: relative;
   background-color: $green;
   height: auto;
@@ -107,7 +107,7 @@
   overflow: auto;
 }
 
-.category_active_request{
+.category_active_request {
   position: relative;
   background-color: $light-green;
   height: auto;
@@ -115,28 +115,28 @@
   border-radius: 2%;
   margin: 1.5rem;
   padding: 20px;
-    span{
-      margin: 0 0 $small-spacing;
-      font-size: 1.3rem;
-      font-weight: 400;
-      color: darken($light-blue, 10%);
-    }
-    p{
-      margin: 0 0 $small-spacing;
-      font-size: 1.4rem;
-      font-weight: 500;
-      color: $black;
-    }
-    button{
-      border-radius: 4%;
-      background-color: $blue;
-      font-size: 1.3rem;
-      font-weight: 600;
-      margin: 5px;
-    }
+  span {
+    margin: 0 0 $small-spacing;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: darken($light-blue, 10%);
+  }
+  p {
+    margin: 0 0 $small-spacing;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: $black;
+  }
+  button {
+    border-radius: 4%;
+    background-color: $blue;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 5px;
+  }
 }
 
-.responders_category_show{
+.responders_category_show {
   margin-left: 3rem;
   margin-right: 3rem;
 }

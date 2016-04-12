@@ -1,27 +1,26 @@
-
 // ******************** Notifications User Account Page ********************
 
-.user_notifications{
+.user_notifications {
   height: auto;
   background-color: $white;
   border-radius: 1%;
   padding: 1rem;
   margin: 1rem;
 }
-.activity{
+
+.activity {
   margin: 0 0 $small-spacing;
   font-size: 1.2rem;
   color: darken($light-blue, 15%);
   padding-left: 2rem;
 }
 
-.paginate_user_notifications{
+.paginate_user_notifications {
   font-size: 1rem;
   font-weight: 400;
   margin-left: 3rem;
   margin-right: 3rem;
-  a{
+  a {
     color: shade($light-green, 50%);
   }
-
 }

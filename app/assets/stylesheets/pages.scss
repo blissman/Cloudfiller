@@ -1,6 +1,7 @@
-.about_page{
+// ******************** About Page ********************
 
-  h1{
+.about_page {
+  h1 {
     font-family: 'Montserrat', sans-serif;
     font-size: 4rem;
     color: $salmon;
@@ -15,7 +16,7 @@
   }
 }
 
-.about_page_container{
+.about_page_container {
   position: relative;
   background-color: $green;
   height: auto;
@@ -26,23 +27,20 @@
   left: 50%;
   transform: translate(-50%, -0%);
   overflow: auto;
+  p {
+    font-size: 1.3rem;
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+  }
+  h3 {
+    font-size: 1.7rem;
+    margin: 50px;
 
-      p{
-        font-size: 1.3rem;
-        margin-right: 50px;
-        margin-left: 50px;
-        margin-bottom: 20px;
-      }
-
-      h3{
-        font-size: 1.7rem;
-        margin: 50px;
-
-      }
-
+  }
 }
 
-.define_grok{
+.define_grok {
   position: relative;
   background-color: $light-green;
   height: auto;
@@ -50,4 +48,4 @@
   border-radius: 2%;
   margin: 1.5rem;
   padding: 20px;
-  }
+}

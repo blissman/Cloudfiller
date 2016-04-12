@@ -1,4 +1,3 @@
-
 // ******************** User Account Show ********************
 
 .user_account_page {
@@ -56,17 +55,17 @@
   width: 25rem;
   margin: 2rem;
   margin-right: 10rem;
-    p {
-      margin: 0 0 $small-spacing;
-      font-size: 1.4rem;
-      font-weight: 500;
-      color: $black;
-    }
-    span {
-      font-size: 1.3rem;
-      font-weight: 400;
-      color: shade($light-green, 30%);
-    }
+  p {
+    margin: 0 0 $small-spacing;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: $black;
+  }
+  span {
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: shade($light-green, 30%);
+  }
 }
 
 .user_account_points {
@@ -74,24 +73,25 @@
   height: auto;
   margin: 1rem;
   overflow: hidden;
-    #points {
-      position: relative;
-      border-radius: 50%;
-      width: 6rem;
-      height: 6rem;
-      margin: auto;
-      color: $blue;
-      background-color: $white;
-        p {
-          text-align: center;
-          font-size: 3rem;
-          padding: 1rem;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-        }
+  #points {
+    position: relative;
+    border-radius: 50%;
+    width: 6rem;
+    height: 6rem;
+    margin: auto;
+    color: $blue;
+    background-color: $white;
+    p {
+      text-align: center;
+      font-size: 3rem;
+      padding: 1rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
+  }
+}
 
 .user_experiences {
   max-width: 25rem;
@@ -102,10 +102,10 @@
   position: relative;
   height: auto;
   margin: 1rem;
-    h3 {
-      margin-top: 2rem;
-      margin-bottom: 0.5rem;
-    }
+  h3 {
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+  }
 }
 
 .user_account_notifications {
@@ -147,7 +147,7 @@
   transform: translate(-50%, -50%);
   z-index: 100;
   text-align: center;
-    h2{
-      color: $white;
-    }
+  h2 {
+    color: $white;
+  }
 }

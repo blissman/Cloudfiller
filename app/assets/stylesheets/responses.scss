@@ -1,9 +1,8 @@
-
 // ******************** Response Page ********************
 
-.user_responses_page{
+.user_responses_page {
   @include outer-container($max-width);
-  h1{
+  h1 {
     font-family: 'Montserrat', sans-serif;
     font-size: 4rem;
     color: $salmon;
@@ -18,7 +17,7 @@
   }
 }
 
-.responses_page_container{
+.responses_page_container {
   position: relative;
   background-color: $green;
   height: auto;
@@ -30,25 +29,25 @@
   left: 50%;
   transform: translate(-50%, -0%);
   overflow: auto;
-    span{
-      margin: 0 0 $small-spacing;
-      font-size: 1.3rem;
-      font-weight: 400;
-      color: darken($light-blue, 10%);
-    }
-    p{
-      margin: 0 0 $small-spacing;
-      font-size: 1.4rem;
-      font-weight: 500;
-      color: $black;
-    }
-    &h2{
-      text-align: left;
-      font-size: 0.5rem;
-    }
+  span {
+    margin: 0 0 $small-spacing;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: darken($light-blue, 10%);
+  }
+  p {
+    margin: 0 0 $small-spacing;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: $black;
+  }
+  &h2 {
+    text-align: left;
+    font-size: 0.5rem;
+  }
 }
 
-.user_active_responses{
+.user_active_responses {
   position: relative;
   background-color: $light-green;
   height: auto;
@@ -56,13 +55,13 @@
   border-radius: 2%;
   margin: 1.5rem;
   padding: 20px;
-    #user_response_list{
-        margin-left: 3rem;
-        margin-right: 3rem;
-    }
+  #user_response_list {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
 }
 
-.user_inactive_responses{
+.user_inactive_responses {
   position: relative;
   background-color: $light-green;
   height: auto;
@@ -70,8 +69,8 @@
   border-radius: 2%;
   margin: 1.5rem;
   padding: 20px;
-    #user_old_response_list{
-        margin-left: 3rem;
-        margin-right: 3rem;
-    }
+  #user_old_response_list {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
 }

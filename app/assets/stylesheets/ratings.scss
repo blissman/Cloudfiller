@@ -1,4 +1,3 @@
-
 // ******************** Rating Input ********************
 
 .rating {
@@ -6,16 +5,17 @@
   margin: 0;
   font-size: 25px;
   overflow: hidden;
-    fieldset {
-        border: none;
-    }
+  fieldset {
+    border: none;
+  }
 }
 
 .rating input {
-float: right;
-opacity: 0;
-position: absolute;
+  float: right;
+  opacity: 0;
+  position: absolute;
 }
+
 .rating a,
 .rating label {
   float: right;
