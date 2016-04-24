@@ -21,7 +21,7 @@ html {
   background-color: #7d8faf;
   body {
     @include outer-container($max-width);
-    background-image: url("grok_back_image.png");
+    background-image: url("grok_back_image_compresssed.jpg");
     background-size: cover;
     min-height: 1700px;
     position: relative;
