@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
 
 # set ruby version for deployment
-ruby '2.3.0'
+ruby '>=2.3.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.5.1'
+gem 'rails', '>=4.2.5.1'
 # Use sqlite3 as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
